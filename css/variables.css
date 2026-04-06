@@ -1,0 +1,30 @@
+:root {
+  --bg: #0d1117;
+  --bg-surface: #161b22;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(12px);
+  --text-primary: #e6edf3;
+  --text-muted: #7d8590;
+  --accent: #EF9F27;
+  --accent-dim: rgba(239, 159, 39, 0.15);
+  --font-display: 'Inter', sans-serif;
+  --radius-card: 16px;
+  --radius-pill: 999px;
+
+  --glass-layer-1: rgba(255, 255, 255, 0.03);
+  --glass-layer-2: rgba(255, 255, 255, 0.05);
+  --glass-layer-3: rgba(255, 255, 255, 0.09);
+  --glass-hover-bg: rgba(255, 255, 255, 0.08);
+  --glass-mobile-bg: rgba(22, 27, 34, 0.95);
+
+  --scene-spacer-height: 300vh;
+  --scene-sticky-height: 100vh;
+
+  --preloader-bg: rgba(13, 17, 23, 0.94);
+  --preloader-panel-bg: rgba(255, 255, 255, 0.04);
+  --preloader-panel-border: rgba(255, 255, 255, 0.1);
+  --cursor-size: 18px;
+  --cursor-ring-size: 56px;
+  --cursor-media-width: 180px;
+}

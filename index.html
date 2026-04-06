@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Paritosh Singh portfolio - CS + Data Science student building full stack and machine learning products.">
+  <title>Paritosh Singh | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/contact.css">
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script defer type="module" src="js/utils.js"></script>
+  <script defer type="module" src="js/hero.js"></script>
+  <script defer type="module" src="js/projects.js"></script>
+  <script defer type="module" src="js/main.js"></script>
+</head>
+<body>
+  <div class="site-preloader" aria-hidden="true">
+    <div class="preloader-panel">
+      <p class="preloader-kicker">Portfolio Boot Sequence</p>
+      <p class="preloader-count" data-preloader-count>0%</p>
+      <p class="preloader-copy">Loading scroll scenes and interactions</p>
+    </div>
+  </div>
+
+  <div class="smart-cursor" aria-hidden="true">
+    <span class="smart-cursor-ring"></span>
+    <span class="smart-cursor-label">Scroll</span>
+    <span class="smart-cursor-media-wrap">
+      <img class="smart-cursor-media" src="assets/screenshots/mini-redis.png" alt="" loading="lazy">
+    </span>
+  </div>
+
+  <main>
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title" class="hero-name">Paritosh Singh</h1>
+        <span class="hero-underline" aria-hidden="true"></span>
+        <p class="hero-role">CS + Data Science &middot; SRM Institute &middot; 2027</p>
+        <p class="hero-dynamic" aria-live="polite">
+          <span class="hero-dynamic-prefix">Focused on</span>
+          <span class="hero-dynamic-word" data-hero-word>systems engineering</span>
+        </p>
+        <div class="hero-actions">
+          <a class="hero-action-link hero-reel-link" href="#projects" data-cursor-label="Watch reel">Watch project reel</a>
+          <nav class="hero-quick-nav" aria-label="Quick section links">
+            <a class="hero-action-link hero-skip-link" href="#projects" data-cursor-label="Jump to projects">Projects</a>
+            <a class="hero-action-link hero-skip-link" href="#skills" data-cursor-label="Jump to skills">Skills</a>
+            <a class="hero-action-link hero-skip-link" href="#contact" data-cursor-label="Jump to contact">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <a class="scroll-indicator" href="#about" aria-label="Scroll to About section" data-cursor-label="Scroll down">
+        <span class="scroll-indicator-circle" aria-hidden="true">
+          <span class="scroll-indicator-chevron"></span>
+        </span>
+      </a>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <span class="section-mask" aria-hidden="true"></span>
+      <div class="section-shell about-layout">
+        <h2 id="about-title" class="section-title">About</h2>
+        <div class="about-stats">
+          <article class="about-stat">
+            <p class="about-stat-value">3+</p>
+            <p class="about-stat-label">Years Coding</p>
+          </article>
+          <article class="about-stat">
+            <p class="about-stat-value">4</p>
+            <p class="about-stat-label">Projects Shipped</p>
+          </article>
+          <article class="about-stat">
+            <p class="about-stat-value">1</p>
+            <p class="about-stat-label">Certification (NPTEL IIT Madras)</p>
+          </article>
+        </div>
+        <div class="about-copy">
+          <p class="about-line">I build robust systems at the intersection of software engineering and machine learning.</p>
+          <p class="about-line">My focus is production-grade backend architecture, practical AI, and clear user-centric interfaces.</p>
+          <p class="about-line">I am currently pursuing CS + Data Science at SRM Institute, graduating in 2027.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <span class="section-mask" aria-hidden="true"></span>
+
+      <div class="section-shell projects-head">
+        <h2 id="projects-title" class="section-title">Projects</h2>
+        <div class="project-filters" role="toolbar" aria-label="Filter projects by category">
+          <button class="project-filter is-active" type="button" data-filter="all" data-cursor-label="All projects">All</button>
+          <button class="project-filter" type="button" data-filter="systems" data-cursor-label="Systems projects">Systems</button>
+          <button class="project-filter" type="button" data-filter="ml" data-cursor-label="ML projects">Machine Learning</button>
+          <button class="project-filter" type="button" data-filter="fullstack" data-cursor-label="Full stack projects">Full Stack</button>
+        </div>
+      </div>
+
+      <section class="project-scene" data-category="fullstack" aria-labelledby="teampulse-title">
+        <div class="scene-spacer" aria-hidden="true"></div>
+        <div class="scene-sticky">
+          <div class="scene-bg">
+            <video
+              class="scene-screenshot scene-video"
+              src="assets/videos/TeamPulse.mp4"
+              poster="assets/screenshots/teampulse.png"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-hidden="true"
+            ></video>
+            <div class="scene-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="scene-glass scene-glass-teampulse">
+            <div class="scene-tag">Full Stack</div>
+            <h2 id="teampulse-title" class="scene-title">TeamPulse</h2>
+            <p class="scene-desc">Real-time team collaboration platform with workspaces, channels, DMs, Socket.IO messaging, JWT auth, RBAC, and background schedulers.</p>
+            <div class="scene-stack" aria-label="Technology stack">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>Socket.IO</span>
+              <span>JWT</span>
+              <span>RBAC</span>
+            </div>
+            <a class="scene-link" href="https://github.com/Paritoshcodes/TeamPulse" target="_blank" rel="noopener noreferrer" data-cursor-label="Open project" data-cursor-media="assets/screenshots/teampulse.png">View on GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-scene" data-category="ml" aria-labelledby="fake-news-radar-title">
+        <div class="scene-spacer" aria-hidden="true"></div>
+        <div class="scene-sticky">
+          <div class="scene-bg">
+            <video
+              class="scene-screenshot scene-video"
+              src="assets/videos/Fake_news_radar.mp4"
+              poster="assets/screenshots/fake-news-radar.png"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-hidden="true"
+            ></video>
+            <div class="scene-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="scene-glass">
+            <div class="scene-tag">Machine Learning</div>
+            <h2 id="fake-news-radar-title" class="scene-title">Fake News Radar</h2>
+            <p class="scene-desc">Streamlit ML app using TF-IDF and Logistic Regression achieving ~94% accuracy on the WELFake dataset with URL content extraction and profile-based training.</p>
+            <div class="scene-stack" aria-label="Technology stack">
+              <span>Python</span>
+              <span>Streamlit</span>
+              <span>scikit-learn</span>
+              <span>TF-IDF</span>
+              <span>pandas</span>
+              <span>BeautifulSoup</span>
+            </div>
+            <a class="scene-link" href="https://fakenewsdetectorxparitoshxsingh.streamlit.app" target="_blank" rel="noopener noreferrer" data-cursor-label="Open project" data-cursor-media="assets/screenshots/fake-news-radar.png">View Live</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-scene" data-category="systems" aria-labelledby="mini-redis-title">
+        <div class="scene-spacer" aria-hidden="true"></div>
+        <div class="scene-sticky">
+          <div class="scene-bg">
+            <video
+              class="scene-screenshot scene-video"
+              src="assets/videos/mini-redis.mp4"
+              poster="assets/screenshots/mini-redis.png"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-hidden="true"
+            ></video>
+            <div class="scene-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="scene-glass">
+            <div class="scene-tag">Systems Engineering</div>
+            <h2 id="mini-redis-title" class="scene-title">mini-redis</h2>
+            <p class="scene-desc">High-performance in-memory TCP server built from scratch in C++ with epoll-based event loop, RESP protocol parsing, and pub/sub messaging.</p>
+            <div class="scene-stack" aria-label="Technology stack">
+              <span>C++</span>
+              <span>TCP</span>
+              <span>epoll</span>
+              <span>RESP protocol</span>
+              <span>pub/sub</span>
+            </div>
+            <a class="scene-link" href="https://github.com/Paritoshcodes" target="_blank" rel="noopener noreferrer" data-cursor-label="Open project" data-cursor-media="assets/screenshots/mini-redis.png">View on GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-scene" data-category="ml fullstack" aria-labelledby="vigil-title">
+        <div class="scene-spacer" aria-hidden="true"></div>
+        <div class="scene-sticky">
+          <div class="scene-bg">
+            <video
+              class="scene-screenshot scene-video"
+              src="assets/videos/vigil.mp4"
+              poster="assets/screenshots/vigil.png"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-hidden="true"
+            ></video>
+            <div class="scene-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="scene-glass">
+            <div class="scene-tag">ML + Full Stack</div>
+            <h2 id="vigil-title" class="scene-title">Vigil</h2>
+            <p class="scene-desc">AI-based multi-hazard disaster prediction platform for real-time monitoring, explainable forecasts, and operational response across 15 Indian regions.</p>
+            <div class="scene-stack" aria-label="Technology stack">
+              <span>React 18</span>
+              <span>TypeScript</span>
+              <span>Vite</span>
+              <span>FastAPI</span>
+              <span>PostgreSQL</span>
+              <span>XGBoost</span>
+              <span>SHAP</span>
+            </div>
+            <a class="scene-link" href="https://github.com/Paritoshcodes/Vigil" target="_blank" rel="noopener noreferrer" data-cursor-label="Open project" data-cursor-media="assets/screenshots/vigil.png">View on GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-shell projects-archive" aria-label="Project output archive">
+        <div class="projects-archive-head">
+          <h3 class="projects-archive-title">Output Archive</h3>
+          <p class="projects-archive-note">Fast access to every shipped build.</p>
+        </div>
+        <div class="archive-track">
+          <a
+            class="archive-item"
+            href="https://github.com/Paritoshcodes/TeamPulse"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-category="fullstack"
+            data-cursor-label="Open project"
+            data-cursor-media="assets/screenshots/teampulse.png"
+          >
+            <img class="archive-thumb" src="assets/screenshots/teampulse.png" alt="TeamPulse screenshot thumbnail" loading="lazy">
+            <span class="archive-tag">Full Stack</span>
+            <strong class="archive-name">TeamPulse</strong>
+          </a>
+
+          <a
+            class="archive-item"
+            href="https://fakenewsdetectorxparitoshxsingh.streamlit.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-category="ml"
+            data-cursor-label="Open project"
+            data-cursor-media="assets/screenshots/fake-news-radar.png"
+          >
+            <img class="archive-thumb" src="assets/screenshots/fake-news-radar.png" alt="Fake News Radar screenshot thumbnail" loading="lazy">
+            <span class="archive-tag">Machine Learning</span>
+            <strong class="archive-name">Fake News Radar</strong>
+          </a>
+
+          <a
+            class="archive-item"
+            href="https://github.com/Paritoshcodes"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-category="systems"
+            data-cursor-label="Open project"
+            data-cursor-media="assets/screenshots/mini-redis.png"
+          >
+            <img class="archive-thumb" src="assets/screenshots/mini-redis.png" alt="mini-redis screenshot thumbnail" loading="lazy">
+            <span class="archive-tag">Systems</span>
+            <strong class="archive-name">mini-redis</strong>
+          </a>
+
+          <a
+            class="archive-item"
+            href="https://github.com/Paritoshcodes/Vigil"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-category="ml fullstack"
+            data-cursor-label="Open project"
+            data-cursor-media="assets/screenshots/vigil.png"
+          >
+            <img class="archive-thumb" src="assets/screenshots/vigil.png" alt="Vigil screenshot thumbnail" loading="lazy">
+            <span class="archive-tag">ML + Full Stack</span>
+            <strong class="archive-name">Vigil</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills" aria-labelledby="skills-title">
+      <span class="section-mask" aria-hidden="true"></span>
+      <div class="section-shell">
+        <h2 id="skills-title" class="section-title">Skills</h2>
+        <div class="skills-groups">
+          <article class="skills-group">
+            <video
+              class="skills-bg-video"
+              src="assets/videos/languages.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-hidden="true"
+            ></video>
+            <span class="skills-group-overlay" aria-hidden="true"></span>
+            <div class="skills-group-content">
+              <h3 class="skills-group-title">Languages</h3>
+              <div class="skills-pills">
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">C++</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">TypeScript</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="skills-group">
+            <video
+              class="skills-bg-video"
+              src="assets/videos/backend.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-hidden="true"
+            ></video>
+            <span class="skills-group-overlay" aria-hidden="true"></span>
+            <div class="skills-group-content">
+              <h3 class="skills-group-title">Backend</h3>
+              <div class="skills-pills">
+                <span class="skill-pill">Node.js</span>
+                <span class="skill-pill">FastAPI</span>
+                <span class="skill-pill">PostgreSQL</span>
+                <span class="skill-pill">Docker</span>
+                <span class="skill-pill">REST APIs</span>
+                <span class="skill-pill">JWT</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="skills-group">
+            <video
+              class="skills-bg-video"
+              src="assets/videos/frontend.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-hidden="true"
+            ></video>
+            <span class="skills-group-overlay" aria-hidden="true"></span>
+            <div class="skills-group-content">
+              <h3 class="skills-group-title">Frontend</h3>
+              <div class="skills-pills">
+                <span class="skill-pill">React 18</span>
+                <span class="skill-pill">Vite</span>
+                <span class="skill-pill">Tailwind</span>
+                <span class="skill-pill">HTML5</span>
+                <span class="skill-pill">CSS3</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="skills-group">
+            <video
+              class="skills-bg-video"
+              src="assets/videos/ml.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-hidden="true"
+            ></video>
+            <span class="skills-group-overlay" aria-hidden="true"></span>
+            <div class="skills-group-content">
+              <h3 class="skills-group-title">ML</h3>
+              <div class="skills-pills">
+                <span class="skill-pill">scikit-learn</span>
+                <span class="skill-pill">XGBoost</span>
+                <span class="skill-pill">LightGBM</span>
+                <span class="skill-pill">SHAP</span>
+                <span class="skill-pill">pandas</span>
+                <span class="skill-pill">NumPy</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <span class="section-mask" aria-hidden="true"></span>
+      <div class="section-shell">
+        <article class="contact-card" aria-label="Contact links">
+          <h2 id="contact-title" class="contact-title">Let's work together</h2>
+          <ul class="contact-links">
+            <li>
+              <a class="contact-link" href="https://github.com/Paritoshcodes" target="_blank" rel="noopener noreferrer">
+                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M12 1.5C6.2 1.5 1.5 6.3 1.5 12.2c0 4.7 3.1 8.7 7.3 10.1.5.1.7-.2.7-.5v-2c-3 .7-3.6-1.3-3.6-1.3-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1 2 .7 2.4-1 .1-.7.4-1.2.8-1.5-2.4-.3-5-1.2-5-5.4 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.5.1-3 0 0 .9-.3 3 .1.8-.2 1.8-.4 2.7-.4.9 0 1.8.1 2.7.4 2.1-.4 3-.1 3-.1.6 1.5.2 2.7.1 3 .7.8 1.1 1.8 1.1 3 0 4.2-2.6 5.1-5 5.4.4.3.8 1 .8 2v3c0 .3.2.6.7.5 4.3-1.4 7.3-5.4 7.3-10.1C22.5 6.3 17.8 1.5 12 1.5Z"></path>
+                </svg>
+                <span>GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="https://www.linkedin.com/in/paritosh-singh" target="_blank" rel="noopener noreferrer">
+                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M4.8 3.5a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM3.1 8.9h3.4V21H3.1V8.9Zm5.4 0h3.2v1.7h.1c.5-.9 1.8-2.1 3.8-2.1 4 0 4.7 2.6 4.7 6V21h-3.4v-5.8c0-1.4 0-3.2-1.9-3.2s-2.2 1.5-2.2 3.1V21H8.5V8.9Z"></path>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="mailto:paritosh.singh@srmist.edu.in" target="_blank" rel="noopener noreferrer">
+                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M3 5.8c0-1.5 1.2-2.8 2.8-2.8h12.4c1.5 0 2.8 1.2 2.8 2.8v12.4c0 1.5-1.2 2.8-2.8 2.8H5.8A2.8 2.8 0 0 1 3 18.2V5.8Zm2.8-.8c-.3 0-.6.1-.8.3L12 10.7l7-5.4a1.2 1.2 0 0 0-.8-.3H5.8Zm13.2 2.8-6.3 4.9a1.2 1.2 0 0 1-1.4 0L5 7.8v10.4c0 .4.4.8.8.8h12.4c.4 0 .8-.4.8-.8V7.8Z"></path>
+                </svg>
+                <span>Email</span>
+              </a>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -5,6 +5,8 @@ import { initAboutReveals } from './about.js';
 import { initPreloader } from './preloader.js';
 import { initSmartCursor } from './cursor.js';
 import { initSectionTransitions } from './transitions.js';
+import { initResumeButtonRelay } from './resume-button.js';
+import { initTopbarSectionState } from './topbar-nav.js';
 
 var manualGsapTickerId = null;
 
@@ -81,6 +83,8 @@ window.addEventListener('load', function () {
     initAboutReveals({ reduceMotion: reduceMotion });
     initProjectScenes({ reduceMotion: reduceMotion });
     initSectionTransitions({ reduceMotion: reduceMotion });
+    initTopbarSectionState({ reduceMotion: reduceMotion });
+    initResumeButtonRelay({ reduceMotion: reduceMotion });
     initSmartCursor({ reduceMotion: reduceMotion });
 
     if (typeof window.ScrollTrigger !== 'undefined') {

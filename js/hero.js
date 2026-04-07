@@ -1,9 +1,6 @@
 var heroInitialized = false;
 var heroPhrases = [
-  'systems engineering',
-  'full stack architecture',
-  'applied machine learning',
-  'real-time platform design'
+  'I build backend systems and ship ML that works in production.'
 ];
 
 function setHeroStaticState(name, underline, role, dynamicLine, reelLink, indicator) {
@@ -45,6 +42,10 @@ function initHeroWordCycle(gsap, wordNode) {
 
   var phraseIndex = 0;
   wordNode.textContent = heroPhrases[0];
+
+  if (heroPhrases.length <= 1) {
+    return;
+  }
 
   var cycle = gsap.timeline({
     repeat: -1,

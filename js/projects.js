@@ -278,13 +278,26 @@ export function initProjectScenes(options) {
   projectsInitialized = true;
 
   var reduceMotion = Boolean(options && options.reduceMotion);
-  var scenes = Array.prototype.slice.call(document.querySelectorAll('.project-scene'));
+  var scenes = Array.prototype.slice.call(
+    document.querySelectorAll('.project-scene:not([hidden]):not([data-disabled="true"])')
+  );
+  var projectsRoot = document.getElementById('projects');
+  var filtersEnabled = Boolean(
+    projectsRoot && projectsRoot.getAttribute('data-filters-enabled') === 'true'
+  );
 
   if (!scenes.length) {
     return;
   }
 
-  initProjectFilters(scenes, reduceMotion);
+  if (filtersEnabled) {
+    initProjectFilters(scenes, reduceMotion);
+  }
+
+  scenes.forEach(function (scene) {
+    scene.classList.remove('is-muted');
+  });
+
   initArchiveReveal(reduceMotion);
 
   if (

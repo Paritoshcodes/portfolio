@@ -48,6 +48,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.35rem;
+  max-width: 68ch;
   color: var(--text-primary);
   font-size: clamp(0.96rem, 0.88rem + 0.34vw, 1.08rem);
   line-height: 1.5;
@@ -59,9 +60,9 @@
 }
 
 .hero-dynamic-word {
-  color: var(--accent);
-  font-weight: 700;
-  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 .hero-actions {
@@ -116,6 +117,35 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   transition: transform 0.24s ease, border-color 0.24s ease, color 0.24s ease, background 0.24s ease;
+}
+
+.hero-actions > a[download='Paritosh_Singh_Resume.pdf'] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.55rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-primary);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: transform 0.24s ease, border-color 0.24s ease, color 0.24s ease, background 0.24s ease;
+}
+
+.hero-actions > a[download='Paritosh_Singh_Resume.pdf']:hover,
+.hero-actions > a[download='Paritosh_Singh_Resume.pdf']:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(239, 159, 39, 0.08);
+}
+
+.hero-actions > a[download='Paritosh_Singh_Resume.pdf']:focus-visible {
+  outline: none;
 }
 
 .hero-skip-link {
@@ -236,6 +266,12 @@
     font-size: 0.79rem;
   }
 
+  .hero-actions > a[download='Paritosh_Singh_Resume.pdf'] {
+    min-height: 2.45rem;
+    padding-inline: 0.95rem;
+    font-size: 0.79rem;
+  }
+
   .hero-quick-nav {
     gap: 0.4rem;
   }
@@ -264,8 +300,20 @@
     transition: none;
   }
 
+  .hero-actions > a[download='Paritosh_Singh_Resume.pdf'] {
+    transition: none;
+  }
+
   .hero-reel-link:hover,
   .hero-reel-link:focus-visible {
+    transform: none;
+    color: var(--text-primary);
+    border-color: var(--glass-border);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .hero-actions > a[download='Paritosh_Singh_Resume.pdf']:hover,
+  .hero-actions > a[download='Paritosh_Singh_Resume.pdf']:focus-visible {
     transform: none;
     color: var(--text-primary);
     border-color: var(--glass-border);

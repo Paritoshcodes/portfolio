@@ -1,6 +1,6 @@
 var heroInitialized = false;
 var heroPhrases = [
-  'I build backend systems and ship ML that works in production.'
+  'I build backend systems and ML pipelines that solve real problems.'
 ];
 
 function setHeroStaticState(name, underline, role, dynamicLine, reelLink, indicator) {

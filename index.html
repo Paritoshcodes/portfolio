@@ -669,7 +669,7 @@
         <div class="metrics" data-metrics>
         <span class="m-rule" data-draw-v></span>
         <div class="metric"><span class="val count" data-count="4" data-pad="2">00</span><span class="key">Systems built &amp; public</span></div>
-        <div class="metric"><span class="val sig count" data-count="1000" data-final="1K+">0</span><span class="key">Ops/sec · mini-redis</span></div>
+        <div class="metric"><span class="val sig count" data-count="150" data-suffix="K+" data-final="150K+">0</span><span class="key">Ops/sec · mini-redis</span></div>
         <div class="metric"><span class="val count" data-count="60" data-suffix="+">0</span><span class="key">REST endpoints · TeamPulse</span></div>
         <div class="metric"><span class="val sig2 count" data-count="94" data-suffix="%">0</span><span class="key">Accuracy · Fake News Radar</span></div>
       </div>
@@ -694,9 +694,9 @@
         <div class="ch-body">
           <div class="ch-tag rv">P/01 · Systems engineering</div>
           <h3 class="rv"><a href="https://github.com/Paritoshcodes/mini-redis" target="_blank" rel="noopener" data-hot data-cursor="github">mini-redis <span class="arr">↗</span></a></h3>
-          <p class="rv">Built an in-memory key-value server from scratch in <b>C++</b> with an epoll event loop and full RESP protocol parsing — <b>no framework, just sockets</b>. Sustains <b>1K+ commands/sec</b> with pub/sub messaging.</p>
+          <p class="rv">Built an in-memory key-value server from scratch in <b>C++</b> with an epoll event loop and full RESP protocol parsing — <b>no framework, just sockets</b>. Sustains <b>150K+ commands/sec</b> (<b>1M+ pipelined</b>) with pub/sub messaging.</p>
           <div class="chips rv"><span class="chip spec">C++</span><span class="chip">epoll</span><span class="chip">TCP</span><span class="chip">RESP</span><span class="chip">pub/sub</span></div>
-          <div class="ch-metric rv"><span class="metric-num count" data-target="1000" data-suffix="+">0</span><span class="metric-unit">Commands / sec</span></div>
+          <div class="ch-metric rv"><span class="metric-num count" data-target="150" data-suffix="K+">0</span><span class="metric-unit">Commands / sec</span></div>
           <button class="btn console-open rv" id="consoleOpen" data-hot data-cursor="try">Open console <span class="arr">›_</span></button>
         </div>
       </article>
@@ -1732,34 +1732,50 @@
       var cmd=(parts[0]||'').toUpperCase(),a=parts.slice(1);
       switch(cmd){
         case 'PING':return line('ok','PONG');
-        case 'ECHO':return line('val','"'+a.join(' ')+'"');
+        case 'ECHO':
+          if(!a.length)return line('err',"(error) ERR wrong number of arguments for 'echo'");
+          return line('val','"'+a.join(' ')+'"');
         case 'SET':
           if(a.length<2)return line('err',"(error) ERR wrong number of arguments for 'set'");
           store[a[0]]=a[1];delete exp[a[0]];
-          if(a[2]&&a[2].toUpperCase()==='EX'&&+a[3]>0)exp[a[0]]=Date.now()+(+a[3])*1000;
+          for(var oi=2;oi+1<a.length;oi+=2){
+            var opt=a[oi].toUpperCase();
+            if(opt==='EX'||opt==='PX'){
+              if(!/^-?\d+$/.test(a[oi+1]))return line('err','(error) ERR value is not an integer or out of range');
+              exp[a[0]]=Date.now()+(+a[oi+1])*(opt==='EX'?1000:1);
+            }
+          }
           return line('ok','OK');
         case 'GET':
           if(a.length!==1)return line('err',"(error) ERR wrong number of arguments for 'get'");
           return alive(a[0])?line('val','"'+store[a[0]]+'"'):line('ok','(nil)');
         case 'DEL':{var n=0;a.forEach(function(k){if(alive(k)){delete store[k];delete exp[k];n++;}});return line('val','(integer) '+n);}
         case 'EXISTS':return line('val','(integer) '+(alive(a[0])?1:0));
-        case 'INCR':case 'DECR':{
-          var k=a[0];if(!k)return line('err',"(error) ERR wrong number of arguments");
-          var v=alive(k)?store[k]:'0';
+        case 'INCR':{
+          if(a.length!==1)return line('err',"(error) ERR wrong number of arguments for 'incr'");
+          var k=a[0],v=alive(k)?store[k]:'0';
           if(!/^-?\d+$/.test(v))return line('err','(error) ERR value is not an integer or out of range');
-          v=(+v)+(cmd==='INCR'?1:-1);store[k]=String(v);return line('val','(integer) '+v);}
+          v=(+v)+1;store[k]=String(v);return line('val','(integer) '+v);}
         case 'EXPIRE':
+          if(a.length!==2)return line('err',"(error) ERR wrong number of arguments for 'expire'");
+          if(!/^-?\d+$/.test(a[1]))return line('err','(error) ERR value is not an integer or out of range');
           if(!alive(a[0]))return line('val','(integer) 0');
-          exp[a[0]]=Date.now()+(+a[1]||0)*1000;return line('val','(integer) 1');
+          exp[a[0]]=Date.now()+(+a[1])*1000;return line('val','(integer) 1');
         case 'TTL':
           if(!alive(a[0]))return line('val','(integer) -2');
           if(!exp[a[0]])return line('val','(integer) -1');
           return line('val','(integer) '+Math.max(0,Math.round((exp[a[0]]-Date.now())/1000)));
+        case 'PTTL':
+          if(!alive(a[0]))return line('val','(integer) -2');
+          if(!exp[a[0]])return line('val','(integer) -1');
+          return line('val','(integer) '+Math.max(0,exp[a[0]]-Date.now()));
+        case 'PERSIST':{var had=alive(a[0])&&exp[a[0]]?1:0;if(had)delete exp[a[0]];return line('val','(integer) '+had);}
         case 'KEYS':{var ks=Object.keys(store).filter(alive);
           if(!ks.length)return line('ok','(empty array)');
           ks.forEach(function(k,i){line('val',(i+1)+') "'+k+'"');});return;}
+        case 'DBSIZE':return line('val','(integer) '+Object.keys(store).filter(alive).length);
         case 'FLUSHALL':store={};exp={};return line('ok','OK');
-        case 'HELP':return line('ok','SET GET DEL EXISTS INCR DECR EXPIRE TTL KEYS PING ECHO FLUSHALL CLEAR EXIT · SET k v EX seconds');
+        case 'HELP':return line('ok','SET GET DEL EXISTS INCR EXPIRE TTL PTTL PERSIST DBSIZE KEYS PING ECHO FLUSHALL CLEAR EXIT · SET k v EX sec | PX ms');
         case 'CLEAR':out.innerHTML='';return;
         case 'EXIT':case 'QUIT':return close();
         case '':return;

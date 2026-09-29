@@ -289,7 +289,7 @@
 
   body.is-mobile .work-scroll {
     overflow: visible;
-    margin: 0;
+    margin: 0 !important; /* beats the reel engine's full-bleed deck margin, which only suits the horizontal deck */
   }
 
   /* Override the horizontal deck - make it vertical */
@@ -320,6 +320,16 @@
     height: auto;
     border-radius: 12px;
     overflow: hidden;
+  }
+
+  /* vertical stack: every card is "live" - drop the horizontal deck's dimmed, shrunken inactive state */
+  html body.is-mobile .work-deck .ch:not(.live) .ch-media {
+    transform: none;
+    opacity: 1;
+  }
+
+  body.is-mobile .ch.gen .ch-grade {
+    background: linear-gradient(0deg, rgba(5, 6, 9, 0.5), rgba(5, 6, 9, 0) 35%) !important;
   }
 
   body.is-mobile .ch-media video {
@@ -385,12 +395,12 @@
   }
 
   body.is-mobile .pr {
-    padding: 0;
+    padding: 20px 18px 24px;
   }
 
   body.is-mobile .pr-n {
     font-size: 10px;
-    padding-top: 12px;
+    padding-top: 0;
     margin-bottom: 14px;
   }
 
@@ -446,12 +456,13 @@
   body.is-mobile .logrow {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    padding: 18px 0;
+    gap: 4px;
+    padding: 14px 0;
   }
 
   body.is-mobile .logrow .yr {
-    font-size: clamp(18px, 5vw, 24px);
+    font-size: 12px;
+    letter-spacing: 0.14em;
   }
 
   body.is-mobile .logrow .ttl {

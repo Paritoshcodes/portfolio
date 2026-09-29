@@ -26,6 +26,7 @@
     { id: 'now', label: 'NOW', name: 'Now' },
     { id: 'about', label: 'PROFILE', name: 'Profile' },
     { id: 'work', label: 'CHANNELS', name: 'Projects' },
+    { id: 'oss', label: 'UPSTREAM', name: 'Open source' },
     { id: 'method', label: 'METHOD', name: 'Method' },
     { id: 'stack', label: 'STACK', name: 'Stack' },
     { id: 'log', label: 'LOG', name: 'Log' },
@@ -65,10 +66,6 @@
 
   function lerp(a, b, t) {
     return a + (b - a) * t;
-  }
-
-  function easeOutCubic(t) {
-    return 1 - Math.pow(1 - t, 3);
   }
 
   function vibrate(pattern) {
@@ -422,7 +419,6 @@
         var card = entry.target;
         var video = card.querySelector('video');
         var sweep = card.querySelector('.sweep');
-        var metricNum = card.querySelector('.metric-num');
 
         if (entry.isIntersecting) {
           // Play video
@@ -467,10 +463,7 @@
             }
           }
 
-          // Animate counter
-          if (metricNum && !metricNum.dataset.done) {
-            animateCounter(metricNum);
-          }
+          // Counters are owned by the shared count manager in index.html
         } else {
           // Pause video when out of view
           if (video) {
@@ -494,45 +487,6 @@
     if (video.dataset.src && !video.src) {
       video.src = video.dataset.src;
     }
-  }
-
-  function animateCounter(el) {
-    if (!el || el.dataset.done) return;
-    el.dataset.done = '1';
-
-    var target = parseFloat(el.dataset.count || el.dataset.target || 0);
-    var suffix = el.dataset.suffix || '';
-    var prefix = el.dataset.prefix || '';
-    var final = el.dataset.final || '';
-    var pad = parseInt(el.dataset.pad || 0, 10);
-
-    function fmt(v) {
-      var s = Math.round(v).toLocaleString();
-      if (pad) s = String(Math.round(v)).padStart(pad, '0');
-      return prefix + s + suffix;
-    }
-
-    if (reduceMotion) {
-      el.textContent = final || fmt(target);
-      return;
-    }
-
-    var duration = 1200;
-    var start = null;
-
-    function step(ts) {
-      if (!start) start = ts;
-      var progress = Math.min((ts - start) / duration, 1);
-      var eased = easeOutCubic(progress);
-      el.textContent = fmt(target * eased);
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else if (final) {
-        el.textContent = final;
-      }
-    }
-
-    requestAnimationFrame(step);
   }
 
   /* ============================================================
@@ -622,9 +576,6 @@
         );
       }
 
-      aboutTl.add(function() {
-        about.querySelectorAll('.count').forEach(animateCounter);
-      }, 0.3);
     }
 
     // Method section

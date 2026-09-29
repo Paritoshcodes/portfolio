@@ -76,7 +76,8 @@
   GenCanvas.prototype.resize = function () {
     // layout size, not the painted rect: scenes dolly/scale in, and that must not shrink the backing store
     var w = Math.max(1, this.c.offsetWidth), h = Math.max(1, this.c.offsetHeight);
-    var dpr = Math.min(window.devicePixelRatio || 1, 1.75);
+    // full-screen stage canvases stay capped for fill-rate; small phone cards render crisp
+    var dpr = Math.min(window.devicePixelRatio || 1, document.body.classList.contains('stage') ? 1.75 : 2);
     if (w === this.w && h === this.h && dpr === this.dpr) return;
     this.w = w; this.h = h; this.dpr = dpr; this.st.dpr = dpr;
     this.c.width = Math.round(w * dpr); this.c.height = Math.round(h * dpr);

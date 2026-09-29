@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/mobile.css" media="(max-width:767px) and (hover:none), (max-width:767px) and (pointer:coarse)" />
+<link rel="stylesheet" href="css/mobile.css" />
 <style>
   :root{
     /* Instrument black — deep, faint cool undertone so both traces glow */
@@ -196,7 +196,6 @@
   .mq-track .tok::before{content:"◇";color:var(--signal);-webkit-text-stroke:0;font-size:12px;margin:0 34px;opacity:.7}
   .mq-track .tok:nth-child(even)::before{color:var(--signal-2)}
   body.stage #now .marquee{display:block;border-block:1px solid var(--line);margin-top:clamp(20px,4vh,40px)}
-  body.mobile .marquee{display:block;border-block:1px solid var(--line)}
   @keyframes mq{to{transform:translateX(-50%)}}
   @media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
 
@@ -400,61 +399,6 @@
   @media (prefers-reduced-motion:reduce){body.stage .hud .l .dot{animation:none}}
 
   /* ============================================================
-     ENGINE B - MOBILE "SIGNAL REEL": one window, scroll-scrubbed.
-     Each section is a full-screen panel whose content COMES IN and
-     LEAVES bound to scroll position (not fire-once), plus a full-bleed
-     swipe deck for projects. body.mobile (JS). Desktop stage untouched.
-     ============================================================ */
-  body.mobile{overflow-x:hidden}
-  body.mobile #stage{position:relative}
-  body.mobile #stage > section{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(88px,15vh,124px);overflow:hidden}
-  body.mobile #stage > section.hero{padding-block:0;overflow:visible}
-  body.mobile #stage > section.now{min-height:62svh;padding-block:34px}
-  body.mobile .pad{padding-block:clamp(88px,15vh,124px)}
-  body.mobile .modhead{margin-bottom:clamp(26px,4vh,42px)}
-  body.mobile .contact h2{font-size:clamp(34px,9vw,60px)}
-  /* hidden entrance states are set in JS so the static fallback stays visible */
-  body.mobile #stage > section > .wrap,body.mobile .hero-inner{will-change:transform,opacity}
-
-  /* WORK = full-bleed horizontal swipe deck */
-  body.mobile #work{padding-block:clamp(80px,12vh,108px);justify-content:center;overflow:hidden}
-  body.mobile #work .wrap{width:100%}
-  body.mobile .work-scroll{overflow:visible;margin-top:clamp(16px,2.6vh,26px);margin-inline:calc(var(--gut)*-1)}
-  body.mobile .work-deck{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;touch-action:pan-x;scrollbar-width:none;padding-inline:7vw;scroll-padding-inline:7vw}
-  body.mobile .work-deck::-webkit-scrollbar{display:none}
-  body.mobile .work-deck .ch{position:relative;flex:0 0 86vw;max-width:86vw;scroll-snap-align:center;scroll-snap-stop:always;padding:0;border:none}
-  body.mobile .work-deck .ch:last-of-type{border-bottom:none}
-  body.mobile .work-deck .ch-media{position:relative;width:100%;height:clamp(250px,38vh,380px);aspect-ratio:auto;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#050608;transition:transform .55s var(--ease),opacity .55s var(--ease)}
-  body.mobile .work-deck .ch:not(.live) .ch-media{transform:scale(.9);opacity:.4}
-  body.mobile .work-deck .ch-media video{width:100%;height:100%;object-fit:cover;display:block}
-  body.mobile .work-deck .ch-media .ch-grade{display:block;position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,6,9,.88),rgba(5,6,9,.04) 58%)}
-  body.mobile .work-deck .ch-media .sweep{display:block;position:absolute;left:0;right:0;height:36%;background:linear-gradient(180deg,transparent,rgba(255,166,61,.18),rgba(255,206,133,.52),rgba(255,166,61,.18),transparent);opacity:0}
-  body.mobile .work-deck .ch-media .sweep.s2{background:linear-gradient(180deg,transparent,rgba(52,226,214,.16),rgba(162,244,238,.46),rgba(52,226,214,.16),transparent)}
-  body.mobile .work-deck .ch-body{padding:18px 2px 0}
-  body.mobile .work-deck .ch-tag{margin-bottom:9px}
-  body.mobile .work-deck .ch h3{font-size:clamp(26px,8vw,38px);margin-bottom:11px}
-  body.mobile .work-deck .ch p{font-size:13.5px;line-height:1.6;margin-bottom:13px}
-  body.mobile .work-deck .ch-metric{margin-top:15px}
-  body.mobile .work-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-inline:calc(var(--gut)*-1);padding-inline:7vw;margin-top:clamp(16px,2.6vh,26px)}
-  body.mobile .work-dots{display:flex;gap:9px;align-items:center}
-  body.mobile .work-dots span{width:7px;height:7px;border-radius:50%;background:var(--line-2);transition:background .3s,box-shadow .3s,transform .3s}
-  body.mobile .work-dots span.on{background:var(--signal);box-shadow:0 0 8px var(--signal);transform:scale(1.35)}
-  body.mobile .work-swipe{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint)}
-  body.mobile .work-swipe .ar{display:inline-flex;gap:2px}
-  body.mobile .work-swipe .ar i{font-style:normal;color:var(--signal);animation:swipepulse 1.6s var(--ease) infinite}
-  body.mobile .work-swipe .ar i:nth-child(2){animation-delay:.18s}
-  @keyframes swipepulse{0%,100%{opacity:.3;transform:translateX(0)}50%{opacity:1;transform:translateX(3px)}}
-  @media (prefers-reduced-motion:reduce){body.mobile .work-swipe .ar i{animation:none}}
-
-  /* mobile instrument HUD - cohesion with the desktop readout */
-  body.mobile .hud{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:56;pointer-events:none;align-items:center;gap:9px;padding:9px var(--gut);font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);background:linear-gradient(0deg,rgba(6,7,10,.92),transparent)}
-  body.mobile .hud .l{display:inline-flex;align-items:center;gap:8px;color:var(--signal)}
-  body.mobile .hud .l .dot{width:7px;height:7px;border-radius:50%;background:var(--signal);box-shadow:0 0 8px var(--signal);animation:pulse 1.4s infinite}
-  body.mobile .hud #hud-scene{color:var(--paper)}
-  body.mobile .hud #hud-tc{display:none}
-  @media (prefers-reduced-motion:reduce){body.mobile .hud .l .dot{animation:none}}
-
-  /* ============================================================
      V3 SPECTACLE - ghost type, char split, velocity, hover, set-pieces
      ============================================================ */
   .c{display:inline-block;will-change:transform}
@@ -463,8 +407,6 @@
   .ghost{display:none;position:absolute;z-index:0;pointer-events:none;white-space:nowrap;font-family:var(--display);font-weight:800;line-height:1;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(234,232,224,.10);will-change:transform,opacity}
   body.stage .ghost{display:block;right:-3vw;top:50%;transform:translateY(-50%);font-size:clamp(140px,23vw,360px)}
   body.stage .scene>.wrap{position:relative;z-index:1}
-  body.mobile .ghost{display:block;right:-6vw;top:14px;font-size:clamp(88px,24vw,170px);-webkit-text-stroke-color:rgba(234,232,224,.09)}
-  body.mobile #stage > section > .wrap{position:relative;z-index:1}
   body.rush .ghost{-webkit-text-stroke-color:rgba(255,166,61,.15)}
 
   body.rush h1,body.rush h2,body.rush h3,body.rush .now-role,body.rush .metric .val{text-shadow:2px 0 0 rgba(255,80,80,.38),-2px 0 0 rgba(70,220,255,.38)}
@@ -528,7 +470,6 @@
   /* bottom corners: recorder strip (left) and the Bengaluru clock (right) */
   .hud .sep{width:1px;height:10px;background:var(--line-2);flex:none}
   .hud .hud-scope{display:block;width:64px;height:16px;flex:none}
-  body.mobile .hud .hud-scope{display:none}
   .hud-r{display:none}
   body.stage .hud-r{display:flex;position:fixed;right:var(--gut);bottom:62px;z-index:56;pointer-events:none;align-items:center;gap:10px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
   body.stage .hud-r b{color:var(--signal-2);font-weight:500}
@@ -795,13 +736,14 @@
 
       <article class="ch" data-i="0">
         <div class="ch-media">
-          <video data-src="assets/videos/mini-redis.mp4" data-start="4.2" poster="assets/screenshots/mini-redis.png" muted loop playsinline preload="none"></video>
+          <video data-src="assets/videos/mini-redis.mp4" data-src-m="assets/videos/mini-redis-m.mp4" data-start="4.2" poster="assets/screenshots/mini-redis.png" muted loop playsinline preload="none"></video>
           <div class="ch-scan"></div><div class="ch-vig"></div><div class="ch-grade"></div><div class="sweep"></div>
           <span class="ch-corner tl"></span><span class="ch-corner br"></span><span class="ch-rec"><b></b> P/01</span>
         </div>
         <div class="ch-body">
           <div class="ch-tag rv">P/01 · Systems engineering</div>
           <h3 class="rv"><a href="https://github.com/Paritoshcodes/mini-redis" target="_blank" rel="noopener" data-hot data-cursor="github">mini-redis <span class="arr">↗</span></a></h3>
+          <p class="m-sum">A Redis-compatible server in <b>594 lines of C++</b> on a hand-rolled epoll loop, driven by stock redis-cli and redis-benchmark.</p>
           <p class="rv">A Redis-compatible server in <b>594 lines of C++</b>: a single-threaded, non-blocking <b>epoll</b> loop over raw POSIX sockets, and a RESP parser that buffers partial frames so pipelined commands survive split TCP reads. Driven by stock <b>redis-cli</b> and <b>redis-benchmark</b>.</p>
           <div class="chips rv"><span class="chip spec">C++</span><span class="chip">epoll</span><span class="chip">POSIX sockets</span><span class="chip">RESP</span><span class="chip">pub/sub</span></div>
           <div class="ch-metric rv"><span class="metric-num count" data-count="2.7" data-dec="1" data-suffix="M+">2.7M+</span><span class="metric-unit">GET / sec · 128-deep pipeline</span></div>
@@ -819,6 +761,7 @@
         <div class="ch-body">
           <div class="ch-tag rv">P/02 · Agents · Causal measurement</div>
           <h3 class="rv"><a href="https://github.com/Paritoshcodes/revenant" target="_blank" rel="noopener" data-hot data-cursor="github">Revenant <span class="arr">↗</span></a></h3>
+          <p class="m-sum">A payment-recovery agent that measures the lift it <b>caused</b>: randomised holdout, bootstrap intervals, tamper-proof audit log.</p>
           <p class="rv">A payment-recovery agent that reports the lift it <b>caused</b>, not gross recovery: a stratified 50/50 holdout, bootstrap intervals, and a calibration harness that caught its own interval being <b>38% too wide</b>. The LLM can only name a failure class; trusted code picks the retry. Built for the Razorpay AI Buildathon.</p>
           <div class="chips rv"><span class="chip spec">Python</span><span class="chip">FastAPI</span><span class="chip">TypeScript</span><span class="chip">PostgreSQL</span><span class="chip">Playwright</span></div>
           <div class="ch-metric rv"><span class="metric-num count" data-count="93.8" data-dec="1" data-suffix="%">93.8%</span><span class="metric-unit">Coverage of the true lift · 2,000 runs</span></div>
@@ -835,6 +778,7 @@
         <div class="ch-body">
           <div class="ch-tag rv">P/03 · Agent CI · AWS</div>
           <h3 class="rv"><a href="https://github.com/Paritoshcodes/agent-replay" target="_blank" rel="noopener" data-hot data-cursor="github">Agent Replay <span class="arr">↗</span></a></h3>
+          <p class="m-sum">Five recorded runs become a <b>YAML contract</b>; CI fails on the exact step a later run diverges. Set logic, not an LLM.</p>
           <p class="rv">Records an agent five times and derives a <b>YAML contract</b> of the tool calls it must make and their order. Later runs are judged by <b>set logic, not an LLM</b>, and CI fails on the exact step that diverged. Built at the WeMakeDevs × AWS hackathon.</p>
           <div class="chips rv"><span class="chip spec">AWS Bedrock</span><span class="chip">Strands Agents</span><span class="chip">Python</span><span class="chip">Lambda</span><span class="chip">DynamoDB</span></div>
           <div class="ch-metric rv"><span class="metric-num count" data-count="339">339</span><span class="metric-unit">pytest tests · reproducible verdicts</span></div>
@@ -844,13 +788,14 @@
 
       <article class="ch" data-i="3">
         <div class="ch-media">
-          <video data-src="assets/videos/vigil.mp4" poster="assets/screenshots/vigil.png" muted loop playsinline preload="none"></video>
+          <video data-src="assets/videos/vigil.mp4" data-src-m="assets/videos/vigil-m.mp4" poster="assets/screenshots/vigil.png" muted loop playsinline preload="none"></video>
           <div class="ch-scan"></div><div class="ch-vig"></div><div class="ch-grade"></div><div class="sweep s2"></div>
           <span class="ch-corner tl"></span><span class="ch-corner br"></span><span class="ch-rec"><b></b> P/04</span>
         </div>
         <div class="ch-body">
           <div class="ch-tag rv">P/04 · ML · Full stack · Published</div>
           <h3 class="rv"><a href="https://github.com/Paritoshcodes/Vigil" target="_blank" rel="noopener" data-hot data-cursor="github">Vigil <span class="arr">↗</span></a></h3>
+          <p class="m-sum">Forecasts <b>7 hazard types across 25 cities</b> with XGBoost + LightGBM, explained with SHAP. Paper accepted in ISJEM.</p>
           <p class="rv">Forecasts <b>seven natural-hazard types across 25 Indian cities</b> with XGBoost and LightGBM ensembles, explained with <b>SHAP</b> and served through FastAPI and PostgreSQL. The paper is <b>accepted in ISJEM</b>.</p>
           <div class="chips rv"><span class="chip spec">XGBoost</span><span class="chip">LightGBM</span><span class="chip">SHAP</span><span class="chip">FastAPI</span><span class="chip">React</span></div>
           <div class="ch-metric rv"><span class="metric-num count" data-count="0.876" data-dec="3">0.876</span><span class="metric-unit">ROC AUC · heatwave</span></div>
@@ -860,13 +805,14 @@
 
       <article class="ch" data-i="4">
         <div class="ch-media">
-          <video data-src="assets/videos/TeamPulse.mp4" poster="assets/screenshots/teampulse.png" muted loop playsinline preload="none"></video>
+          <video data-src="assets/videos/TeamPulse.mp4" data-src-m="assets/videos/TeamPulse-m.mp4" poster="assets/screenshots/teampulse.png" muted loop playsinline preload="none"></video>
           <div class="ch-scan"></div><div class="ch-vig"></div><div class="ch-grade"></div><div class="sweep"></div>
           <span class="ch-corner tl"></span><span class="ch-corner br"></span><span class="ch-rec"><b></b> P/05</span>
         </div>
         <div class="ch-body">
           <div class="ch-tag rv">P/05 · Full stack · Realtime</div>
           <h3 class="rv"><a href="https://team-pulse-client-x2oh.vercel.app" target="_blank" rel="noopener" data-hot data-cursor="live">TeamPulse <span class="arr">↗</span></a></h3>
+          <p class="m-sum">A Slack-style platform with <b>WebRTC calls</b>, three access tiers and a Bull + Redis job queue. Live on Vercel.</p>
           <p class="rv">A Slack-style platform: channels, DMs, typing presence and <b>WebRTC calls</b> on Express and MongoDB. Three access tiers behind JWT and Google OAuth, slow work moved onto a <b>Bull + Redis</b> queue. Tested with Jest, deployed on Vercel and Railway.</p>
           <div class="chips rv"><span class="chip spec">Socket.IO</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">WebRTC</span></div>
           <div class="ch-metric rv"><span class="metric-num count" data-count="73">73</span><span class="metric-unit">REST endpoints</span></div>
@@ -1332,15 +1278,19 @@
   var velEnv=0, amp=0, ampVel=0;
   var STEP=2, isMobileNow=!isDesktop;
   function size(){
-    isMobileNow=window.matchMedia('(max-width:760px)').matches;
+    isMobileNow=window.matchMedia('(max-width:760px)').matches||document.body.classList.contains('m'); // body.m: phone/tablet layout
     STEP=isMobileNow?3:2;
     DPR=Math.min(window.devicePixelRatio||1, isMobileNow?1.5:2);
     W=canvas.clientWidth;H=canvas.clientHeight;
     canvas.width=W*DPR;canvas.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);
-    y0=isMobileNow?H*0.32:H*0.5;
+    y0=isMobileNow?mobileScopeY():H*0.5;
     ctx.clearRect(0,0,W,H);
   }
   window.addEventListener('resize',size);
+  function mobileScopeY(){ // under the CTAs, clear of the copy
+    var cta=document.querySelector('.hero-cta'),cb=cta?cta.getBoundingClientRect().bottom-canvas.getBoundingClientRect().top:H*0.6;
+    return Math.min(H-96,Math.max(H*0.7,cb+H*0.12));
+  }
   window.addEventListener('pointermove',function(e){
     var now=performance.now();
     if(havePtr){var dt=Math.max((now-lastPT)/1000,1e-4);
@@ -1375,7 +1325,7 @@
     var sy=window.scrollY,scrollSpeed=Math.abs(sy-lastScrollY)/Math.max(dt,1e-4);lastScrollY=sy;
     velEnv=Math.max(velEnv, pointerSpeed, scrollSpeed*0.55);pointerSpeed=0;
     velEnv*=Math.pow(0.0018,dt);
-    var maxAmp=H*(isMobileNow?0.19:0.32), idleAmp=Math.max(5,H*0.028);
+    var maxAmp=H*(isMobileNow?0.09:0.32), idleAmp=Math.max(5,H*(isMobileNow?0.014:0.028));
     var ampTarget=maxAmp*Math.tanh((idleAmp+0.06*velEnv)/maxAmp);
     var s=spring(amp,ampVel,ampTarget,0.12,dt);amp=s[0];ampVel=s[1];
     tWave+=dt;
@@ -1425,7 +1375,7 @@
       }
       var isM=window.matchMedia('(max-width:760px)').matches;
       var Wn=Math.min(W2*(isM?0.92:0.66),860),s=Wn/GW;
-      var ox=(W2-Wn)/2,oy=(isM?H2*0.32:H2*0.5)-(GH/2)*s; // anchored to the scope midline
+      var ox=(W2-Wn)/2,oy=(isM?y0:H2*0.5)-(GH/2)*s; // anchored to the scope midline
       var t0=null,DUR=2500;
       (function step(ts){
         if(!t0)t0=ts;var t=Math.min((ts-t0)/DUR,1);
@@ -1478,8 +1428,9 @@
   function loadVideo(v){
     if(navigator.connection&&navigator.connection.saveData)return;
     if(v&&v.dataset.src&&!v.src){
-      if(v.dataset.start)v.addEventListener('loadedmetadata',function(){try{v.currentTime=+v.dataset.start;}catch(e){}},{once:true});
-      v.src=v.dataset.src;
+      var cut=document.body.classList.contains('m')&&v.dataset.srcM; // phones: light, pre-trimmed cut
+      if(v.dataset.start&&!cut)v.addEventListener('loadedmetadata',function(){try{v.currentTime=+v.dataset.start;}catch(e){}},{once:true});
+      v.src=cut||v.dataset.src;
     }
   }
   function setupVideos(){
@@ -1766,186 +1717,11 @@
      are a full-bleed swipe deck. (transform/opacity; reduced-motion
      falls back to fully-visible static.)
      ============================================================ */
-  function mScene(sec){return gsap.timeline({scrollTrigger:{trigger:sec,start:'top bottom',end:'bottom top',scrub:0.6}});}
-  function mMod(tl,sec){
-    var mh=sec.querySelector('[data-mh]');if(!mh)return;
-    var rule=mh.querySelector('[data-draw]');
-    if(rule)tl.fromTo(rule,{scaleX:0},{scaleX:1,duration:.32,transformOrigin:'left'},0);
-    tl.fromTo(mh.querySelectorAll('[data-rise]'),{autoAlpha:0,y:14},{autoAlpha:1,y:0,duration:.3,stagger:.06},0.04);
-  }
-  function mobileChoreo(){
-    function mGhost(tl,sec){var g=sec.querySelector('.ghost');
-      if(g)tl.fromTo(g,{xPercent:10,autoAlpha:0},{xPercent:-10,autoAlpha:1,ease:'none',duration:1},0);}
-    // HERO - lifts, scales and dissolves as you scroll away (its own moment)
-    var heroInner=document.querySelector('.hero-inner');
-    if(heroInner)gsap.to(heroInner,{yPercent:-10,scale:.9,autoAlpha:0,filter:'blur(6px)',ease:'none',
-      scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:0.6}});
-    var heroMeta=document.querySelector('[data-hero-meta]');
-    if(heroMeta)gsap.to(heroMeta,{autoAlpha:0,y:-20,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'42% top',scrub:0.6}});
-
-    // NOW - clip-wipe in, slide out
-    var now=document.getElementById('now');
-    if(now){
-      var ni=now.querySelector('.now-inner'),tn=mScene(now);
-      mGhost(tn,now);
-      tn.fromTo(now.querySelectorAll('.now-l,.now-r'),{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:.45,stagger:.12,ease:'power2.out'},0.04);
-      tn.to(ni,{autoAlpha:0,x:-30,duration:.28,ease:'power1.in'},0.72);
-    }
-    // ABOUT - heading lines mask up, metric rule draws, rows count
-    var about=document.getElementById('about');
-    if(about){
-      var aw=about.querySelector('.wrap'),ta=mScene(about);
-      mMod(ta,about);
-      mGhost(ta,about);
-      ta.fromTo(about.querySelectorAll('.about-copy .clip > i'),{yPercent:110},{yPercent:0,duration:.5,stagger:.07,ease:'power3.out'},0.06);
-      ta.fromTo(about.querySelectorAll('.about-body'),{autoAlpha:0,y:18},{autoAlpha:1,y:0,duration:.45},0.2);
-      var ar=about.querySelector('[data-draw-v]');if(ar)ta.fromTo(ar,{scaleY:0},{scaleY:1,duration:.5,transformOrigin:'top'},0.16);
-      ta.fromTo(about.querySelectorAll('.metric'),{autoAlpha:0,y:18},{autoAlpha:1,y:0,duration:.4,stagger:.07},0.26);
-      ta.to(aw,{autoAlpha:0,yPercent:-8,duration:.28,ease:'power1.in'},0.74);
-    }
-    // OPEN SOURCE - rows slide in, each git graph draws and its MERGED stamp lands once
-    var oss=document.getElementById('oss');
-    if(oss){
-      var ow=oss.querySelector('.wrap'),to2=mScene(oss);
-      mMod(to2,oss);
-      mGhost(to2,oss);
-      to2.fromTo(oss.querySelectorAll('[data-o-rise]'),{autoAlpha:0,y:18},{autoAlpha:1,y:0,duration:.4},0.05);
-      to2.fromTo(oss.querySelectorAll('[data-o-row]'),{autoAlpha:0,x:-30},{autoAlpha:1,x:0,duration:.4,stagger:.1,ease:'power3.out'},0.12);
-      to2.to(ow,{autoAlpha:0,yPercent:-6,duration:.28,ease:'power1.in'},0.8);
-      oss.querySelectorAll('[data-o-row]').forEach(function(row){
-        var g=gitGraphIn(row);
-        if(row.getBoundingClientRect().bottom<0)g.progress(1); // already scrolled past: show it merged
-        ScrollTrigger.create({trigger:row,start:'top 85%',
-          onEnter:function(){if(!g.progress())g.play();},
-          onEnterBack:function(){g.progress(1);}}); // walking back up: fully drawn, no replay
-      });
-    }
-    // METHOD - cards pop up (scale + lift), then lift away
-    var method=document.getElementById('method');
-    if(method){
-      var mw=method.querySelector('.wrap'),tm=mScene(method);
-      mMod(tm,method);
-      mGhost(tm,method);
-      tm.fromTo(method.querySelectorAll('.pr'),{autoAlpha:0,y:40,scale:.92},{autoAlpha:1,y:0,scale:1,duration:.5,stagger:.1,ease:'power3.out'},0.06);
-      tm.fromTo(method.querySelectorAll('.pr-ghost'),{y:36,autoAlpha:0},{y:0,autoAlpha:1,duration:.5,stagger:.12},0.14);
-      tm.to(mw,{autoAlpha:0,yPercent:-8,duration:.28,ease:'power1.in'},0.74);
-    }
-    // STACK - columns slide in from alternating sides, list cascades
-    var stack=document.getElementById('stack');
-    if(stack){
-      var sw=stack.querySelector('.wrap'),ts=mScene(stack);
-      mMod(ts,stack);
-      mGhost(ts,stack);
-      stack.querySelectorAll('.scol').forEach(function(col,k){ts.fromTo(col,{autoAlpha:0,x:(k%2?40:-40)},{autoAlpha:1,x:0,duration:.45,ease:'power3.out'},0.06+k*0.05);});
-      ts.fromTo(stack.querySelectorAll('.scol li'),{autoAlpha:0,y:12},{autoAlpha:1,y:0,duration:.34,stagger:.02},0.26);
-      ts.to(sw,{autoAlpha:0,yPercent:-8,duration:.28,ease:'power1.in'},0.74);
-    }
-    // LOG - rows slide in from the left, then lift away
-    var log=document.getElementById('log');
-    if(log){
-      var lw=log.querySelector('.wrap'),tlog=mScene(log);
-      mMod(tlog,log);
-      mGhost(tlog,log);
-      tlog.fromTo(log.querySelectorAll('.logrow'),{autoAlpha:0,x:-40},{autoAlpha:1,x:0,duration:.45,stagger:.1,ease:'power3.out'},0.06);
-      log.querySelectorAll('.logrow .ttl').forEach(function(t,k){
-        if(t.children.length)return;
-        if(!t.dataset.t)t.dataset.t=t.textContent;
-        tlog.add(function(){if(FX.tele)typeIn(t,t.dataset.t,420);},0.1+k*0.08);
-      });
-      tlog.to(lw,{autoAlpha:0,yPercent:-8,duration:.28,ease:'power1.in'},0.74);
-    }
-    // CONTACT - headline masks up, channels stagger, sign-off draws (last section: reveal on entry, no exit)
-    var contact=document.getElementById('contact');
-    if(contact){
-      var tc=gsap.timeline({scrollTrigger:{trigger:contact,start:'top 82%',end:'top 30%',scrub:0.6}});
-      mMod(tc,contact);
-      mGhost(tc,contact);
-      var conC=[];
-      if(FX.chars){contact.querySelectorAll('h2 .clip > i').forEach(function(l){splitChars(l).forEach(function(c){conC.push(c);});});}
-      if(conC.length)tc.fromTo(conC,{yPercent:130,rotate:gsap.utils.wrap([-7,7]),autoAlpha:0},{yPercent:0,rotate:0,autoAlpha:1,duration:.55,stagger:{each:.018,from:'random'},ease:'power4.out'},0.06);
-      else tc.fromTo(contact.querySelectorAll('h2 .clip > i'),{yPercent:110},{yPercent:0,duration:.55,stagger:.08},0.06);
-      tc.fromTo(contact.querySelectorAll('.channel'),{autoAlpha:0,y:26},{autoAlpha:1,y:0,duration:.45,stagger:.08},0.22);
-      var cf=contact.querySelector('footer');if(cf)tc.fromTo(cf,{autoAlpha:0,y:14},{autoAlpha:1,y:0,duration:.4},0.34);
-      tc.add(playFlatline,0.4);
-      var cst=contact.querySelector('.so-text');if(cst)tc.fromTo(cst,{autoAlpha:0},{autoAlpha:1,duration:.32},0.5);
-    }
-  }
-  function buildWorkDeck(){
-    var deck=document.querySelector('.work-pin');if(!deck)return;
-    deck.classList.add('work-deck');
-    var chans=Array.prototype.slice.call(deck.querySelectorAll('.ch'));
-    var scroll=document.querySelector('.work-scroll');
-    var foot=document.createElement('div');foot.className='work-foot';
-    var dots=document.createElement('div');dots.className='work-dots';
-    chans.forEach(function(_,i){var s=document.createElement('span');if(i===0)s.className='on';dots.appendChild(s);});
-    var swipe=document.createElement('div');swipe.className='work-swipe';swipe.innerHTML='Swipe <span class="ar"><i>\u203A</i><i>\u203A</i></span>';
-    foot.appendChild(dots);foot.appendChild(swipe);
-    if(scroll&&scroll.parentNode)scroll.parentNode.insertBefore(foot,scroll.nextSibling);
-    var dotEls=dots.querySelectorAll('span');
-    var current=0, workVisible=false;
-    function playVid(idx){
-      chans.forEach(function(ch,k){var v=ch.querySelector('video');if(!v)return;
-        if(k===idx){loadVideo(v);if(!reduce){v.muted=true;v.loop=true;v.play&&v.play().catch(function(){});}}
-        else{try{v.pause();}catch(e){}}});
-    }
-    function activate(idx,silent){
-      current=idx;
-      chans.forEach(function(ch,k){ch.classList.toggle('live',k===idx);if(dotEls[k])dotEls[k].classList.toggle('on',k===idx);});
-      if(silent)return;
-      var ch=chans[idx];if(!ch)return;
-      playVid(idx);
-      var num=ch.querySelector('.metric-num');if(num)animateCount(num);
-      var sweep=ch.querySelector('.sweep');
-      if(sweep)gsap.fromTo(sweep,{yPercent:-120,opacity:.85},{yPercent:260,opacity:0,duration:.95,ease:'power2.inOut'});
-      if(!ch.dataset.played){
-        ch.dataset.played='1';
-        var vid=ch.querySelector('video');
-        if(vid)gsap.fromTo(vid,{scale:1.14},{scale:1,duration:1.1,ease:'power3.out'});
-        gsap.fromTo(ch.querySelectorAll('.rv'),{y:24,autoAlpha:0},{y:0,autoAlpha:1,duration:.6,stagger:.08,ease:'power3.out'});
-      }
-    }
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){
-      if(e.isIntersecting&&e.intersectionRatio>=0.6){activate(chans.indexOf(e.target),!workVisible);}
-    });},{root:deck,threshold:[0.6]});
-    chans.forEach(function(ch){io.observe(ch);});
-    if(FX.tilt&&!reduce){
-      var tick=false;
-      deck.addEventListener('scroll',function(){
-        if(tick)return;tick=true;
-        requestAnimationFrame(function(){
-          chans.forEach(function(ch){
-            var m=ch.querySelector('.ch-media');if(!m)return;
-            var r=ch.getBoundingClientRect();
-            var off=(r.left+r.width/2-window.innerWidth/2)/window.innerWidth;
-            gsap.set(m,{rotationY:gsap.utils.clamp(-9,9,off*-18),transformPerspective:700});
-          });
-          tick=false;
-        });
-      },{passive:true});
-    }
-    activate(0,true);
-    ScrollTrigger.create({trigger:'#work',start:'top 75%',end:'bottom 25%',
-      onEnter:function(){workVisible=true;activate(current,false);},
-      onEnterBack:function(){workVisible=true;activate(current,false);},
-      onLeave:function(){workVisible=false;},
-      onLeaveBack:function(){workVisible=false;}});
-    // section heading + deck come in and leave with the scroll (one scrubbed timeline)
-    var wmod=document.querySelector('#work .modhead');
-    var tw=mScene(document.getElementById('work'));
-    if(wmod){var wr=wmod.querySelector('[data-draw]');if(wr)tw.fromTo(wr,{scaleX:0},{scaleX:1,duration:.32,transformOrigin:'left'},0);
-      tw.fromTo(wmod.querySelectorAll('[data-rise]'),{autoAlpha:0,y:14},{autoAlpha:1,y:0,duration:.3,stagger:.06},0.04);}
-    var ents=[scroll,foot].filter(Boolean);
-    tw.fromTo(ents,{autoAlpha:0,y:26},{autoAlpha:1,y:0,duration:.4,stagger:.06},0.06);
-    var outs=[wmod,scroll,foot].filter(Boolean);
-    tw.to(outs,{autoAlpha:0,yPercent:-6,duration:.28,ease:'power1.in'},0.74);
-  }
   function buildMobileReel(){
-    document.body.classList.add('mobile');
     injectGhosts();
-    mobileChoreo();
-    buildWorkDeck();
     watchCounts();
-    runGensWhenVisible();
+    if(window.PSMobile)PSMobile.run({gsap:gsap,ScrollTrigger:ScrollTrigger,splitChars:splitChars,gitGraphIn:gitGraphIn,
+      playFlatline:playFlatline,animateCount:animateCount,sfx:sfx,kick:function(v){velEnv=Math.max(velEnv,v);}});
   }
   // generative canvases outside the stage animate only while on screen
   function runGensWhenVisible(){

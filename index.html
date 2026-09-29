@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Paritosh Singh — Backend & Systems Engineer</title>
-<meta name="description" content="Paritosh Singh — backend & systems engineer and SDET. C++ TCP servers, ML in production, low-latency platforms, and the automated test harness that proves them. CS + Data Science, SRM Institute. Available for full-time roles, 2027." />
+<meta name="description" content="Paritosh Singh — backend &amp; systems engineer and SDET at HealthEdge. A Redis-compatible C++ server at 2.7M ops/sec pipelined, AI agents with audited, measured behaviour, merged open-source fixes, and the test harness that proves it all. CS + Data Science, SRM Institute. Available for full-time roles, 2027." />
 <meta name="theme-color" content="#06070A" />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <link rel="alternate icon" href="assets/favicon.ico" sizes="any" />
@@ -12,18 +12,19 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://paritoshsingh.me/" />
 <meta property="og:title" content="Paritosh Singh — Backend & Systems Engineer" />
-<meta property="og:description" content="C++ TCP servers, ML in production, and the automated test harness that proves them. Available for full-time roles, 2027." />
+<meta property="og:description" content="C++ servers on raw epoll sockets, AI agents that can't go rogue, merged open-source fixes, and the test harness that proves them. Available for full-time roles, 2027." />
 <meta property="og:image" content="https://paritoshsingh.me/assets/screenshots/preview.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Paritosh Singh — Backend & Systems Engineer" />
-<meta name="twitter:description" content="C++ TCP servers, ML in production, and the automated test harness that proves them." />
+<meta name="twitter:description" content="C++ servers on raw epoll sockets, AI agents that can't go rogue, and the test harness that proves them." />
 <meta name="twitter:image" content="https://paritoshsingh.me/assets/screenshots/preview.png" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Paritosh Singh","url":"https://paritoshsingh.me","email":"mailto:paritosh0180@gmail.com","jobTitle":"Backend & Systems Engineer","alumniOf":"SRM Institute of Science and Technology","worksFor":{"@type":"Organization","name":"HealthEdge"},"sameAs":["https://github.com/Paritoshcodes","https://www.linkedin.com/in/paritosh-singh-800722359/"]}
+{"@context":"https://schema.org","@type":"Person","name":"Paritosh Singh","url":"https://paritoshsingh.me","email":"mailto:paritosh0180@gmail.com","jobTitle":"Backend & Systems Engineer · SDET","alumniOf":"SRM Institute of Science and Technology","worksFor":{"@type":"Organization","name":"HealthEdge"},"address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},"knowsAbout":["C++","Python","TypeScript","Distributed systems","Test automation","RAG","LLM agents","MCP servers","Machine learning"],"sameAs":["https://github.com/Paritoshcodes","https://www.linkedin.com/in/paritosh18/"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/mobile.css" />
 <style>
   :root{
     /* Instrument black — deep, faint cool undertone so both traces glow */
@@ -35,8 +36,6 @@
     --signal-2:#34E2D6;--signal-2-soft:rgba(52,226,214,.10);--glow-2:#A2F4EE;--signal-2-rgb:52,226,214;
     --display:'Bricolage Grotesque',serif;--body:'Spline Sans',sans-serif;--mono:'IBM Plex Mono',monospace;
     --maxw:1240px;--gut:clamp(20px,5vw,72px);--ease:cubic-bezier(.2,.7,.2,1);
-    /* ink-on-paper tokens for the lit Method scene */
-    --sig-ink:#A85A00;--sig2-ink:#0B7168;--ink-mute:#4C5158;--ink-line:rgba(6,7,10,.16);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -197,7 +196,6 @@
   .mq-track .tok::before{content:"◇";color:var(--signal);-webkit-text-stroke:0;font-size:12px;margin:0 34px;opacity:.7}
   .mq-track .tok:nth-child(even)::before{color:var(--signal-2)}
   body.stage #now .marquee{display:block;border-block:1px solid var(--line);margin-top:clamp(20px,4vh,40px)}
-  body.mobile .marquee{display:block;border-block:1px solid var(--line)}
   @keyframes mq{to{transform:translateX(-50%)}}
   @media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
 
@@ -287,7 +285,7 @@
   body.stage .scene--work .work-hud .rec b{width:8px;height:8px;border-radius:50%;background:var(--signal);box-shadow:0 0 8px var(--signal);animation:pulse 1.4s infinite}
   body.stage .scene--work .work-hud #hudtc{color:var(--signal-2)}
   body.stage .scene--work .channel-rail{display:flex;flex-direction:column;gap:18px;position:absolute;right:var(--gut);top:50%;transform:translateY(-50%);z-index:6}
-  body.stage .scene--work .work-prog{display:block;position:absolute;left:0;bottom:52px;height:2px;width:0;background:linear-gradient(90deg,var(--signal),var(--signal-2));box-shadow:0 0 8px var(--signal);z-index:6}
+  body.stage .scene--work .work-prog{display:block;position:absolute;left:0;bottom:40px;height:2px;width:0;background:linear-gradient(90deg,var(--signal),var(--signal-2));box-shadow:0 0 8px var(--signal);z-index:6}
   @media (prefers-reduced-motion:reduce){body.stage .scene--work .work-hud .rec b{animation:none}}
 
   /* METHOD */
@@ -355,6 +353,7 @@
   .console-x{background:none;border:none;color:var(--mute);font-family:var(--mono);font-size:11px;letter-spacing:.12em;cursor:pointer}
   .console-x:hover{color:var(--signal)}
   .console-out{height:min(320px,46vh);overflow-y:auto;padding:16px;font-family:var(--mono);font-size:13px;line-height:1.7;color:var(--paper)}
+  .console-out div{white-space:pre-wrap}
   .console-out .in{color:var(--mute)}
   .console-out .ok{color:var(--signal-2)}
   .console-out .err{color:#FF6B6B}
@@ -381,69 +380,23 @@
   body.stage .modhead{margin-bottom:clamp(20px,3.4vh,42px)}
   body.stage .scene--hero{display:block}
   body.stage .scene--hero .hero-inner{min-height:100svh;padding-bottom:clamp(118px,15vh,170px)}
-  body.stage .contact h2{font-size:clamp(38px,7.6vw,120px);margin-bottom:clamp(18px,3vh,32px)}
-  body.stage .about-copy p{font-size:clamp(26px,3.6vw,58px)}
-  body.stage .hud{display:flex;position:fixed;left:var(--gut);bottom:62px;z-index:56;pointer-events:none;align-items:center;gap:10px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+  body.stage .contact h2{font-size:clamp(36px,6vw,96px);margin-bottom:clamp(16px,2.6vh,28px)}
+  body.stage .scene:not(.scene--hero):not(.scene--work){padding:78px 0 104px}
+  body.stage section.scene.scene--work>.wrap{position:static} /* its modhead pins to the scene, not the centred wrap */
+  body.stage .channel{padding:clamp(12px,2vh,20px) 4px}
+  body.stage .channel .v{font-size:clamp(22px,3.1vw,46px)}
+  body.stage footer{padding:22px 0 18px}
+  body.stage .about-sub{margin-top:clamp(24px,4.5vh,52px)}
+  body.stage .metric{padding:clamp(12px,1.9vh,18px) 22px}
+  body.stage .scene--work .ch.gen .ch-grade{background:linear-gradient(90deg,rgba(5,6,9,.96) 0%,rgba(5,6,9,.78) 30%,rgba(5,6,9,0) 46%)}
+  body.stage .scene--work .ch.gen .ch-vig{box-shadow:inset 0 0 120px rgba(0,0,0,.6)}
+  body.stage .about-copy p{font-size:clamp(26px,3.4vw,54px)}
+  body.stage .hud{display:flex;position:fixed;left:var(--gut);bottom:62px;z-index:56;pointer-events:none;align-items:center;gap:12px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
   body.stage .hud .l{display:inline-flex;align-items:center;gap:8px;color:var(--signal)}
   body.stage .hud .l .dot{width:7px;height:7px;border-radius:50%;background:var(--signal);box-shadow:0 0 8px var(--signal);animation:pulse 1.4s infinite}
   body.stage .hud #hud-scene{color:var(--paper)}
   body.stage .hud #hud-tc{color:var(--signal-2)}
   @media (prefers-reduced-motion:reduce){body.stage .hud .l .dot{animation:none}}
-
-  /* ============================================================
-     ENGINE B - MOBILE "SIGNAL REEL": one window, scroll-scrubbed.
-     Each section is a full-screen panel whose content COMES IN and
-     LEAVES bound to scroll position (not fire-once), plus a full-bleed
-     swipe deck for projects. body.mobile (JS). Desktop stage untouched.
-     ============================================================ */
-  body.mobile{overflow-x:hidden}
-  body.mobile #stage{position:relative}
-  body.mobile #stage > section{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(88px,15vh,124px);overflow:hidden}
-  body.mobile #stage > section.hero{padding-block:0;overflow:visible}
-  body.mobile #stage > section.now{min-height:62svh;padding-block:34px}
-  body.mobile .pad{padding-block:clamp(88px,15vh,124px)}
-  body.mobile .modhead{margin-bottom:clamp(26px,4vh,42px)}
-  body.mobile .contact h2{font-size:clamp(34px,9vw,60px)}
-  /* hidden entrance states are set in JS so the static fallback stays visible */
-  body.mobile #stage > section > .wrap,body.mobile .hero-inner{will-change:transform,opacity}
-
-  /* WORK = full-bleed horizontal swipe deck */
-  body.mobile #work{padding-block:clamp(80px,12vh,108px);justify-content:center;overflow:hidden}
-  body.mobile #work .wrap{width:100%}
-  body.mobile .work-scroll{overflow:visible;margin-top:clamp(16px,2.6vh,26px);margin-inline:calc(var(--gut)*-1)}
-  body.mobile .work-deck{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;touch-action:pan-x;scrollbar-width:none;padding-inline:7vw;scroll-padding-inline:7vw}
-  body.mobile .work-deck::-webkit-scrollbar{display:none}
-  body.mobile .work-deck .ch{position:relative;flex:0 0 86vw;max-width:86vw;scroll-snap-align:center;scroll-snap-stop:always;padding:0;border:none}
-  body.mobile .work-deck .ch:last-of-type{border-bottom:none}
-  body.mobile .work-deck .ch-media{position:relative;width:100%;height:clamp(250px,38vh,380px);aspect-ratio:auto;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#050608;transition:transform .55s var(--ease),opacity .55s var(--ease)}
-  body.mobile .work-deck .ch:not(.live) .ch-media{transform:scale(.9);opacity:.4}
-  body.mobile .work-deck .ch-media video{width:100%;height:100%;object-fit:cover;display:block}
-  body.mobile .work-deck .ch-media .ch-grade{display:block;position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,6,9,.88),rgba(5,6,9,.04) 58%)}
-  body.mobile .work-deck .ch-media .sweep{display:block;position:absolute;left:0;right:0;height:36%;background:linear-gradient(180deg,transparent,rgba(255,166,61,.18),rgba(255,206,133,.52),rgba(255,166,61,.18),transparent);opacity:0}
-  body.mobile .work-deck .ch-media .sweep.s2{background:linear-gradient(180deg,transparent,rgba(52,226,214,.16),rgba(162,244,238,.46),rgba(52,226,214,.16),transparent)}
-  body.mobile .work-deck .ch-body{padding:18px 2px 0}
-  body.mobile .work-deck .ch-tag{margin-bottom:9px}
-  body.mobile .work-deck .ch h3{font-size:clamp(26px,8vw,38px);margin-bottom:11px}
-  body.mobile .work-deck .ch p{font-size:13.5px;line-height:1.6;margin-bottom:13px}
-  body.mobile .work-deck .ch-metric{margin-top:15px}
-  body.mobile .work-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-inline:calc(var(--gut)*-1);padding-inline:7vw;margin-top:clamp(16px,2.6vh,26px)}
-  body.mobile .work-dots{display:flex;gap:9px;align-items:center}
-  body.mobile .work-dots span{width:7px;height:7px;border-radius:50%;background:var(--line-2);transition:background .3s,box-shadow .3s,transform .3s}
-  body.mobile .work-dots span.on{background:var(--signal);box-shadow:0 0 8px var(--signal);transform:scale(1.35)}
-  body.mobile .work-swipe{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint)}
-  body.mobile .work-swipe .ar{display:inline-flex;gap:2px}
-  body.mobile .work-swipe .ar i{font-style:normal;color:var(--signal);animation:swipepulse 1.6s var(--ease) infinite}
-  body.mobile .work-swipe .ar i:nth-child(2){animation-delay:.18s}
-  @keyframes swipepulse{0%,100%{opacity:.3;transform:translateX(0)}50%{opacity:1;transform:translateX(3px)}}
-  @media (prefers-reduced-motion:reduce){body.mobile .work-swipe .ar i{animation:none}}
-
-  /* mobile instrument HUD - cohesion with the desktop readout */
-  body.mobile .hud{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:56;pointer-events:none;align-items:center;gap:9px;padding:9px var(--gut);font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);background:linear-gradient(0deg,rgba(6,7,10,.92),transparent)}
-  body.mobile .hud .l{display:inline-flex;align-items:center;gap:8px;color:var(--signal)}
-  body.mobile .hud .l .dot{width:7px;height:7px;border-radius:50%;background:var(--signal);box-shadow:0 0 8px var(--signal);animation:pulse 1.4s infinite}
-  body.mobile .hud #hud-scene{color:var(--paper)}
-  body.mobile .hud #hud-tc{display:none}
-  @media (prefers-reduced-motion:reduce){body.mobile .hud .l .dot{animation:none}}
 
   /* ============================================================
      V3 SPECTACLE - ghost type, char split, velocity, hover, set-pieces
@@ -454,8 +407,6 @@
   .ghost{display:none;position:absolute;z-index:0;pointer-events:none;white-space:nowrap;font-family:var(--display);font-weight:800;line-height:1;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(234,232,224,.10);will-change:transform,opacity}
   body.stage .ghost{display:block;right:-3vw;top:50%;transform:translateY(-50%);font-size:clamp(140px,23vw,360px)}
   body.stage .scene>.wrap{position:relative;z-index:1}
-  body.mobile .ghost{display:block;right:-6vw;top:14px;font-size:clamp(88px,24vw,170px);-webkit-text-stroke-color:rgba(234,232,224,.09)}
-  body.mobile #stage > section > .wrap{position:relative;z-index:1}
   body.rush .ghost{-webkit-text-stroke-color:rgba(255,166,61,.15)}
 
   body.rush h1,body.rush h2,body.rush h3,body.rush .now-role,body.rush .metric .val{text-shadow:2px 0 0 rgba(255,80,80,.38),-2px 0 0 rgba(70,220,255,.38)}
@@ -483,22 +434,56 @@
   .pulse{position:fixed;z-index:60;width:14px;height:14px;margin:-7px 0 0 -7px;border:1px solid var(--signal);border-radius:50%;pointer-events:none;animation:pulseOut .7s var(--ease) forwards}
   @keyframes pulseOut{to{transform:scale(16);opacity:0}}
   @media (prefers-reduced-motion:reduce){.pulse{display:none}}
-  #rail{position:fixed;right:22px;top:50%;transform:translateY(-50%);width:158px;height:264px;z-index:55;overflow:hidden;
-    -webkit-mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent)}
-  #rail .rail-strip{position:absolute;top:50%;right:0;display:flex;flex-direction:column;will-change:transform}
-  #rail .rl{display:flex;align-items:center;gap:12px;height:44px;width:158px;background:none;border:none;cursor:pointer;justify-content:flex-end;color:var(--paper);font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;transform-origin:right center;will-change:transform,opacity}
-  #rail .rl-tick{width:20px;height:2px;background:var(--mute);flex:none}
-  #rail .rl:hover{color:var(--signal)}
-  #rail .rl:hover .rl-tick{background:var(--signal)}
-  #rail .rail-head{position:absolute;right:0;top:50%;width:30px;height:2px;margin-top:-1px;background:var(--signal);box-shadow:0 0 12px var(--signal)}
-  @media(max-width:1099px){#rail{display:none}}
-  body.stage .scene--work .channel-rail{right:calc(var(--gut) + 56px)}
+  /* TUNER - radio-dial section navigator (stage, >=1100px) */
+  #tuner{position:fixed;right:30px;top:50%;height:min(56vh,500px);width:16px;transform:translateY(-50%);z-index:55;display:none}
+  body.stage #tuner{display:block}
+  #tuner::before{content:"";position:absolute;top:-40px;bottom:-40px;right:-30px;width:250px;background:linear-gradient(90deg,transparent,rgba(6,7,10,.9) 45%);opacity:0;transition:opacity .35s var(--ease);pointer-events:none}
+  #tuner:hover::before{opacity:1}
+  @media(max-width:1099px){#tuner{display:none!important}}
+  #tuner .tn-scale{position:absolute;right:0;top:-10px;bottom:-10px;width:6px;background:repeating-linear-gradient(180deg,rgba(234,232,224,.2) 0 1px,transparent 1px 8px);-webkit-mask-image:linear-gradient(transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(transparent,#000 8%,#000 92%,transparent);pointer-events:none}
+  #tuner .tn-spine,#tuner .tn-fill{position:absolute;right:0;top:0;height:100%;width:1px;pointer-events:none}
+  #tuner .tn-spine{background:var(--line-2)}
+  #tuner .tn-fill{background:linear-gradient(var(--signal-2),var(--signal));transform-origin:top;transform:scaleY(0);box-shadow:0 0 8px rgba(255,166,61,.55)}
+  #tuner .tn-stop{position:absolute;right:0;height:24px;width:44px;margin-top:-12px;display:flex;align-items:center;justify-content:flex-end;background:none;border:none;padding:0;cursor:pointer}
+  #tuner .tn-stop i{display:block;width:12px;height:1px;background:rgba(234,232,224,.42);transition:width .4s var(--ease),background .3s,box-shadow .3s}
+  #tuner .tn-stop.past i{background:rgba(255,166,61,.5)}
+  #tuner .tn-stop.on i{width:20px;background:var(--signal);box-shadow:0 0 8px var(--signal)}
+  #tuner .tn-stop:hover i{width:26px;background:var(--paper);box-shadow:none}
+  #tuner .tn-l{position:absolute;right:36px;top:50%;transform:translate(12px,-50%);opacity:0;pointer-events:none;white-space:nowrap;font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);transition:opacity .3s var(--d,0ms),transform .5s var(--ease) var(--d,0ms),color .2s}
+  #tuner .tn-l em{font-style:normal;color:var(--faint);margin-right:10px}
+  #tuner:hover .tn-l{opacity:1;transform:translate(0,-50%);pointer-events:auto}
+  #tuner .tn-stop.on .tn-l,#tuner .tn-stop:hover .tn-l{color:var(--paper)}
+  #tuner .tn-stop.on .tn-l em,#tuner .tn-stop:hover .tn-l em{color:var(--signal)}
+  #tuner .tn-sub{position:absolute;right:0;width:24px;height:12px;margin-top:-6px;display:flex;align-items:center;justify-content:flex-end;background:none;border:none;padding:0;cursor:pointer}
+  #tuner .tn-sub i{display:block;width:6px;height:1px;background:rgba(52,226,214,.55);transition:width .35s var(--ease),background .3s}
+  #tuner .tn-sub.on i{width:10px;background:var(--signal-2);box-shadow:0 0 6px var(--signal-2)}
+  #tuner .tn-sub:hover i{width:14px;background:var(--signal-2)}
+  #tuner .tn-needle{position:absolute;right:0;top:0;width:0;height:0;will-change:transform;pointer-events:none}
+  #tuner .tn-needle::before{content:"";position:absolute;right:-5px;top:-1px;width:36px;height:2px;background:linear-gradient(90deg,transparent,var(--signal) 45%,var(--glow));box-shadow:0 0 10px rgba(255,166,61,.75)}
+  #tuner .tn-needle::after{content:"";position:absolute;right:-15px;top:-4px;border-style:solid;border-width:4px 7px 4px 0;border-color:transparent var(--signal) transparent transparent;filter:drop-shadow(0 0 4px var(--signal))}
+  #tuner .tn-read{position:absolute;right:42px;top:-7px;white-space:nowrap;font-family:var(--mono);font-size:10px;line-height:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--paper);transition:opacity .25s}
+  #tuner .tn-read b{font-weight:500;color:var(--signal)}
+  #tuner .tn-read span{display:inline-block;vertical-align:top;max-width:0;opacity:0;overflow:hidden;padding-left:0;transition:max-width .55s var(--ease),opacity .3s,padding .55s var(--ease)}
+  #tuner .tn-read.show span{max-width:170px;opacity:1;padding-left:10px}
+  #tuner:hover .tn-read{opacity:0}
+  @media(min-width:1100px){body.stage .scene--work .channel-rail{display:none}}
+  /* bottom corners: recorder strip (left) and the Bengaluru clock (right) */
+  .hud .sep{width:1px;height:10px;background:var(--line-2);flex:none}
+  .hud .hud-scope{display:block;width:64px;height:16px;flex:none}
+  .hud-r{display:none}
+  body.stage .hud-r{display:flex;position:fixed;right:var(--gut);bottom:62px;z-index:56;pointer-events:none;align-items:center;gap:10px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+  body.stage .hud-r b{color:var(--signal-2);font-weight:500}
+  body.stage .hud-r .sig{display:inline-flex;gap:2px;align-items:flex-end;height:10px}
+  body.stage .hud-r .sig i{width:2px;background:var(--mute);animation:sigbar 1.6s var(--ease) infinite}
+  body.stage .hud-r .sig i:nth-child(1){height:3px}body.stage .hud-r .sig i:nth-child(2){height:5px;animation-delay:.15s}body.stage .hud-r .sig i:nth-child(3){height:7px;animation-delay:.3s}body.stage .hud-r .sig i:nth-child(4){height:10px;animation-delay:.45s}
+  @keyframes sigbar{0%,100%{opacity:.35}50%{opacity:1;background:var(--signal-2)}}
+  @media (prefers-reduced-motion:reduce){body.stage .hud-r .sig i{animation:none}}
   .lk{display:none}
   body.stage .scene--work .lk{display:block;position:absolute;width:22px;height:22px;z-index:6;border:1px solid var(--signal);opacity:0;pointer-events:none;will-change:transform,opacity}
-  .lk-tl{top:calc(78px + 6vh);left:calc(var(--gut) - 14px);border-right:none;border-bottom:none}
-  .lk-tr{top:calc(78px + 6vh);right:calc(var(--gut) - 14px);border-left:none;border-bottom:none}
-  .lk-bl{bottom:46px;left:calc(var(--gut) - 14px);border-right:none;border-top:none}
-  .lk-br{bottom:46px;right:calc(var(--gut) - 14px);border-left:none;border-top:none}
+  .lk-tl{top:84px;left:calc(var(--gut) - 14px);border-right:none;border-bottom:none}
+  .lk-tr{top:84px;right:calc(var(--gut) - 14px);border-left:none;border-bottom:none}
+  .lk-bl{bottom:22px;left:calc(var(--gut) - 14px);border-right:none;border-top:none}
+  .lk-br{bottom:22px;right:calc(var(--gut) - 14px);border-left:none;border-top:none}
   .vu{display:inline-flex;gap:3px;align-items:flex-end;height:12px;margin-left:14px}
   .vu i{width:3px;height:100%;background:var(--line-2);transform:scaleY(.25);transform-origin:bottom;transition:transform .1s linear,background .1s}
   .vu i.on{background:var(--signal);transform:scaleY(1);box-shadow:0 0 6px var(--signal)}
@@ -533,37 +518,99 @@
   body.cine-on .cine{display:flex}
   @media (prefers-reduced-motion:reduce){.cine{display:none!important}}
 
-  /* Light event — the paper-white Method scene */
-  #method.light-scene{position:relative;isolation:isolate}
-  #method.light-scene::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(120% 90% at 50% 0%,#F7F5EE 0%,#EAE8E0 60%,#DED9CC 100%)}
-  #method.light-scene::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E")}
-  #method.light-scene .wrap{position:relative;z-index:1}
-  #method.light-scene .modhead .label,#method.light-scene .modhead .idx{color:var(--ink-mute)}
-  #method.light-scene .modhead .mh-rule{background:var(--ink-line)}
-  #method.light-scene .pr-n{color:var(--ink-mute);border-top-color:var(--ink-line)}
-  #method.light-scene .pr h4{color:var(--ink)}
-  #method.light-scene .pr h4 em{color:var(--sig-ink)}
-  #method.light-scene .pr:nth-child(2) h4 em{color:var(--sig2-ink)}
-  #method.light-scene .pr p{color:var(--ink-mute)}
-  #method.light-scene .pr p b{color:var(--ink)}
-  #method.light-scene .pr:hover .pr-n{border-top-color:var(--sig-ink)}
-  #method.light-scene .pr:nth-child(2):hover .pr-n{border-top-color:var(--sig2-ink)}
-  #method.light-scene .ghost{-webkit-text-stroke-color:rgba(6,7,10,.10)}
-  #method.light-scene .pr-ghost{-webkit-text-stroke-color:rgba(6,7,10,.10)}
-  #method.light-scene .pr:hover .pr-ghost{-webkit-text-stroke-color:rgba(168,90,0,.28)}
+  /* ===== V6 SIGNAL-LOCK PASS ===== */
+  /* Method stays dark: a searchlight scene replaces the old paper-white flip */
+  .principles .pr{border:1px solid var(--line);padding:24px 24px 30px;background:linear-gradient(180deg,rgba(16,19,25,.7),rgba(6,7,10,.35));overflow:hidden}
+  .principles .pr .pr-n{border-top:none;padding-top:0}
+  .principles .pr::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(380px circle at var(--px,-400px) var(--py,-400px),rgba(255,166,61,.08),transparent 65%);opacity:0;transition:opacity .35s}
+  .principles .pr::after{content:"";position:absolute;inset:-1px;z-index:0;pointer-events:none;padding:1px;background:radial-gradient(300px circle at var(--px,-400px) var(--py,-400px),rgba(255,166,61,.85),rgba(52,226,214,.4) 42%,transparent 72%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .35s}
+  .principles:hover .pr::before,.principles:hover .pr::after{opacity:1}
+  /* searchlight: the ghost word lights up amber around the cursor */
+  .ghost .lit{position:absolute;inset:0;color:transparent;-webkit-text-stroke:1px rgba(255,166,61,.62);-webkit-mask-image:radial-gradient(260px circle at var(--gx,-999px) var(--gy,-999px),#000,transparent 72%);mask-image:radial-gradient(260px circle at var(--gx,-999px) var(--gy,-999px),#000,transparent 72%)}
+  #spot{display:none}
+  body.stage #spot{display:block;position:fixed;inset:0;z-index:4;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(640px circle at var(--mx,-999px) var(--my,-999px),rgba(255,166,61,.05),transparent 62%)}
 
-  /* Chrome flip while the lit scene is active */
-  body.lit{background:var(--paper)}
-  body.lit #hdr{color:var(--ink);border-bottom-color:var(--ink-line)}
-  body.lit #hdr a,body.lit #hdr .brand,body.lit #hdr .nav-link{color:var(--ink)}
-  body.lit #hdr .nav-link{opacity:.7}
-  body.lit .cursor .h,body.lit .cursor .v{background:var(--ink)}
-  body.lit .cursor .ring,body.lit .cursor .ring.r2{border-color:rgba(6,7,10,.4)}
-  body.lit .cursor .coord,body.lit .cursor .clabel{color:var(--ink-mute)}
-  body.lit .hud{color:var(--ink-mute)}
-  body.lit #rail .rl{color:var(--ink)}
-  body.lit #rail .rl-tick{background:var(--ink-mute)}
-  body.lit #rail .rail-head{background:var(--sig-ink);box-shadow:0 0 12px rgba(168,90,0,.5)}
+  /* CRT power-on: the calibration line becomes the beam that opens the screen */
+  #crt{position:fixed;inset:0;z-index:8950;pointer-events:none;display:none}
+  body.crt-on #crt{display:block}
+  #crt .half{position:absolute;left:0;right:0;height:50.5%;background:var(--ink);will-change:transform}
+  #crt .top{top:0}#crt .bot{bottom:0}
+  #crt .beam{position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:linear-gradient(90deg,transparent,var(--signal) 16%,var(--glow) 50%,var(--signal-2) 84%,transparent);box-shadow:0 0 22px 3px rgba(255,166,61,.55),0 0 90px 12px rgba(52,226,214,.16);transform:scaleX(.4);will-change:transform,opacity}
+
+  /* PROJECT channels: spec readouts + generative / WebGL media */
+  .ch[data-i="4"]{--acc:var(--signal)}
+  .ch-specs{display:flex;flex-wrap:wrap;gap:7px 18px;margin-top:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+  .ch-specs span{display:inline-flex;align-items:center;gap:8px}
+  .ch-specs span::before{content:"";width:5px;height:5px;flex:none;background:var(--acc);box-shadow:0 0 6px var(--acc)}
+  .ch-media .ch-gen,.ch-media .ch-gl{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .ch-media .ch-gen{background:#07080B}
+  .ch-media .ch-gl{transition:opacity .45s var(--ease)}
+  .ch-media .ch-gl.rest{opacity:0}
+  body.stage .scene--work .ch h3{font-size:clamp(44px,6.2vw,96px)}
+  body.stage .scene--work .metric-num{font-size:clamp(50px,6.2vw,96px)}
+  body.stage .scene--work .ch p{max-width:54ch}
+
+  /* OPEN SOURCE: merged upstream */
+  .oss-lede{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.6vw,56px);letter-spacing:-.025em;line-height:1.04;max-width:22ch;margin-bottom:clamp(22px,4vh,44px)}
+  .oss-lede em{font-style:normal;color:var(--signal-2)}
+  .prs{border-top:1px solid var(--line)}
+  .prrow{position:relative;display:grid;grid-template-columns:minmax(220px,330px) minmax(0,1fr) auto;gap:clamp(20px,3.5vw,52px);align-items:center;padding:24px 0;border-bottom:1px solid var(--line);transition:background .35s}
+  .prrow:hover{background:var(--signal-2-soft)}
+  .gg{width:100%;height:auto;display:block;overflow:visible}
+  .gg .main{stroke:var(--line-2);stroke-width:2;fill:none}
+  .gg .br{stroke:var(--signal);stroke-width:2;fill:none;filter:drop-shadow(0 0 4px rgba(255,166,61,.5))}
+  .gg .cm{fill:var(--ink);stroke:var(--mute);stroke-width:1.5}
+  .gg .cb{fill:var(--ink);stroke:var(--signal);stroke-width:1.5}
+  .gg .rv-mk{fill:var(--signal-2)}
+  .gg .mg{fill:var(--signal-2)}
+  .gg .mr{fill:none;stroke:var(--signal-2);stroke-width:1}
+  .gg text{font-family:var(--mono);font-size:9px;letter-spacing:.12em;fill:var(--faint)}
+  .gg .tg{fill:var(--signal-2)}
+  .gg .tgb{fill:none;stroke:var(--signal-2);stroke-width:1}
+  .pr-meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+  .pr-meta b{color:var(--signal-2);font-weight:500}
+  .prrow h3{font-family:var(--display);font-weight:700;font-size:clamp(24px,2.8vw,40px);letter-spacing:-.02em;line-height:1;margin-bottom:10px}
+  .prrow h3 a{display:inline-flex;align-items:center;gap:10px}
+  .prrow h3 .arr{font-size:.5em;color:var(--faint);transition:transform .35s var(--ease),color .35s}
+  .prrow h3 a:hover .arr{color:var(--signal);transform:translate(4px,-4px)}
+  .prrow p{color:var(--mute);font-size:15px;line-height:1.6;max-width:62ch}
+  .prrow p b{color:var(--paper);font-weight:500}
+  .prrow code{font-family:var(--mono);font-size:.88em;color:var(--glow);background:rgba(255,166,61,.08);padding:1px 6px}
+  .stamp{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--signal-2);border:1.5px solid var(--signal-2);padding:9px 13px 8px;transform:rotate(-7deg);white-space:nowrap;box-shadow:0 0 18px rgba(52,226,214,.16),inset 0 0 12px rgba(52,226,214,.1)}
+  .stamp small{display:block;font-size:9px;letter-spacing:.18em;color:var(--mute);margin-top:4px}
+  @media(max-width:820px){.prrow{grid-template-columns:1fr;gap:14px}.gg{max-width:360px}.stamp{justify-self:start}}
+
+  /* LOG: two-column record */
+  .logs{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(28px,4vw,64px);border-bottom:1px solid var(--line)}
+  .logs .logrow{grid-template-columns:clamp(64px,7vw,96px) minmax(0,1fr);gap:4px 18px;padding:13px 0;align-items:baseline}
+  .logs .logrow:last-child{border-bottom:none}
+  .logs .logrow .yr{font-family:var(--mono);font-size:clamp(13px,1.2vw,16px);letter-spacing:.06em}
+  .logs .logrow .ttl{font-size:clamp(15px,1.45vw,19px);line-height:1.25}
+  .logs .logrow .meta{grid-column:2;text-align:left;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+  .logs .logrow a.ttl:hover{color:var(--signal)}
+  @media(max-width:860px){.logs{grid-template-columns:1fr}.logs .logrow{grid-template-columns:clamp(64px,18vw,96px) minmax(0,1fr)}.logs .logrow .yr{grid-column:auto}.logs .logrow .meta{grid-column:2}}
+
+  /* STACK: tighter on the pinned stage */
+  body.stage .scol{padding:15px 0}
+  body.stage .scol li{font-size:15px}
+  body.stage .scol ul{gap:9px 20px}
+  @media (max-height:860px){
+    body.stage .scol{padding:11px 0}
+    body.stage .scol li{font-size:14px}
+    body.stage .oss-lede{font-size:clamp(24px,3vw,44px)}
+    body.stage .prrow{padding:16px 0}
+    body.stage .scene--work .ch p{font-size:15px;margin-bottom:14px}
+    body.stage .scene--work .ch h3{font-size:clamp(40px,5.4vw,80px);margin-bottom:12px}
+    body.stage .scene--work .metric-num{font-size:clamp(44px,5.2vw,80px)}
+    body.stage .scene--work .ch-body{bottom:100px}
+    body.stage .scene--work .ch-metric{margin-top:16px}
+    body.stage .about-copy p{font-size:clamp(22px,2.9vw,44px)}
+    body.stage .metric .val{font-size:clamp(26px,3vw,38px)}
+    body.stage .metric{padding:10px 22px 18px}
+    body.stage .about-sub{margin-top:22px}
+    body.stage .modhead{margin-bottom:20px}
+    body.stage .scene:not(.scene--hero):not(.scene--work){padding:72px 0 96px}
+  }
 
 </style>
 </head>
@@ -572,6 +619,8 @@
 <div id="progress"></div>
 <div id="wipe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 <div id="flash" aria-hidden="true"></div>
+<div id="crt" aria-hidden="true"><div class="half top"></div><div class="half bot"></div><div class="beam"></div></div>
+<div id="spot" aria-hidden="true"></div>
 <div class="cine" id="cineT" aria-hidden="true"><span class="mono">&#9679; ON AIR</span></div>
 <div class="cine" id="cineB" aria-hidden="true"><span class="mono">CH.1 &middot; PARITOSH SINGH</span></div>
 <canvas class="tv-static" id="tvStatic" aria-hidden="true"></canvas>
@@ -593,7 +642,7 @@
     <a href="#top" class="brand" data-hot data-cursor="top"><span class="dot"></span> Paritosh Singh</a>
     <nav class="nav-links">
       <a href="#work" data-hot data-cursor="go">Work</a>
-      <a href="#method" data-hot data-cursor="go">Method</a>
+      <a href="#oss" data-hot data-cursor="go">Open source</a>
       <a href="#stack" data-hot data-cursor="go">Stack</a>
       <a href="#contact" data-hot data-cursor="go">Contact</a>
     </nav>
@@ -606,7 +655,7 @@
 <div class="menu-overlay" id="menuOverlay">
   <nav>
     <a href="#work"><span class="n">01</span>Work</a>
-    <a href="#method"><span class="n">02</span>Method</a>
+    <a href="#oss"><span class="n">02</span>Open source</a>
     <a href="#stack"><span class="n">03</span>Stack</a>
     <a href="#contact"><span class="n">04</span>Contact</a>
   </nav>
@@ -623,8 +672,8 @@
   <canvas id="sig" aria-hidden="true"></canvas>
   <div class="hero-inner wrap">
     <div class="hero-meta" data-hero-meta>
-      <span class="live"><b></b> SDET Intern · HealthEdge</span>
-      <span class="r">SRM Institute · Chennai<br><span class="avail">Available · Full-time roles, 2027</span><br><span class="mono" style="font-size:10px;color:var(--faint)">Press ? for controls</span></span>
+      <span class="live"><b></b> SDET Intern · HealthEdge · Bengaluru</span>
+      <span class="r">SRM Institute · CSE (Data Science) '27<br><span class="avail">Available · Full-time roles, 2027</span><br><span class="mono" style="font-size:10px;color:var(--faint)">Press ? for controls</span></span>
     </div>
     <div class="hero-main" data-hero-main>
       <p class="eyebrow" id="ghLive">Acquiring signal…</p>
@@ -632,7 +681,7 @@
         <span class="ln"><i>Systems built to</i></span>
         <span class="ln"><i>be <em>measured.</em></i></span>
       </h1>
-      <p class="hero-lede">Backend &amp; systems engineer. I build software that holds up under load, from a <b>C++ TCP server</b> written on raw sockets to <b>ML that ships</b>, and I write the <b>automated test harness</b> that proves it on every run.</p>
+      <p class="hero-lede">Backend &amp; systems engineer and SDET. I build software that holds up under load, from a <b>C++ server on raw epoll sockets</b> to <b>AI agents that can't go rogue</b>, and I write the <b>test harness</b> that proves it on every run.</p>
       <div class="hero-cta">
         <a class="btn fill" href="#work" data-mag data-hot data-cursor="view">View work <span class="arr">↗</span></a>
         <a class="btn" href="assets/Resume.pdf" target="_blank" rel="noopener" data-mag data-hot data-cursor="open">Résumé <span class="arr">↗</span></a>
@@ -649,7 +698,7 @@
       <span class="live"><b></b> Currently</span>
       <span class="now-role"><em>SDET Intern</em> · HealthEdge</span>
     </div>
-    <div class="now-r" data-rise-r>Building automated UI and regression coverage for an enterprise healthcare platform with Katalon and Playwright. 2026 — present.</div>
+    <div class="now-r" data-rise-r>Test automation and AI-assisted QA tooling. Bengaluru · Jun 2026 to present.</div>
   </div>
 </section>
 
@@ -665,13 +714,13 @@
         <p><span class="clip"><i>I work at the layers most people</i></span><span class="clip"><i>abstract away — and I prove what</i></span><span class="clip"><i>I build actually works.</i></span></p>
       </div>
       <div class="about-sub">
-        <p class="about-body" data-rise>CS + Data Science at SRM Institute, currently an SDET Intern at HealthEdge. I write production code in <b>C++, Node.js, and Python</b> — from a hand-rolled TCP server with an epoll event loop to multi-tenant Postgres platforms — train and explain <b>ML models</b> with XGBoost and SHAP, and automate the regression that keeps it all honest. The thread across everything: numbers I can point to, not adjectives.</p>
+        <p class="about-body" data-rise>CS + Data Science at SRM Institute (CGPA 8.78), now an SDET Intern at HealthEdge in Bengaluru. I write production code in <b>C++, Python and TypeScript</b>, from a Redis-compatible server on a hand-rolled epoll loop to <b>payment and CI agents</b> whose every action is audited and measured. I ship fixes <b>upstream to open source</b> and build the test harness that keeps all of it honest. The thread across everything: numbers I can point to, not adjectives.</p>
         <div class="metrics" data-metrics>
         <span class="m-rule" data-draw-v></span>
-        <div class="metric"><span class="val count" data-count="4" data-pad="2">00</span><span class="key">Systems built &amp; public</span></div>
-        <div class="metric"><span class="val sig count" data-count="150" data-suffix="K+" data-final="150K+">0</span><span class="key">Ops/sec · mini-redis</span></div>
-        <div class="metric"><span class="val count" data-count="60" data-suffix="+">0</span><span class="key">REST endpoints · TeamPulse</span></div>
-        <div class="metric"><span class="val sig2 count" data-count="94" data-suffix="%">0</span><span class="key">Accuracy · Fake News Radar</span></div>
+        <div class="metric"><span class="val sig count" data-count="2.7" data-dec="1" data-suffix="M+">2.7M+</span><span class="key">GET/sec pipelined · mini-redis</span></div>
+        <div class="metric"><span class="val count" data-count="2" data-pad="2">02</span><span class="key">Upstream PRs merged · open source</span></div>
+        <div class="metric"><span class="val count" data-count="339">339</span><span class="key">pytest tests · Agent Replay</span></div>
+        <div class="metric"><span class="val sig2 count" data-count="93.8" data-dec="1" data-suffix="%">93.8%</span><span class="key">Interval coverage · Revenant</span></div>
       </div>
     </div>
     </div>
@@ -683,66 +732,91 @@
   <div class="wrap"><div class="modhead" data-mh><span class="mh-rule" data-draw></span><span class="label" data-rise>Selected builds</span><span class="idx" data-rise>02 · CHANNELS</span></div></div>
   <div class="work-scroll">
     <div class="work-pin">
-      <div class="work-hud"><span class="rec"><b></b> Rec</span><span id="hudch">CH.01 / 04</span><span id="hudtc">00:00</span></div>
+      <div class="work-hud"><span class="rec"><b></b> Rec</span><span id="hudch">CH.01 / 05</span><span id="hudtc">00:00</span></div>
 
       <article class="ch" data-i="0">
         <div class="ch-media">
-          <video data-src="assets/videos/mini-redis.mp4" poster="assets/screenshots/mini-redis.png" muted loop playsinline preload="none"></video>
+          <video data-src="assets/videos/mini-redis.mp4" data-src-m="assets/videos/mini-redis-m.mp4" data-start="4.2" poster="assets/screenshots/mini-redis.png" muted loop playsinline preload="none"></video>
           <div class="ch-scan"></div><div class="ch-vig"></div><div class="ch-grade"></div><div class="sweep"></div>
           <span class="ch-corner tl"></span><span class="ch-corner br"></span><span class="ch-rec"><b></b> P/01</span>
         </div>
         <div class="ch-body">
           <div class="ch-tag rv">P/01 · Systems engineering</div>
           <h3 class="rv"><a href="https://github.com/Paritoshcodes/mini-redis" target="_blank" rel="noopener" data-hot data-cursor="github">mini-redis <span class="arr">↗</span></a></h3>
-          <p class="rv">Built an in-memory key-value server from scratch in <b>C++</b> with an epoll event loop and full RESP protocol parsing — <b>no framework, just sockets</b>. Sustains <b>150K+ commands/sec</b> (<b>1M+ pipelined</b>) with pub/sub messaging.</p>
-          <div class="chips rv"><span class="chip spec">C++</span><span class="chip">epoll</span><span class="chip">TCP</span><span class="chip">RESP</span><span class="chip">pub/sub</span></div>
-          <div class="ch-metric rv"><span class="metric-num count" data-target="150" data-suffix="K+">0</span><span class="metric-unit">Commands / sec</span></div>
+          <p class="m-sum">A Redis-compatible server in <b>594 lines of C++</b> on a hand-rolled epoll loop, driven by stock redis-cli and redis-benchmark.</p>
+          <p class="rv">A Redis-compatible server in <b>594 lines of C++</b>: a single-threaded, non-blocking <b>epoll</b> loop over raw POSIX sockets, and a RESP parser that buffers partial frames so pipelined commands survive split TCP reads. Driven by stock <b>redis-cli</b> and <b>redis-benchmark</b>.</p>
+          <div class="chips rv"><span class="chip spec">C++</span><span class="chip">epoll</span><span class="chip">POSIX sockets</span><span class="chip">RESP</span><span class="chip">pub/sub</span></div>
+          <div class="ch-metric rv"><span class="metric-num count" data-count="2.7" data-dec="1" data-suffix="M+">2.7M+</span><span class="metric-unit">GET / sec · 128-deep pipeline</span></div>
+          <div class="ch-specs rv"><span>150K+ ops/s · 50 clients · 1 core</span><span>18 commands</span><span>pub/sub 1,000 / 1,000</span></div>
           <button class="btn console-open rv" id="consoleOpen" data-hot data-cursor="try">Open console <span class="arr">›_</span></button>
         </div>
       </article>
 
-      <article class="ch" data-i="1">
+      <article class="ch gen" data-i="1">
         <div class="ch-media">
-          <video data-src="assets/videos/vigil.mp4" poster="assets/screenshots/vigil.png" muted loop playsinline preload="none"></video>
+          <canvas class="ch-gen" data-gen="revenant" aria-hidden="true"></canvas>
           <div class="ch-scan"></div><div class="ch-vig"></div><div class="ch-grade"></div><div class="sweep s2"></div>
           <span class="ch-corner tl"></span><span class="ch-corner br"></span><span class="ch-rec"><b></b> P/02</span>
         </div>
         <div class="ch-body">
-          <div class="ch-tag rv">P/02 · ML · Full stack</div>
-          <h3 class="rv"><a href="https://github.com/Paritoshcodes/Vigil" target="_blank" rel="noopener" data-hot data-cursor="github">Vigil <span class="arr">↗</span></a></h3>
-          <p class="rv">Shipped a five-hazard disaster-prediction platform across <b>15 Indian regions</b>. <b>XGBoost</b> models made auditable with <b>SHAP</b> explainability, served <b>sub-second</b> through FastAPI on live NASA and weather feeds.</p>
-          <div class="chips rv"><span class="chip spec">XGBoost</span><span class="chip">SHAP</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">React 18</span></div>
-          <div class="ch-metric rv"><span class="metric-num count" data-target="15">0</span><span class="metric-unit">Regions monitored</span></div>
+          <div class="ch-tag rv">P/02 · Agents · Causal measurement</div>
+          <h3 class="rv"><a href="https://github.com/Paritoshcodes/revenant" target="_blank" rel="noopener" data-hot data-cursor="github">Revenant <span class="arr">↗</span></a></h3>
+          <p class="m-sum">A payment-recovery agent that measures the lift it <b>caused</b>: randomised holdout, bootstrap intervals, tamper-proof audit log.</p>
+          <p class="rv">A payment-recovery agent that reports the lift it <b>caused</b>, not gross recovery: a stratified 50/50 holdout, bootstrap intervals, and a calibration harness that caught its own interval being <b>38% too wide</b>. The LLM can only name a failure class; trusted code picks the retry. Built for the Razorpay AI Buildathon.</p>
+          <div class="chips rv"><span class="chip spec">Python</span><span class="chip">FastAPI</span><span class="chip">TypeScript</span><span class="chip">PostgreSQL</span><span class="chip">Playwright</span></div>
+          <div class="ch-metric rv"><span class="metric-num count" data-count="93.8" data-dec="1" data-suffix="%">93.8%</span><span class="metric-unit">Coverage of the true lift · 2,000 runs</span></div>
+          <div class="ch-specs rv"><span>Hash-chained audit log</span><span>Postgres refuses edits</span><span>Circuit breaker</span></div>
         </div>
       </article>
 
-      <article class="ch" data-i="2">
+      <article class="ch gen" data-i="2">
         <div class="ch-media">
-          <video data-src="assets/videos/TeamPulse.mp4" poster="assets/screenshots/teampulse.png" muted loop playsinline preload="none"></video>
+          <canvas class="ch-gen" data-gen="replay" aria-hidden="true"></canvas>
           <div class="ch-scan"></div><div class="ch-vig"></div><div class="ch-grade"></div><div class="sweep"></div>
           <span class="ch-corner tl"></span><span class="ch-corner br"></span><span class="ch-rec"><b></b> P/03</span>
         </div>
         <div class="ch-body">
-          <div class="ch-tag rv">P/03 · Full stack · Realtime</div>
-          <h3 class="rv"><a href="https://github.com/Paritoshcodes/TeamPulse" target="_blank" rel="noopener" data-hot data-cursor="github">TeamPulse <span class="arr">↗</span></a></h3>
-          <p class="rv">Built real-time collaboration handling <b>50+ concurrent WebSocket connections</b> at <b>sub-100ms delivery</b> — Socket.IO messaging, JWT auth and RBAC across <b>60+ REST endpoints</b>.</p>
-          <div class="chips rv"><span class="chip spec">Socket.IO</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">JWT</span><span class="chip">RBAC</span></div>
-          <div class="ch-metric rv"><span class="metric-num count" data-target="60" data-suffix="+">0</span><span class="metric-unit">REST endpoints</span></div>
+          <div class="ch-tag rv">P/03 · Agent CI · AWS</div>
+          <h3 class="rv"><a href="https://github.com/Paritoshcodes/agent-replay" target="_blank" rel="noopener" data-hot data-cursor="github">Agent Replay <span class="arr">↗</span></a></h3>
+          <p class="m-sum">Five recorded runs become a <b>YAML contract</b>; CI fails on the exact step a later run diverges. Set logic, not an LLM.</p>
+          <p class="rv">Records an agent five times and derives a <b>YAML contract</b> of the tool calls it must make and their order. Later runs are judged by <b>set logic, not an LLM</b>, and CI fails on the exact step that diverged. Built at the WeMakeDevs × AWS hackathon.</p>
+          <div class="chips rv"><span class="chip spec">AWS Bedrock</span><span class="chip">Strands Agents</span><span class="chip">Python</span><span class="chip">Lambda</span><span class="chip">DynamoDB</span></div>
+          <div class="ch-metric rv"><span class="metric-num count" data-count="339">339</span><span class="metric-unit">pytest tests · reproducible verdicts</span></div>
+          <div class="ch-specs rv"><span>GitHub Actions gate</span><span>OIDC · 0 long-lived keys</span><span>Lambda · DynamoDB · S3</span></div>
         </div>
       </article>
 
       <article class="ch" data-i="3">
         <div class="ch-media">
-          <video data-src="assets/videos/Fake_news_radar.mp4" poster="assets/screenshots/fake-news-radar.png" muted loop playsinline preload="none"></video>
+          <video data-src="assets/videos/vigil.mp4" data-src-m="assets/videos/vigil-m.mp4" poster="assets/screenshots/vigil.png" muted loop playsinline preload="none"></video>
           <div class="ch-scan"></div><div class="ch-vig"></div><div class="ch-grade"></div><div class="sweep s2"></div>
           <span class="ch-corner tl"></span><span class="ch-corner br"></span><span class="ch-rec"><b></b> P/04</span>
         </div>
         <div class="ch-body">
-          <div class="ch-tag rv">P/04 · Machine learning</div>
-          <h3 class="rv"><a href="https://fakenewsdetectorxparitoshxsingh.streamlit.app" target="_blank" rel="noopener" data-hot data-cursor="live">Fake News Radar <span class="arr">↗</span></a></h3>
-          <p class="rv">Trained a classifier on <b>70K+ WELFake articles</b> to <b>~94% accuracy</b> with TF-IDF and logistic regression, plus live URL content extraction. <b>Deployed and public.</b></p>
-          <div class="chips rv"><span class="chip spec">scikit-learn</span><span class="chip">TF-IDF</span><span class="chip">Python</span><span class="chip">Streamlit</span><span class="chip">pandas</span></div>
-          <div class="ch-metric rv"><span class="metric-num count" data-target="94" data-suffix="%">0</span><span class="metric-unit">Model accuracy</span></div>
+          <div class="ch-tag rv">P/04 · ML · Full stack · Published</div>
+          <h3 class="rv"><a href="https://github.com/Paritoshcodes/Vigil" target="_blank" rel="noopener" data-hot data-cursor="github">Vigil <span class="arr">↗</span></a></h3>
+          <p class="m-sum">Forecasts <b>7 hazard types across 25 cities</b> with XGBoost + LightGBM, explained with SHAP. Paper accepted in ISJEM.</p>
+          <p class="rv">Forecasts <b>seven natural-hazard types across 25 Indian cities</b> with XGBoost and LightGBM ensembles, explained with <b>SHAP</b> and served through FastAPI and PostgreSQL. The paper is <b>accepted in ISJEM</b>.</p>
+          <div class="chips rv"><span class="chip spec">XGBoost</span><span class="chip">LightGBM</span><span class="chip">SHAP</span><span class="chip">FastAPI</span><span class="chip">React</span></div>
+          <div class="ch-metric rv"><span class="metric-num count" data-count="0.876" data-dec="3">0.876</span><span class="metric-unit">ROC AUC · heatwave</span></div>
+          <div class="ch-specs rv"><span>AUC 0.74 to 0.88</span><span>Cyclone 0.852</span><span>7 hazards · 25 cities</span></div>
+        </div>
+      </article>
+
+      <article class="ch" data-i="4">
+        <div class="ch-media">
+          <video data-src="assets/videos/TeamPulse.mp4" data-src-m="assets/videos/TeamPulse-m.mp4" poster="assets/screenshots/teampulse.png" muted loop playsinline preload="none"></video>
+          <div class="ch-scan"></div><div class="ch-vig"></div><div class="ch-grade"></div><div class="sweep"></div>
+          <span class="ch-corner tl"></span><span class="ch-corner br"></span><span class="ch-rec"><b></b> P/05</span>
+        </div>
+        <div class="ch-body">
+          <div class="ch-tag rv">P/05 · Full stack · Realtime</div>
+          <h3 class="rv"><a href="https://team-pulse-client-x2oh.vercel.app" target="_blank" rel="noopener" data-hot data-cursor="live">TeamPulse <span class="arr">↗</span></a></h3>
+          <p class="m-sum">A Slack-style platform with <b>WebRTC calls</b>, three access tiers and a Bull + Redis job queue. Live on Vercel.</p>
+          <p class="rv">A Slack-style platform: channels, DMs, typing presence and <b>WebRTC calls</b> on Express and MongoDB. Three access tiers behind JWT and Google OAuth, slow work moved onto a <b>Bull + Redis</b> queue. Tested with Jest, deployed on Vercel and Railway.</p>
+          <div class="chips rv"><span class="chip spec">Socket.IO</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">WebRTC</span></div>
+          <div class="ch-metric rv"><span class="metric-num count" data-count="73">73</span><span class="metric-unit">REST endpoints</span></div>
+          <div class="ch-specs rv"><span>15 Socket.IO handlers</span><span>Admin · Member · Guest</span><span>Live on Vercel</span></div>
         </div>
       </article>
 
@@ -751,20 +825,66 @@
         <span class="rail-item" data-r="1"><span>02</span><span class="tick"></span></span>
         <span class="rail-item" data-r="2"><span>03</span><span class="tick"></span></span>
         <span class="rail-item" data-r="3"><span>04</span><span class="tick"></span></span>
+        <span class="rail-item" data-r="4"><span>05</span><span class="tick"></span></span>
       </div>
       <div class="work-prog" id="workProg"></div>
     </div>
   </div>
 </section>
 
-<!-- METHOD -->
-<section id="method" class="pad light-scene">
+<!-- OPEN SOURCE -->
+<section id="oss" class="pad">
   <div class="wrap">
-    <div class="modhead" data-mh><span class="mh-rule" data-draw></span><span class="label" data-rise>Method</span><span class="idx" data-rise>03 · OPERATING PRINCIPLES</span></div>
+    <div class="modhead" data-mh><span class="mh-rule" data-draw></span><span class="label" data-rise>Open source</span><span class="idx" data-rise>03 · UPSTREAM</span></div>
+    <p class="oss-lede" data-o-rise>Fixes merged into <em>other people's</em> codebases, with the tests to prove them.</p>
+    <div class="prs">
+      <div class="prrow" data-o-row>
+        <svg class="gg" viewBox="0 0 330 96" aria-hidden="true">
+          <path class="main" d="M6 70 H324"/>
+          <path class="br" d="M70 70 C96 70 96 30 122 30 H206 C232 30 232 70 258 70"/>
+          <circle class="cm" cx="26" cy="70" r="4"/><circle class="cm" cx="70" cy="70" r="4"/>
+          <circle class="cb" cx="138" cy="30" r="4"/><circle class="cb" cx="176" cy="30" r="4"/>
+          <circle class="mr" cx="258" cy="70" r="11"/><circle class="mg" cx="258" cy="70" r="5.5"/>
+          <circle class="cm" cx="304" cy="70" r="4"/>
+          <text x="6" y="90">MAIN</text><text x="124" y="16">PR #2599 · +TEST</text>
+          <rect class="tgb" x="270" y="44" width="54" height="15" rx="2"/><text class="tg" x="276" y="55">V1.10.1</text>
+        </svg>
+        <div>
+          <div class="pr-meta"><b>MapLibre</b> · Rust · vector tile server · 3.9K★</div>
+          <h3><a href="https://github.com/maplibre/martin/pull/2599" target="_blank" rel="noopener" data-hot data-cursor="github">Martin <span class="arr">↗</span></a></h3>
+          <p>Fixed a redirect that ignored <code>--route-prefix</code> for <code>.pbf</code> tile requests. Merged with a <b>regression test</b> and shipped in <b>release v1.10.1</b>.</p>
+        </div>
+        <span class="stamp">Merged<small>PR #2599</small></span>
+      </div>
+      <div class="prrow" data-o-row>
+        <svg class="gg" viewBox="0 0 330 96" aria-hidden="true">
+          <path class="main" d="M6 70 H324"/>
+          <path class="br" d="M52 70 C78 70 78 30 104 30 H216 C242 30 242 70 268 70"/>
+          <circle class="cm" cx="22" cy="70" r="4"/><circle class="cm" cx="52" cy="70" r="4"/>
+          <circle class="cb" cx="122" cy="30" r="4"/><path class="rv-mk" d="M158 24 l6 6 -6 6 -6 -6z"/><circle class="cb" cx="178" cy="30" r="4"/><path class="rv-mk" d="M204 24 l6 6 -6 6 -6 -6z"/>
+          <circle class="mr" cx="268" cy="70" r="11"/><circle class="mg" cx="268" cy="70" r="5.5"/>
+          <circle class="cm" cx="306" cy="70" r="4"/>
+          <text x="6" y="90">MAIN</text><text x="106" y="16">PR #40 · 2 REVIEW ROUNDS</text>
+        </svg>
+        <div>
+          <div class="pr-meta"><b>render-engine</b> · Python · static site generator CLI</div>
+          <h3><a href="https://github.com/render-engine/render-engine-cli/pull/40" target="_blank" rel="noopener" data-hot data-cursor="github">render-engine-cli <span class="arr">↗</span></a></h3>
+          <p>Fixed broken sitemap URLs when serving sites locally. Merged after <b>two rounds of maintainer code review</b>.</p>
+        </div>
+        <span class="stamp">Merged<small>PR #40</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section id="method" class="pad">
+  <div class="wrap">
+    <div class="modhead" data-mh><span class="mh-rule" data-draw></span><span class="label" data-rise>Method</span><span class="idx" data-rise>04 · OPERATING PRINCIPLES</span></div>
     <div class="principles" data-stagger>
-      <div class="pr"><span class="pr-n">01 / Measure</span><h4>Measure, <em>don't guess.</em></h4><p>Throughput and latency are numbers I <b>benchmark and reproduce on demand</b>, never adjectives on a slide.</p></div>
-      <div class="pr"><span class="pr-n">02 / Prove</span><h4>Tests are <em>the spec.</em></h4><p>I automate regression and API contracts with <b>Playwright, Katalon and Postman</b>, so "it works" is something I prove on every run — not something I hope for.</p></div>
-      <div class="pr"><span class="pr-n">03 / Restraint</span><h4>The <em>smallest diff</em> that ships.</h4><p>Reuse what already exists, prefer dynamic waits over brittle delays, and keep every change minimal and reviewable.</p></div>
+      <div class="pr"><span class="pr-n">01 / Measure</span><h4>Measure, <em>don't guess.</em></h4><p>Throughput is a number I <b>benchmark and reproduce on demand</b>. Impact is measured against a <b>randomised holdout</b>, never reported as a gross figure that counts wins that would have happened anyway.</p></div>
+      <div class="pr"><span class="pr-n">02 / Prove</span><h4>Tests are <em>the spec.</em></h4><p>Regression suites, API contracts, and for agents a <b>recorded behavioural contract</b>, so "it works" is something I prove on every run and every pull request, not something I hope for.</p></div>
+      <div class="pr"><span class="pr-n">03 / Ground</span><h4>Ground it, <em>or reject it.</em></h4><p>A model never gets the final word. Its output is <b>grounded in real code or rejected</b>, and in Revenant trusted code, not the LLM, decides <b>whether money moves</b>.</p></div>
     </div>
   </div>
 </section>
@@ -772,12 +892,13 @@
 <!-- STACK -->
 <section id="stack" class="pad">
   <div class="wrap">
-    <div class="modhead" data-mh><span class="mh-rule" data-draw></span><span class="label" data-rise>Stack</span><span class="idx" data-rise>04 · INSTRUMENTS</span></div>
+    <div class="modhead" data-mh><span class="mh-rule" data-draw></span><span class="label" data-rise>Stack</span><span class="idx" data-rise>05 · INSTRUMENTS</span></div>
     <div class="stack" data-stack>
-      <div class="scol"><h4>Build <span>06</span></h4><div class="sub">Services &amp; infra</div><ul><li>C++</li><li>Python</li><li>Node.js</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker</li></ul></div>
-      <div class="scol"><h4>Ship <span>04</span></h4><div class="sub">Interfaces</div><ul><li>React</li><li>TypeScript</li><li>Tailwind</li><li>REST APIs</li></ul></div>
-      <div class="scol"><h4>Prove <span>05</span></h4><div class="sub">Quality &amp; SDET</div><ul><li>Playwright</li><li>Katalon</li><li>Postman</li><li>Selenium</li><li>Regression suites</li></ul></div>
-      <div class="scol"><h4>Learn <span>05</span></h4><div class="sub">Machine learning</div><ul><li>scikit-learn</li><li>pandas</li><li>XGBoost</li><li>SHAP</li><li>NLP</li></ul></div>
+      <div class="scol"><h4>Build <span>12</span></h4><div class="sub">Systems &amp; services</div><ul><li>C++</li><li>Python</li><li>TypeScript</li><li>Java</li><li>SQL</li><li>Rust</li><li>Node.js</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>MongoDB</li><li>Linux</li></ul></div>
+      <div class="scol"><h4>Reason <span>07</span></h4><div class="sub">Generative AI</div><ul><li>RAG</li><li>LLM agents</li><li>Multi-agent workflows</li><li>MCP servers</li><li>AWS Bedrock</li><li>Strands Agents</li><li>Prompt engineering</li></ul></div>
+      <div class="scol"><h4>Prove <span>08</span></h4><div class="sub">Quality &amp; SDET</div><ul><li>Katalon</li><li>Playwright</li><li>Selenium</li><li>pytest</li><li>Jest</li><li>JUnit</li><li>Postman</li><li>Groovy</li></ul></div>
+      <div class="scol"><h4>Ship <span>07</span></h4><div class="sub">Interfaces &amp; infra</div><ul><li>React</li><li>Socket.IO</li><li>WebRTC</li><li>OAuth 2.0 · JWT</li><li>Docker</li><li>GitHub Actions</li><li>AWS Lambda · DynamoDB · S3</li></ul></div>
+      <div class="scol"><h4>Learn <span>06</span></h4><div class="sub">Machine learning</div><ul><li>scikit-learn</li><li>XGBoost</li><li>LightGBM</li><li>SHAP</li><li>pandas</li><li>NLP</li></ul></div>
     </div>
   </div>
 </section>
@@ -785,12 +906,18 @@
 <!-- LOG -->
 <section id="log" class="pad">
   <div class="wrap">
-    <div class="modhead" data-mh><span class="mh-rule" data-draw></span><span class="label" data-rise>Record</span><span class="idx" data-rise>05 · LOG</span></div>
-    <div data-logrows>
-      <div class="logrow"><span class="yr">2026 —</span><span class="ttl"><em>SDET Intern</em> — HealthEdge</span><span class="meta">Test automation · enterprise healthcare</span></div>
+    <div class="modhead" data-mh><span class="mh-rule" data-draw></span><span class="label" data-rise>Record</span><span class="idx" data-rise>06 · LOG</span></div>
+    <div class="logs" data-logrows>
+      <div class="logrow"><span class="yr">2026 —</span><span class="ttl"><em>SDET Intern</em> — HealthEdge</span><span class="meta">Bengaluru · test automation</span></div>
+      <div class="logrow"><span class="yr">2026</span><span class="ttl"><em>Paper accepted</em> — Vigil, in ISJEM</span><span class="meta">Publication · multi-hazard prediction</span></div>
+      <div class="logrow"><span class="yr">2026</span><span class="ttl">Merged upstream — MapLibre Martin</span><span class="meta">Rust · shipped in v1.10.1</span></div>
+      <div class="logrow"><span class="yr">2026</span><span class="ttl">Razorpay AI Buildathon — Revenant</span><span class="meta">AI revenue recovery track</span></div>
+      <div class="logrow"><span class="yr">2026</span><span class="ttl">WeMakeDevs × AWS hackathon — Agent Replay</span><span class="meta">Bedrock · Strands Agents</span></div>
       <div class="logrow"><span class="yr">2026</span><span class="ttl">SAP Certified Back-End Developer — ABAP Cloud</span><span class="meta">SAP · valid to Apr 2027</span></div>
-      <div class="logrow"><span class="yr">2024</span><span class="ttl">Machine Learning — NPTEL Certification</span><span class="meta">NPTEL · IIT Madras</span></div>
-      <div class="logrow"><span class="yr">2024</span><span class="ttl">2nd Place — CTF Competition</span><span class="meta">SRM Institute</span></div>
+      <div class="logrow"><span class="yr">2024–25</span><span class="ttl">Associate Corporate Lead — SRMKZILLA</span><span class="meta">SRMIST's Mozilla club · sponsorships &amp; events</span></div>
+      <div class="logrow"><span class="yr">2024</span><span class="ttl">Machine Learning — NPTEL, Elite grade</span><span class="meta">IIT Madras</span></div>
+      <div class="logrow"><span class="yr">2024</span><span class="ttl">2nd Place — Capture the Flag</span><span class="meta">SRM Institute</span></div>
+      <div class="logrow"><span class="yr">Archive</span><a class="ttl" href="https://fakenewsdetectorxparitoshxsingh.streamlit.app" target="_blank" rel="noopener" data-hot data-cursor="live">Fake News Radar ↗</a><span class="meta">TF-IDF classifier · ~94% on WELFake · live</span></div>
     </div>
   </div>
 </section>
@@ -798,16 +925,16 @@
 <!-- CONTACT -->
 <section id="contact" class="contact pad">
   <div class="wrap">
-    <div class="modhead" data-mh><span class="mh-rule" data-draw></span><span class="label" data-rise>Open channel</span><span class="idx" data-rise>06 · CONTACT</span></div>
+    <div class="modhead" data-mh><span class="mh-rule" data-draw></span><span class="label" data-rise>Open channel</span><span class="idx" data-rise>07 · CONTACT</span></div>
     <h2 data-clip><span class="clip"><i>Let's build something</i></span><span class="clip"><i>that <span class="rot-mask"><span id="rotword">holds up.</span></span></i></span></h2>
     <div class="channels" data-stagger>
       <a class="channel" href="mailto:paritosh0180@gmail.com" data-hot data-cursor="copy"><div class="k">Email</div><div class="v">paritosh0180 <span class="arr">↗</span></div></a>
       <a class="channel" href="https://github.com/Paritoshcodes" target="_blank" rel="noopener" data-hot data-cursor="github"><div class="k">GitHub</div><div class="v">Paritoshcodes <span class="arr">↗</span></div></a>
-      <a class="channel" href="https://www.linkedin.com/in/paritosh-singh-800722359/" target="_blank" rel="noopener" data-hot data-cursor="open"><div class="k">LinkedIn</div><div class="v">Paritosh Singh <span class="arr">↗</span></div></a>
+      <a class="channel" href="https://www.linkedin.com/in/paritosh18/" target="_blank" rel="noopener" data-hot data-cursor="open"><div class="k">LinkedIn</div><div class="v">paritosh18 <span class="arr">↗</span></div></a>
     </div>
     <footer>
       <span><b>Paritosh Singh</b> — Backend &amp; Systems Engineer · SDET</span>
-      <span>Chennai, IN · Available for full-time roles, 2027</span>
+      <span>Bengaluru, IN · Available for full-time roles, 2027</span>
     </footer>
     <div class="signoff" id="signoff"><canvas class="so-line" id="soLine" height="18" aria-hidden="true"></canvas><span class="so-text">End of stream · Signal clear · <b>2027</b></span></div>
   </div>
@@ -816,6 +943,7 @@
   <div class="legend-panel mono">
     <div class="lg-h">INSTRUMENT CONTROLS</div>
     <div class="lg-r"><b>`</b><span>mini-redis console</span></div>
+    <div class="lg-r"><b>BENCH</b><span>in the console: the real numbers</span></div>
     <div class="lg-r"><b>j / k · ↓ / ↑</b><span>step channels</span></div>
     <div class="lg-r"><b>SND</b><span>sound on/off (top right)</span></div>
     <div class="lg-r"><b>?</b><span>this legend</span></div>
@@ -832,11 +960,14 @@
   </div>
 </div>
 
-<div class="hud" aria-hidden="true"><span class="l"><b class="dot"></b> Rec</span> &middot; <span id="hud-idx">CH 01 / 08</span> &middot; <span id="hud-scene">HERO</span> &middot; <span id="hud-tc">00:00</span></div>
+<div class="hud" aria-hidden="true"><span class="l"><b class="dot"></b> Rec</span><canvas class="hud-scope" id="hudScope" width="128" height="32"></canvas><span id="hud-idx">CH 01 / 09</span><span class="sep"></span><span id="hud-scene">HERO</span><span class="sep"></span><span id="hud-tc">00:00</span></div>
+<div class="hud-r" aria-hidden="true"><span class="sig"><i></i><i></i><i></i><i></i></span><span>BLR <b id="clk">--:--:--</b> IST</span></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="js/signal.js"></script>
+<script src="js/mobile.js"></script>
 <script>
 (function(){
   var mqReduce=window.matchMedia('(prefers-reduced-motion:reduce)');
@@ -849,12 +980,15 @@
   var AMBER='255,166,61', TEAL='52,226,214';
   var lenis=null, scopeActive=true, inited=false;
   // pick ONE engine for the whole session
-  var engine=(hasGSAP&&!reduce)?(isDesktop?'stage':'mobile'):'static';
+  // ?engine=stage|mobile|static forces an engine (handy for testing on touch laptops / previews)
+  var forced=(location.search.match(/[?&]engine=(stage|mobile|static)/)||[])[1];
+  var engine=forced||((hasGSAP&&!reduce)?(isDesktop?'stage':'mobile'):'static');
+  if(forced==='stage'){fine=true;isDesktop=true;}
 
   /* V3+V4 feature flags - flip any to 0 to disable that effect */
   var FX={wipe:1,ghost:1,chars:1,rush:1,grain:1,fill:1,marquee:1,tilt:1,
         phosphor:1,sig:1,interf:1,rail:1,lock:1,gauge:1,tele:1,xref:1,sfx:1,title:1,
-        dolly:1,flash:1,lit:1,cine:1};
+        dolly:1,flash:1,cine:1,crt:1,weight:1,spot:1,gl:1,gen:1};
 
   /* SCRAMBLE - terminal decode effect */
   var GLYPHS='!<>-_\\/[]{}=+*^?#0123456789ABCDEF';
@@ -896,15 +1030,17 @@
   }
 
   /* GHOST TYPE - giant outline word injected behind each scene */
-  var ghostWords={now:'ON AIR',about:'OPERATOR',method:'METHOD',stack:'RACK',log:'RECORD',contact:'SIGNAL'};
+  var ghostWords={now:'ON AIR',about:'OPERATOR',oss:'UPSTREAM',method:'METHOD',stack:'RACK',log:'RECORD',contact:'SIGNAL'};
   function injectGhosts(){
     if(!FX.ghost)return;
     Object.keys(ghostWords).forEach(function(id){
       var sec=document.getElementById(id);if(!sec||sec.querySelector('.ghost'))return;
       var g=document.createElement('div');g.className='ghost';g.setAttribute('aria-hidden','true');
-      g.textContent=ghostWords[id];sec.appendChild(g);
+      g.textContent=ghostWords[id];
+      if(FX.spot&&fine&&!reduce){var lit=document.createElement('span');lit.className='lit';lit.textContent=ghostWords[id];g.appendChild(lit);}
+      sec.appendChild(g);
     });
-    document.querySelectorAll('.pr').forEach(function(p,i){
+    document.querySelectorAll('.principles .pr').forEach(function(p,i){ // scoped: the console prompt is also .pr
       if(p.querySelector('.pr-ghost'))return;
       var n=document.createElement('span');n.className='pr-ghost';n.setAttribute('aria-hidden','true');
       n.textContent='0'+(i+1);p.appendChild(n);
@@ -916,16 +1052,21 @@
   var navLinks=document.querySelectorAll('.nav-links a');
 
   // stage handles (populated by buildStage)
-  var stageTL=null, stageLabelPos=null, stageTotalUnits=1, stageScenes=null, stageLenMap=null;
+  var stageTL=null, stageLabelPos=null, stageTotalUnits=1, stageDur=1, stageScenes=null, stageLenMap=null;
+  // scroll maps onto the timeline's full duration (scenes + tail), so all unit math divides by stageDur
+  function stageSettleU(idx){
+    // after every entrance has finished, before the next scene's wipe begins (it starts 0.3 early)
+    var settle=idx===0?0:Math.min(0.9,((stageLenMap&&stageLenMap[stageScenes[idx].id])||1)-0.4);
+    return stageLabelPos[idx]+settle;
+  }
   function stageTargetY(idx){
     var st=stageTL.scrollTrigger;
-    var settle=idx===0?0:Math.min(0.62,((stageLenMap&&stageLenMap[stageScenes[idx].id])||1)*0.5);
-    var u=(stageLabelPos[idx]+settle)/stageTotalUnits;
-    return st.start+u*(st.end-st.start);
+    return st.start+stageSettleU(idx)/stageDur*(st.end-st.start);
   }
+  function stageIdxAt(u){if(!stageScenes)return 0;var idx=0;for(var k=0;k<stageScenes.length;k++){if(u>=stageLabelPos[k]-1e-4)idx=k;}return idx;}
 
   /* MARQUEE TOKENS */
-  var mqToks=['Epoll event loop','RESP protocol','Sub-100ms delivery','C++ from scratch','XGBoost & SHAP','Socket.IO realtime','Multi-tenant Postgres','FastAPI','Playwright','Katalon','Postman','TF-IDF & NLP','Regression coverage','Docker'];
+  var mqToks=['Epoll event loop','2.7M ops/sec pipelined','RESP protocol','Causal lift, not gross','Hash-chained audit log','Agent contracts','Set logic, not an LLM judge','MCP servers','Grounded or rejected','Katalon','Playwright','XGBoost & SHAP','Merged upstream','AWS Bedrock'];
   var mqEl=document.getElementById('mqTrack');
   if(mqEl){var mqHtml=mqToks.map(function(t){return '<span class="tok">'+t+'</span>';}).join('');mqEl.innerHTML=mqHtml+mqHtml;}
 
@@ -944,6 +1085,7 @@
         {yPercent:0,rotate:0,autoAlpha:1,duration:.9,stagger:.03,ease:'power4.out',delay:.12});
       gsap.from('.hero-inner',{scale:1.035,duration:1.4,ease:'power3.out',clearProps:'scale'});
     }
+    if(FX.crt&&hasGSAP&&!reduce&&engine!=='static')powerOn();
     document.body.classList.add('booted');startScope();playSignature();
     if(FX.cine&&hasGSAP&&!reduce){
       gsap.to('.cine',{scaleY:0,duration:1.1,ease:'power4.inOut',delay:2.4,
@@ -951,7 +1093,8 @@
     }
     afterLayout();
   }
-  if(reduce){pct.textContent='100%';bar.style.width='100%';finishBoot();}
+  // deferred: finishBoot touches the scope canvas and helpers declared further down this script
+  if(reduce){pct.textContent='100%';bar.style.width='100%';setTimeout(finishBoot,0);}
   else{
     scrambleTo(bootLabel,'CALIBRATING\u00A0INSTRUMENT',700);
     if(FX.cine&&hasGSAP)document.body.classList.add('cine-on');
@@ -976,6 +1119,19 @@
       bt=requestAnimationFrame(tick);
     });
     skip.addEventListener('click',function(){cancelAnimationFrame(bt);done=true;pct.textContent='100%';bar.style.width='100%';finishBoot();});
+  }
+
+  /* CRT POWER-ON - the boot's calibration line becomes the beam that opens the tube */
+  function powerOn(){
+    var crt=document.getElementById('crt');if(!crt)return;
+    document.body.classList.add('crt-on');
+    var beam=crt.querySelector('.beam'),top=crt.querySelector('.top'),bot=crt.querySelector('.bot');
+    gsap.timeline({onComplete:function(){document.body.classList.remove('crt-on');crt.remove();}})
+      .fromTo(beam,{scaleX:.4,scaleY:1,autoAlpha:1},{scaleX:1,duration:.34,ease:'power3.out'})
+      .to(beam,{scaleY:3,duration:.08,ease:'power1.in'},'-=.04')
+      .to(top,{yPercent:-100,duration:.72,ease:'power4.inOut'},'-=.02')
+      .to(bot,{yPercent:100,duration:.72,ease:'power4.inOut'},'<')
+      .to(beam,{scaleY:.2,autoAlpha:0,duration:.5,ease:'power2.out'},'<+.1');
   }
 
   /* LENIS - only in the desktop stage (slow, weighted, cinematic) */
@@ -1005,9 +1161,9 @@
   window.addEventListener('scroll',function(){if(hdr)hdr.classList.toggle('solid',window.scrollY>40);},{passive:true});
 
   /* NAV ACTIVE STATE - non-stage uses IntersectionObserver; stage is timeline-driven */
-  var nameMap={top:'HERO',now:'NOW',about:'PROFILE',work:'CHANNELS',method:'METHOD',stack:'STACK',log:'LOG',contact:'CONTACT'};
+  var nameMap={top:'HERO',now:'NOW',about:'PROFILE',work:'CHANNELS',oss:'OPEN SOURCE',method:'METHOD',stack:'STACK',log:'LOG',contact:'CONTACT'};
   if(engine!=='stage'){
-    var secIds=['top','now','about','work','method','stack','log','contact'];
+    var secIds=['top','now','about','work','oss','method','stack','log','contact'];
     var hIdxM=document.getElementById('hud-idx'),hSceneM=document.getElementById('hud-scene');
     secIds.forEach(function(id,si){
       var el=document.getElementById(id);if(!el)return;
@@ -1032,24 +1188,59 @@
   function closeMenu(){document.body.classList.remove('menu-open');if(lenis)lenis.start();else document.documentElement.classList.remove('lenis-stopped');}
   menuBtn&&menuBtn.addEventListener('click',function(){document.body.classList.contains('menu-open')?closeMenu():openMenu();});
 
-  /* COUNT-UP */
-  function animateCount(el){
-    if(!el||el.dataset.done)return;el.dataset.done='1';
-    var target=+(el.dataset.count||el.dataset.target||0),suf=el.dataset.suffix||'',pre=el.dataset.prefix||'',fin=el.dataset.final||'',pad=+(el.dataset.pad||0);
-    function fmt(v){var s=Math.round(v).toLocaleString();if(pad)s=String(Math.round(v)).padStart(pad,'0');return pre+s+suf;}
-    if(reduce){el.textContent=fin||fmt(target);
-      var gr=el.parentNode&&el.parentNode.querySelector&&el.parentNode.querySelector('.gauge i');
-      if(gr)gr.style.transform='scaleX(1)';return;}
-    var dur=1400,t0=null;
-    (function step(ts){if(!t0)t0=ts;var pr=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-pr,3);
-      el.textContent=fmt(target*e);
-      var gi=el.parentNode&&el.parentNode.querySelector&&el.parentNode.querySelector('.gauge i');
-      if(gi)gi.style.transform='scaleX('+e+')';
-      if(pr<1)requestAnimationFrame(step);else if(fin)el.textContent=fin;})(0);
+  /* COUNT-UP - one manager for every engine.
+     The markup holds each number's FINAL value (no-JS, crawlers, reduced motion).
+     A number is primed to zero only if the viewer will reach it scrolling DOWN;
+     it counts up once on a forward reveal. Any reveal while scrolling UP (or a
+     jump past it) settles it at its final value, so numbers never sit at 0. */
+  function countTarget(el){return +(el.dataset.count||el.dataset.target||0);}
+  function countFmt(el,v){
+    var dec=+(el.dataset.dec||0),pad=+(el.dataset.pad||0),s;
+    if(dec)s=v.toFixed(dec);else if(pad)s=String(Math.round(v)).padStart(pad,'0');else s=Math.round(v).toLocaleString();
+    return (el.dataset.prefix||'')+s+(el.dataset.suffix||'');
   }
-  function observeCounts(els){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animateCount(e.target);io.unobserve(e.target);}});},{rootMargin:'0px 0px -10% 0px'});
-    els.forEach(function(el){io.observe(el);});
+  function countGauge(el,e){var m=el.closest&&el.closest('.metric'),gi=m&&m.querySelector('.gauge i');if(gi)gi.style.transform='scaleX('+e+')';}
+  function finishCount(el){
+    if(!el)return;el.dataset.done='1';el._run=null;
+    el.textContent=el.dataset.final||countFmt(el,countTarget(el));countGauge(el,1);
+  }
+  function primeCount(el){if(!el||el.dataset.done)return;el.textContent=countFmt(el,0);countGauge(el,0);}
+  function animateCount(el){
+    if(!el||el.dataset.done)return;
+    if(reduce){finishCount(el);return;}
+    el.dataset.done='1';
+    var target=countTarget(el),dur=1400,t0=null,run={};el._run=run;
+    (function step(ts){
+      if(el._run!==run)return; // settled early by finishCount
+      if(!t0)t0=ts;var pr=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-pr,3);
+      el.textContent=countFmt(el,target*e);countGauge(el,e);
+      if(pr<1)requestAnimationFrame(step);else finishCount(el);
+    })(performance.now());
+  }
+  function finishCountsIn(root){if(root)root.querySelectorAll('.count').forEach(finishCount);}
+  // non-stage engines: count up on a forward reveal, settle on any upward scroll
+  function watchCounts(){
+    var els=Array.prototype.slice.call(document.querySelectorAll('.count'));
+    if(reduce||!hasGSAP){
+      if(reduce){els.forEach(finishCount);return;}
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){
+        if(!e.isIntersecting)return;io.unobserve(e.target);
+        if(e.boundingClientRect.top<0)finishCount(e.target);else animateCount(e.target); // arrived from above = scrolling up
+      });},{rootMargin:'0px 0px -10% 0px'});
+      els.forEach(function(el){if(el.getBoundingClientRect().bottom<0)finishCount(el);else{primeCount(el);io.observe(el);}});
+      return;
+    }
+    function offX(el){var r=el.getBoundingClientRect();return r.right<0||r.left>window.innerWidth;} // parked in the horizontal deck
+    els.forEach(function(el){
+      if(el.getBoundingClientRect().bottom<0){finishCount(el);return;}
+      primeCount(el);
+      ScrollTrigger.create({trigger:el,start:'top bottom',onEnter:function(){if(!offX(el))animateCount(el);}}); // counts from the moment it peeks in
+    });
+    ScrollTrigger.create({start:0,end:'max',onUpdate:function(self){
+      if(self.direction>=0)return;
+      for(var i=0;i<els.length;i++){var el=els[i];if(el.dataset.done&&!el._run)continue;
+        if(el.getBoundingClientRect().top<window.innerHeight&&!offX(el))finishCount(el);}
+    }});
   }
 
   /* CURSOR (desktop pointer only) */
@@ -1087,15 +1278,19 @@
   var velEnv=0, amp=0, ampVel=0;
   var STEP=2, isMobileNow=!isDesktop;
   function size(){
-    isMobileNow=window.matchMedia('(max-width:760px)').matches;
+    isMobileNow=window.matchMedia('(max-width:760px)').matches||document.body.classList.contains('m'); // body.m: phone/tablet layout
     STEP=isMobileNow?3:2;
     DPR=Math.min(window.devicePixelRatio||1, isMobileNow?1.5:2);
     W=canvas.clientWidth;H=canvas.clientHeight;
     canvas.width=W*DPR;canvas.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);
-    y0=isMobileNow?H*0.32:H*0.5;
+    y0=isMobileNow?mobileScopeY():H*0.5;
     ctx.clearRect(0,0,W,H);
   }
   window.addEventListener('resize',size);
+  function mobileScopeY(){ // under the CTAs, clear of the copy
+    var cta=document.querySelector('.hero-cta'),cb=cta?cta.getBoundingClientRect().bottom-canvas.getBoundingClientRect().top:H*0.6;
+    return Math.min(H-96,Math.max(H*0.7,cb+H*0.12));
+  }
   window.addEventListener('pointermove',function(e){
     var now=performance.now();
     if(havePtr){var dt=Math.max((now-lastPT)/1000,1e-4);
@@ -1130,7 +1325,7 @@
     var sy=window.scrollY,scrollSpeed=Math.abs(sy-lastScrollY)/Math.max(dt,1e-4);lastScrollY=sy;
     velEnv=Math.max(velEnv, pointerSpeed, scrollSpeed*0.55);pointerSpeed=0;
     velEnv*=Math.pow(0.0018,dt);
-    var maxAmp=H*(isMobileNow?0.19:0.32), idleAmp=Math.max(5,H*0.028);
+    var maxAmp=H*(isMobileNow?0.09:0.32), idleAmp=Math.max(5,H*(isMobileNow?0.014:0.028));
     var ampTarget=maxAmp*Math.tanh((idleAmp+0.06*velEnv)/maxAmp);
     var s=spring(amp,ampVel,ampTarget,0.12,dt);amp=s[0];ampVel=s[1];
     tWave+=dt;
@@ -1145,6 +1340,7 @@
       strokeTrace(tWave+0.18, amp*0.5, 0.16, 1, TEAL, 2);
       strokeTrace(tWave, amp*0.55, 0.30, 1.2, AMBER, 1);
     }
+    if(hudCtx&&engine==='stage')drawHudScope();
     raf=requestAnimationFrame(frame);
   }
   function staticTrace(){ctx.clearRect(0,0,W,H);grid();
@@ -1179,7 +1375,7 @@
       }
       var isM=window.matchMedia('(max-width:760px)').matches;
       var Wn=Math.min(W2*(isM?0.92:0.66),860),s=Wn/GW;
-      var ox=(W2-Wn)/2,oy=(isM?H2*0.32:H2*0.5)-(GH/2)*s; // anchored to the scope midline
+      var ox=(W2-Wn)/2,oy=(isM?y0:H2*0.5)-(GH/2)*s; // anchored to the scope midline
       var t0=null,DUR=2500;
       (function step(ts){
         if(!t0)t0=ts;var t=Math.min((ts-t0)/DUR,1);
@@ -1231,9 +1427,12 @@
   /* VIDEOS */
   function loadVideo(v){
     if(navigator.connection&&navigator.connection.saveData)return;
-    if(v&&v.dataset.src&&!v.src){v.src=v.dataset.src;}
+    if(v&&v.dataset.src&&!v.src){
+      var cut=document.body.classList.contains('m')&&v.dataset.srcM; // phones: light, pre-trimmed cut
+      if(v.dataset.start&&!cut)v.addEventListener('loadedmetadata',function(){try{v.currentTime=+v.dataset.start;}catch(e){}},{once:true});
+      v.src=cut||v.dataset.src;
+    }
   }
-  function setNum(el,v){el.textContent=Math.round(v).toLocaleString()+(el.dataset.suffix||'');}
   function setupVideos(){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){
       var v=e.target.querySelector('video');if(!v)return;
@@ -1246,12 +1445,41 @@
   /* ============================================================
      ENGINE A - DESKTOP STAGE (single pinned window, scene sequencer)
      ============================================================ */
+  /* GIT GRAPH - main line, the fix branch, the merge node, then the release tag */
+  function gitGraph(tl,row,at){
+    var svg=row.querySelector('.gg');if(!svg)return;
+    var paths=svg.querySelectorAll('.main,.br');
+    paths.forEach(function(p){var L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;});
+    var main=svg.querySelector('.main'),br=svg.querySelector('.br');
+    if(main)tl.to(main,{strokeDashoffset:0,duration:.35,ease:'power1.inOut'},at);
+    if(br)tl.to(br,{strokeDashoffset:0,duration:.4,ease:'power1.inOut'},at+0.1);
+    tl.fromTo(svg.querySelectorAll('.cm,.cb,.rv-mk'),{scale:0,transformOrigin:'50% 50%'},{scale:1,duration:.12,stagger:.035,ease:'back.out(3)'},at+0.12);
+    tl.fromTo(svg.querySelectorAll('.mg,.mr'),{scale:0,transformOrigin:'50% 50%'},{scale:1,duration:.16,ease:'back.out(3)'},at+0.42);
+    tl.fromTo(svg.querySelectorAll('text,.tgb'),{autoAlpha:0},{autoAlpha:1,duration:.15,stagger:.03},at+0.3);
+  }
+  function gitGraphIn(row){ // time-based variant for the mobile reel
+    var tl=gsap.timeline({paused:true});gitGraph(tl,row,0);
+    var st=row.querySelector('.stamp');
+    if(st)tl.fromTo(st,{autoAlpha:0,scale:2.2,rotate:-18},{autoAlpha:1,scale:1,rotate:-7,duration:.3,ease:'back.out(2.2)'},0.5);
+    return tl.timeScale(1.4);
+  }
+
+  function stageDir(){return (stageTL&&stageTL.scrollTrigger&&stageTL.scrollTrigger.direction)||1;}
+  function genOf(el){var c=el&&el.querySelector('canvas[data-gen]');return (c&&FX.gen&&window.PSFX)?PSFX.gen(c):null;}
+  var workChannel=function(){};
+  var stageCounts=[];
+  function settleCountsUpTo(idx){
+    for(var i=0;i<stageCounts.length;i++){var c=stageCounts[i];
+      if(c.k<=idx&&(!c.el.dataset.done||c.el._run))finishCount(c.el);}
+  }
+
   function buildStage(){
     document.body.classList.add('stage');
 
     var scope=document.getElementById('scope');
     if(scope){document.body.appendChild(scope);scope.classList.add('scope-global');size();}
     var sig=document.getElementById('sig');if(sig)document.body.appendChild(sig);
+    var hudtc=document.getElementById('hudtc'),workCount=document.querySelectorAll('#work .ch').length||1;
     var lastSceneIdx=-1;
 
     injectGhosts();
@@ -1271,7 +1499,7 @@
 
     var hIdx=document.getElementById('hud-idx'),hScene=document.getElementById('hud-scene'),hTc=document.getElementById('hud-tc');
 
-    var lenMap={top:0.9,now:1.1,about:1.4,work:5.2,method:1.2,stack:1.4,log:1.1,contact:1.5};
+    var lenMap={top:0.9,now:1.1,about:1.4,work:6.5,oss:1.4,method:1.2,stack:1.4,log:1.3,contact:1.5};
     stageLenMap=lenMap;
     var pos=0,labelPos=[];
     scenes.forEach(function(sc,i){labelPos[i]=pos;pos+=(lenMap[sc.id]||1);});
@@ -1304,25 +1532,34 @@
         tl.fromTo(sc.querySelectorAll('.about-body'),{autoAlpha:0,y:18},{autoAlpha:1,y:0,duration:.5},at+0.2);
         var mr=sc.querySelector('[data-draw-v]');if(mr)tl.fromTo(mr,{scaleY:0},{scaleY:1,duration:.5,transformOrigin:'top'},at+0.15);
         tl.fromTo(sc.querySelectorAll('.metric'),{autoAlpha:0,y:18},{autoAlpha:1,y:0,duration:.45,stagger:.07},at+0.25);
-        tl.add(function(){sc.querySelectorAll('.count').forEach(animateCount);},at+0.3);
+        tl.add(function(){if(stageDir()>0)sc.querySelectorAll('.count').forEach(animateCount);},at+0.3);
+      }else if(id==='oss'){
+        tl.fromTo(sc.querySelectorAll('[data-o-rise]'),{autoAlpha:0,y:20},{autoAlpha:1,y:0,duration:.45},at+0.05);
+        sc.querySelectorAll('[data-o-row]').forEach(function(row,k){
+          var at2=at+0.1+k*0.12;
+          tl.fromTo(row,{autoAlpha:0,x:-30},{autoAlpha:1,x:0,duration:.4,ease:'power3.out'},at2);
+          gitGraph(tl,row,at2+0.05);
+          var st=row.querySelector('.stamp');
+          if(st)tl.fromTo(st,{autoAlpha:0,scale:2.2,rotate:-18},{autoAlpha:1,scale:1,rotate:-7,duration:.22,ease:'back.out(2.2)'},at2+0.36);
+        });
       }else if(id==='method'){
-        tl.fromTo(sc.querySelectorAll('.pr'),{autoAlpha:0,rotationX:-78,y:46,transformOrigin:'top center',transformPerspective:900},{autoAlpha:1,rotationX:0,y:0,duration:.6,stagger:.12,ease:'power3.out'},at+0.05);
+        tl.fromTo(sc.querySelectorAll('.pr'),{autoAlpha:0,rotationX:-78,y:46,transformOrigin:'top center',transformPerspective:900},{autoAlpha:1,rotationX:0,y:0,duration:.5,stagger:.1,ease:'power3.out'},at+0.05);
         tl.fromTo(sc.querySelectorAll('.pr-ghost'),{y:36,autoAlpha:0},{y:0,autoAlpha:1,duration:.5,stagger:.12},at+0.18);
       }else if(id==='stack'){
         var cols=sc.querySelectorAll('.scol');
         cols.forEach(function(col,k){tl.fromTo(col,{autoAlpha:0,x:(k%2?64:-64)},{autoAlpha:1,x:0,duration:.5,ease:'power3.out'},at+0.05+k*0.05);});
         var lis=sc.querySelectorAll('.scol li');
-        tl.fromTo(lis,{autoAlpha:0},{autoAlpha:1,duration:.06,stagger:.03},at+0.26);
+        tl.fromTo(lis,{autoAlpha:0,y:6},{autoAlpha:1,y:0,duration:.08,stagger:.012},at+0.24);
         lis.forEach(function(li,k){
           if(!li.dataset.t)li.dataset.t=li.textContent;
-          tl.add(function(){scrambleTo(li,li.dataset.t,360);},at+0.26+k*0.03);
+          tl.add(function(){scrambleTo(li,li.dataset.t,360);},at+0.24+k*0.012);
         });
       }else if(id==='log'){
-        tl.fromTo(sc.querySelectorAll('.logrow'),{autoAlpha:0,x:-20},{autoAlpha:1,x:0,duration:.5,stagger:.1,ease:'power3.out'},at+0.05);
+        tl.fromTo(sc.querySelectorAll('.logrow'),{autoAlpha:0,x:-20},{autoAlpha:1,x:0,duration:.4,stagger:.045,ease:'power3.out'},at+0.05);
         sc.querySelectorAll('.logrow .ttl').forEach(function(t,k){
           if(t.children.length)return;
           if(!t.dataset.t)t.dataset.t=t.textContent;
-          tl.add(function(){if(FX.tele)typeIn(t,t.dataset.t,420);},at+0.1+k*0.1);
+          tl.add(function(){if(FX.tele)typeIn(t,t.dataset.t,420);},at+0.1+k*0.045);
         });
       }else if(id==='contact'){
         var conC=[];
@@ -1361,12 +1598,28 @@
       var rails=Array.prototype.slice.call(sc.querySelectorAll('.rail-item'));
       var hudch=document.getElementById('hudch'),wprog=document.getElementById('workProg');
       gsap.set(chans,{autoAlpha:0});if(chans[0])gsap.set(chans[0],{autoAlpha:1});
+      var useGL=FX.gl&&!reduce&&window.PSFX&&PSFX.signal.init();
+      var posters=chans.map(function(ch){var v=ch.querySelector('video');if(!v||!v.poster)return null;var im=new Image();im.src=v.poster;return im;});
       function setActive(i){rails.forEach(function(r,k){r.classList.toggle('on',k===i);});if(hudch)hudch.textContent='CH.0'+(i+1)+' / 0'+chans.length;}
       function playChannel(i){
-        chans.forEach(function(ch,k){var v=ch.querySelector('video');if(!v)return;
-          if(k===i){loadVideo(v);if(!reduce){v.muted=true;v.loop=true;v.play&&v.play().catch(function(){});}}
-          else{try{v.pause();}catch(e){}}});
+        chans.forEach(function(ch,k){
+          var v=ch.querySelector('video'),gc=genOf(ch);
+          if(k===i){
+            if(v){loadVideo(v);if(!reduce){v.muted=true;v.loop=true;v.play&&v.play().catch(function(){});}}
+            if(gc&&workLive)gc.start();
+            if(useGL){var media=ch.querySelector('.ch-media');PSFX.signal.tune(media,v||ch.querySelector('canvas[data-gen]'),posters[k]);}
+          }else{
+            if(v){try{v.pause();}catch(e){}}
+            if(gc)gc.stop();
+          }
+        });
       }
+      workChannel=function(on){ // called when the WORK scene becomes (in)active
+        workLive=on;var gc=genOf(chans[curChan]);
+        if(on){if(gc)gc.start();if(useGL)PSFX.signal.start();}
+        else{chans.forEach(function(ch){var g=genOf(ch);if(g)g.stop();});if(useGL)PSFX.signal.stop();}
+      };
+      var curChan=0,workLive=false;
       setActive(0);playChannel(0);
       var per=len/chans.length;
       var reveal=Math.min(per*0.55,1.0); // content settles in the first part; the rest is a fully-loaded HOLD before the next project
@@ -1376,12 +1629,19 @@
           tl.to(chans[i-1],{autoAlpha:0,duration:.3},t0);
           tl.fromTo(ch,{autoAlpha:0},{autoAlpha:1,duration:.3},t0);
         }
-        var vid=ch.querySelector('video');if(vid)tl.fromTo(vid,{scale:1.1},{scale:1,duration:reveal,ease:'power2.out'},t0);
+        var media=ch.querySelector('.ch-media');if(media)tl.fromTo(media,{scale:1.1},{scale:1,duration:reveal,ease:'power2.out'},t0);
         var sweep=ch.querySelector('.sweep');if(sweep)tl.fromTo(sweep,{yPercent:-120,opacity:.9},{yPercent:260,opacity:0,duration:.4},t0+0.02);
         if(lockEls.length)tl.fromTo(lockEls,{scale:1.35,autoAlpha:0},{scale:1,autoAlpha:.5,duration:.28,stagger:.03},t0+0.04);
-        var rv=ch.querySelectorAll('.rv');tl.fromTo(rv,{yPercent:60,autoAlpha:0,filter:'blur(5px)'},{yPercent:0,autoAlpha:1,filter:'blur(0px)',stagger:.08,duration:.4},t0+0.08);
-        var num=ch.querySelector('.metric-num');if(num){var o={v:0};tl.to(o,{v:+num.dataset.target,duration:Math.max(.4,reveal*0.85),onUpdate:function(){setNum(num,o.v);}},t0+0.1);}
-        tl.add(function(){setActive(i);playChannel(i);if(i>0)burstStatic();if(wprog)wprog.style.width=((i+1)/chans.length*100)+'%';sfx(760,0.07);},t0+0.05);
+        var rv=ch.querySelectorAll('.rv');tl.fromTo(rv,{yPercent:60,autoAlpha:0,filter:'blur(5px)'},{yPercent:0,autoAlpha:1,filter:'blur(0px)',stagger:.05,duration:.35},t0+0.08);
+        // the callback fires in both scroll directions: going UP past channel i means channel i-1 is taking over
+        tl.add(function(){
+          var dir=stageDir(),k=dir<0?Math.max(0,i-1):i;
+          if(k===curChan&&i>0)return;curChan=k;
+          setActive(k);playChannel(k);if(i>0)burstStatic();
+          if(wprog)wprog.style.width=((k+1)/chans.length*100)+'%';sfx(760,0.07);
+          var num=chans[k].querySelector('.metric-num');
+          if(num){if(dir>0)animateCount(num);else finishCount(num);}
+        },t0+0.05);
       });
     }
 
@@ -1390,24 +1650,29 @@
       end:function(){return '+='+(totalUnits*window.innerHeight);},
       pin:true,scrub:1,anticipatePin:1,invalidateOnRefresh:true,
       onUpdate:function(self){
-        var u=self.progress*totalUnits,idx=0;
-        for(var k=0;k<scenes.length;k++){if(u>=labelPos[k]-1e-4)idx=k;}
-        var id=scenes[idx].id;
-        if(hScene)hScene.textContent=nameMap[id]||'';
-        if(hIdx)hIdx.textContent='CH '+String(idx+1).padStart(2,'0')+' / '+String(scenes.length).padStart(2,'0');
-        if(hTc)hTc.textContent='00:'+String(Math.min(59,Math.floor(self.progress*60))).padStart(2,'0');
-        if(prog)prog.style.transform='scaleX('+self.progress+')';
-        scopeActive=(idx===0);
-        if(scope&&lastSceneIdx!==idx){
-          lastSceneIdx=idx;
-          gsap.to(scope,{opacity:idx===0?0.9:0.14,duration:.6,overwrite:true});
-          if(id==='work')vuStart();else vuStop();
-          if(FX.lit)document.body.classList.toggle('lit',id==='method');
-        }
-        railUpdate(railSceneProgress(u,idx,scenes,labelPos,lenMap));
+        // scrolling UP: every scene from the one on screen back to the top is already fully loaded
+        if(self.direction<0)settleCountsUpTo(stageIdxAt(tl.time()));
+        if(window.PSFX&&lastSceneIdx>=0&&scenes[lastSceneIdx].id==='work')PSFX.signal.kick(Math.abs(self.getVelocity())/3500);
+      }
+    },
+    // readouts follow the SCRUBBED time (what is actually on screen), not the raw scroll target
+    onUpdate:function(){
+      var u=tl.time(),idx=stageIdxAt(u),id=scenes[idx].id,pr=tl.progress();
+      if(hScene&&hScene.dataset.v!==id){hScene.dataset.v=id;scrambleTo(hScene,nameMap[id]||'',260);}
+      if(hIdx)hIdx.textContent='CH '+String(idx+1).padStart(2,'0')+' / '+String(scenes.length).padStart(2,'0');
+      if(hTc)hTc.textContent='00:'+String(Math.min(59,Math.floor(pr*60))).padStart(2,'0');
+      if(prog)prog.style.transform='scaleX('+pr+')';
+      scopeActive=(idx===0);
+      if(lastSceneIdx!==idx){
+        lastSceneIdx=idx;
+        if(scope)gsap.to(scope,{opacity:idx===0?0.9:0.14,duration:.6,overwrite:true});
+        if(id==='work')vuStart();else vuStop();
+        workChannel(id==='work');
         if(navch&&navch.dataset.v!==(nameMap[id]||'')){navch.dataset.v=nameMap[id]||'';scrambleTo(navch,nameMap[id]||'',260);}
         navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+id);});
       }
+      tunerUpdate(u,idx);
+      if(id==='work'&&hudtc){var wper=lenMap.work/workCount,wf=((u-labelPos[idx])%wper)/wper;hudtc.textContent='00:'+pad2(Math.min(59,Math.floor(wf*60)));}
     }});
 
     var wipeStrips=FX.wipe?document.querySelectorAll('#wipe i'):[];
@@ -1434,11 +1699,14 @@
     });
     tl.to({},{duration:0.4});
 
-    stageTL=tl;stageLabelPos=labelPos;stageTotalUnits=totalUnits;stageScenes=scenes;
+    stageTL=tl;stageLabelPos=labelPos;stageTotalUnits=totalUnits;stageDur=tl.duration();stageScenes=scenes;
+    // counts start primed at zero on the stage (it always boots at the hero); remember their scene
+    stageCounts=[];
+    scenes.forEach(function(sc,k){sc.querySelectorAll('.count').forEach(function(el){primeCount(el);stageCounts.push({el:el,k:k});});});
     var vu=document.createElement('span');vu.className='vu';
     vu.innerHTML='<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
     var wh=document.querySelector('.work-hud');if(wh){wh.appendChild(vu);vuBars=vu.querySelectorAll('i');}
-    initRail();
+    initTuner();
   }
 
   /* ============================================================
@@ -1449,170 +1717,20 @@
      are a full-bleed swipe deck. (transform/opacity; reduced-motion
      falls back to fully-visible static.)
      ============================================================ */
-  function mScene(sec){return gsap.timeline({scrollTrigger:{trigger:sec,start:'top bottom',end:'bottom top',scrub:0.6}});}
-  function mMod(tl,sec){
-    var mh=sec.querySelector('[data-mh]');if(!mh)return;
-    var rule=mh.querySelector('[data-draw]');
-    if(rule)tl.fromTo(rule,{scaleX:0},{scaleX:1,duration:.32,transformOrigin:'left'},0);
-    tl.fromTo(mh.querySelectorAll('[data-rise]'),{autoAlpha:0,y:14},{autoAlpha:1,y:0,duration:.3,stagger:.06},0.04);
-  }
-  function mobileChoreo(){
-    function mGhost(tl,sec){var g=sec.querySelector('.ghost');
-      if(g)tl.fromTo(g,{xPercent:10,autoAlpha:0},{xPercent:-10,autoAlpha:1,ease:'none',duration:1},0);}
-    // HERO - lifts, scales and dissolves as you scroll away (its own moment)
-    var heroInner=document.querySelector('.hero-inner');
-    if(heroInner)gsap.to(heroInner,{yPercent:-10,scale:.9,autoAlpha:0,filter:'blur(6px)',ease:'none',
-      scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:0.6}});
-    var heroMeta=document.querySelector('[data-hero-meta]');
-    if(heroMeta)gsap.to(heroMeta,{autoAlpha:0,y:-20,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'42% top',scrub:0.6}});
-
-    // NOW - clip-wipe in, slide out
-    var now=document.getElementById('now');
-    if(now){
-      var ni=now.querySelector('.now-inner'),tn=mScene(now);
-      mGhost(tn,now);
-      tn.fromTo(now.querySelectorAll('.now-l,.now-r'),{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:.45,stagger:.12,ease:'power2.out'},0.04);
-      tn.to(ni,{autoAlpha:0,x:-30,duration:.28,ease:'power1.in'},0.72);
-    }
-    // ABOUT - heading lines mask up, metric rule draws, rows count
-    var about=document.getElementById('about');
-    if(about){
-      var aw=about.querySelector('.wrap'),ta=mScene(about);
-      mMod(ta,about);
-      mGhost(ta,about);
-      ta.fromTo(about.querySelectorAll('.about-copy .clip > i'),{yPercent:110},{yPercent:0,duration:.5,stagger:.07,ease:'power3.out'},0.06);
-      ta.fromTo(about.querySelectorAll('.about-body'),{autoAlpha:0,y:18},{autoAlpha:1,y:0,duration:.45},0.2);
-      var ar=about.querySelector('[data-draw-v]');if(ar)ta.fromTo(ar,{scaleY:0},{scaleY:1,duration:.5,transformOrigin:'top'},0.16);
-      ta.fromTo(about.querySelectorAll('.metric'),{autoAlpha:0,y:18},{autoAlpha:1,y:0,duration:.4,stagger:.07},0.26);
-      ta.add(function(){about.querySelectorAll('.count').forEach(animateCount);},0.32);
-      ta.to(aw,{autoAlpha:0,yPercent:-8,duration:.28,ease:'power1.in'},0.74);
-    }
-    // METHOD - cards pop up (scale + lift), then lift away
-    var method=document.getElementById('method');
-    if(method){
-      var mw=method.querySelector('.wrap'),tm=mScene(method);
-      mMod(tm,method);
-      mGhost(tm,method);
-      tm.fromTo(method.querySelectorAll('.pr'),{autoAlpha:0,y:40,scale:.92},{autoAlpha:1,y:0,scale:1,duration:.5,stagger:.1,ease:'power3.out'},0.06);
-      tm.fromTo(method.querySelectorAll('.pr-ghost'),{y:36,autoAlpha:0},{y:0,autoAlpha:1,duration:.5,stagger:.12},0.14);
-      tm.to(mw,{autoAlpha:0,yPercent:-8,duration:.28,ease:'power1.in'},0.74);
-    }
-    // STACK - columns slide in from alternating sides, list cascades
-    var stack=document.getElementById('stack');
-    if(stack){
-      var sw=stack.querySelector('.wrap'),ts=mScene(stack);
-      mMod(ts,stack);
-      mGhost(ts,stack);
-      stack.querySelectorAll('.scol').forEach(function(col,k){ts.fromTo(col,{autoAlpha:0,x:(k%2?40:-40)},{autoAlpha:1,x:0,duration:.45,ease:'power3.out'},0.06+k*0.05);});
-      ts.fromTo(stack.querySelectorAll('.scol li'),{autoAlpha:0,y:12},{autoAlpha:1,y:0,duration:.34,stagger:.02},0.26);
-      ts.to(sw,{autoAlpha:0,yPercent:-8,duration:.28,ease:'power1.in'},0.74);
-    }
-    // LOG - rows slide in from the left, then lift away
-    var log=document.getElementById('log');
-    if(log){
-      var lw=log.querySelector('.wrap'),tlog=mScene(log);
-      mMod(tlog,log);
-      mGhost(tlog,log);
-      tlog.fromTo(log.querySelectorAll('.logrow'),{autoAlpha:0,x:-40},{autoAlpha:1,x:0,duration:.45,stagger:.1,ease:'power3.out'},0.06);
-      log.querySelectorAll('.logrow .ttl').forEach(function(t,k){
-        if(t.children.length)return;
-        if(!t.dataset.t)t.dataset.t=t.textContent;
-        tlog.add(function(){if(FX.tele)typeIn(t,t.dataset.t,420);},0.1+k*0.08);
-      });
-      tlog.to(lw,{autoAlpha:0,yPercent:-8,duration:.28,ease:'power1.in'},0.74);
-    }
-    // CONTACT - headline masks up, channels stagger, sign-off draws (last section: reveal on entry, no exit)
-    var contact=document.getElementById('contact');
-    if(contact){
-      var tc=gsap.timeline({scrollTrigger:{trigger:contact,start:'top 82%',end:'top 30%',scrub:0.6}});
-      mMod(tc,contact);
-      mGhost(tc,contact);
-      var conC=[];
-      if(FX.chars){contact.querySelectorAll('h2 .clip > i').forEach(function(l){splitChars(l).forEach(function(c){conC.push(c);});});}
-      if(conC.length)tc.fromTo(conC,{yPercent:130,rotate:gsap.utils.wrap([-7,7]),autoAlpha:0},{yPercent:0,rotate:0,autoAlpha:1,duration:.55,stagger:{each:.018,from:'random'},ease:'power4.out'},0.06);
-      else tc.fromTo(contact.querySelectorAll('h2 .clip > i'),{yPercent:110},{yPercent:0,duration:.55,stagger:.08},0.06);
-      tc.fromTo(contact.querySelectorAll('.channel'),{autoAlpha:0,y:26},{autoAlpha:1,y:0,duration:.45,stagger:.08},0.22);
-      var cf=contact.querySelector('footer');if(cf)tc.fromTo(cf,{autoAlpha:0,y:14},{autoAlpha:1,y:0,duration:.4},0.34);
-      tc.add(playFlatline,0.4);
-      var cst=contact.querySelector('.so-text');if(cst)tc.fromTo(cst,{autoAlpha:0},{autoAlpha:1,duration:.32},0.5);
-    }
-  }
-  function buildWorkDeck(){
-    var deck=document.querySelector('.work-pin');if(!deck)return;
-    deck.classList.add('work-deck');
-    var chans=Array.prototype.slice.call(deck.querySelectorAll('.ch'));
-    var scroll=document.querySelector('.work-scroll');
-    var foot=document.createElement('div');foot.className='work-foot';
-    var dots=document.createElement('div');dots.className='work-dots';
-    chans.forEach(function(_,i){var s=document.createElement('span');if(i===0)s.className='on';dots.appendChild(s);});
-    var swipe=document.createElement('div');swipe.className='work-swipe';swipe.innerHTML='Swipe <span class="ar"><i>\u203A</i><i>\u203A</i></span>';
-    foot.appendChild(dots);foot.appendChild(swipe);
-    if(scroll&&scroll.parentNode)scroll.parentNode.insertBefore(foot,scroll.nextSibling);
-    var dotEls=dots.querySelectorAll('span');
-    var current=0, workVisible=false;
-    function playVid(idx){
-      chans.forEach(function(ch,k){var v=ch.querySelector('video');if(!v)return;
-        if(k===idx){loadVideo(v);if(!reduce){v.muted=true;v.loop=true;v.play&&v.play().catch(function(){});}}
-        else{try{v.pause();}catch(e){}}});
-    }
-    function activate(idx,silent){
-      current=idx;
-      chans.forEach(function(ch,k){ch.classList.toggle('live',k===idx);if(dotEls[k])dotEls[k].classList.toggle('on',k===idx);});
-      if(silent)return;
-      var ch=chans[idx];if(!ch)return;
-      playVid(idx);
-      var num=ch.querySelector('.metric-num');if(num)animateCount(num);
-      var sweep=ch.querySelector('.sweep');
-      if(sweep)gsap.fromTo(sweep,{yPercent:-120,opacity:.85},{yPercent:260,opacity:0,duration:.95,ease:'power2.inOut'});
-      if(!ch.dataset.played){
-        ch.dataset.played='1';
-        var vid=ch.querySelector('video');
-        if(vid)gsap.fromTo(vid,{scale:1.14},{scale:1,duration:1.1,ease:'power3.out'});
-        gsap.fromTo(ch.querySelectorAll('.rv'),{y:24,autoAlpha:0},{y:0,autoAlpha:1,duration:.6,stagger:.08,ease:'power3.out'});
-      }
-    }
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){
-      if(e.isIntersecting&&e.intersectionRatio>=0.6){activate(chans.indexOf(e.target),!workVisible);}
-    });},{root:deck,threshold:[0.6]});
-    chans.forEach(function(ch){io.observe(ch);});
-    if(FX.tilt&&!reduce){
-      var tick=false;
-      deck.addEventListener('scroll',function(){
-        if(tick)return;tick=true;
-        requestAnimationFrame(function(){
-          chans.forEach(function(ch){
-            var m=ch.querySelector('.ch-media');if(!m)return;
-            var r=ch.getBoundingClientRect();
-            var off=(r.left+r.width/2-window.innerWidth/2)/window.innerWidth;
-            gsap.set(m,{rotationY:gsap.utils.clamp(-9,9,off*-18),transformPerspective:700});
-          });
-          tick=false;
-        });
-      },{passive:true});
-    }
-    activate(0,true);
-    ScrollTrigger.create({trigger:'#work',start:'top 75%',end:'bottom 25%',
-      onEnter:function(){workVisible=true;activate(current,false);},
-      onEnterBack:function(){workVisible=true;activate(current,false);},
-      onLeave:function(){workVisible=false;},
-      onLeaveBack:function(){workVisible=false;}});
-    // section heading + deck come in and leave with the scroll (one scrubbed timeline)
-    var wmod=document.querySelector('#work .modhead');
-    var tw=mScene(document.getElementById('work'));
-    if(wmod){var wr=wmod.querySelector('[data-draw]');if(wr)tw.fromTo(wr,{scaleX:0},{scaleX:1,duration:.32,transformOrigin:'left'},0);
-      tw.fromTo(wmod.querySelectorAll('[data-rise]'),{autoAlpha:0,y:14},{autoAlpha:1,y:0,duration:.3,stagger:.06},0.04);}
-    var ents=[scroll,foot].filter(Boolean);
-    tw.fromTo(ents,{autoAlpha:0,y:26},{autoAlpha:1,y:0,duration:.4,stagger:.06},0.06);
-    var outs=[wmod,scroll,foot].filter(Boolean);
-    tw.to(outs,{autoAlpha:0,yPercent:-6,duration:.28,ease:'power1.in'},0.74);
-  }
   function buildMobileReel(){
-    document.body.classList.add('mobile');
     injectGhosts();
-    mobileChoreo();
-    buildWorkDeck();
-    if(FX.lit)ScrollTrigger.create({trigger:'#method',start:'top 55%',end:'bottom 45%',
-      onToggle:function(self){document.body.classList.toggle('lit',self.isActive);}});
+    watchCounts();
+    if(window.PSMobile)PSMobile.run({gsap:gsap,ScrollTrigger:ScrollTrigger,splitChars:splitChars,gitGraphIn:gitGraphIn,
+      playFlatline:playFlatline,animateCount:animateCount,sfx:sfx,kick:function(v){velEnv=Math.max(velEnv,v);}});
+  }
+  // generative canvases outside the stage animate only while on screen
+  function runGensWhenVisible(){
+    if(!FX.gen||!window.PSFX)return;
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      var g=PSFX.gen(e.target);if(!g)return;
+      if(e.isIntersecting&&e.intersectionRatio>0.15)g.start();else g.stop();
+    });},{threshold:[0,0.15]});
+    document.querySelectorAll('canvas[data-gen]').forEach(function(c){io.observe(c);});
   }
 
   /* ============================================================
@@ -1620,9 +1738,8 @@
      ============================================================ */
   function buildStatic(){
     setupVideos();
-    observeCounts(document.querySelectorAll('.count'));
-    var meth=document.getElementById('method');
-    if(FX.lit&&meth)new IntersectionObserver(function(es){es.forEach(function(e){document.body.classList.toggle('lit',e.isIntersecting);});},{rootMargin:'-45% 0px -45% 0px'}).observe(meth);
+    watchCounts();
+    runGensWhenVisible();
     var so=document.getElementById('signoff');
     if(so)new IntersectionObserver(function(es,io){es.forEach(function(e){if(e.isIntersecting){playFlatline();io.disconnect();}});},{threshold:0.4}).observe(so);
   }
@@ -1775,7 +1892,14 @@
           ks.forEach(function(k,i){line('val',(i+1)+') "'+k+'"');});return;}
         case 'DBSIZE':return line('val','(integer) '+Object.keys(store).filter(alive).length);
         case 'FLUSHALL':store={};exp={};return line('ok','OK');
-        case 'HELP':return line('ok','SET GET DEL EXISTS INCR EXPIRE TTL PTTL PERSIST DBSIZE KEYS PING ECHO FLUSHALL CLEAR EXIT · SET k v EX sec | PX ms');
+        case 'HELP':return line('ok','SET GET DEL EXISTS INCR EXPIRE TTL PTTL PERSIST DBSIZE KEYS PING ECHO FLUSHALL BENCH CLEAR EXIT · SET k v EX sec | PX ms');
+        case 'BENCH':
+          line('ok','# measured on the real C++ server with stock redis-benchmark:');
+          line('val','SET/GET · 50 concurrent clients        150,000+ requests/sec');
+          line('val','GET     · 128-deep pipeline            2,700,000+ requests/sec');
+          line('val','SET     · 128-deep pipeline            2,400,000+ requests/sec');
+          line('val','PUB/SUB · delivered under test         1,000 / 1,000 messages');
+          return line('ok','# 18 Redis-compatible commands · 594 lines of C++ · github.com/Paritoshcodes/mini-redis');
         case 'CLEAR':out.innerHTML='';return;
         case 'EXIT':case 'QUIT':return close();
         case '':return;
@@ -1824,8 +1948,7 @@
       else if(e.key==='ArrowUp'||e.key==='PageUp'||e.key==='k')dir=-1;
       if(!dir||!stageTL||!stageTL.scrollTrigger)return;
       e.preventDefault();
-      var u=stageTL.scrollTrigger.progress*stageTotalUnits,idx=0;
-      for(var i=0;i<stageScenes.length;i++){if(u>=stageLabelPos[i]-1e-4)idx=i;}
+      var idx=stageIdxAt(stageTL.scrollTrigger.progress*stageDur);
       var next=Math.min(stageScenes.length-1,Math.max(0,idx+dir));
       var y=stageTargetY(next);
       if(lenis)lenis.scrollTo(y,{duration:1.1});else window.scrollTo(0,y);
@@ -1939,24 +2062,35 @@
   function initInterference(){
     if(!FX.interf||!fine||reduce||engine==='static')return;
     var hero=document.querySelector('.hero');if(!hero)return;
-    var items=null,mx=-9999,my=-9999,armed=false;
+    var items=null,mx=-9999,my=-9999,armed=false,h1=hero.querySelector('h1'),BASE=700;
+    // char centres are cached relative to the h1: weight changes reflow the line, so reading
+    // every rect per frame would thrash layout and feed back into the effect
+    function measure(){
+      if(!items)return;var h1r=h1.getBoundingClientRect();
+      items.forEach(function(it){it.el.style.transform='';it.el.style.fontVariationSettings='';});
+      items.forEach(function(it){var r=it.el.getBoundingClientRect();it.ox=r.left+r.width/2-h1r.left;it.oy=r.top+r.height/2-h1r.top;it.lw=BASE;it.w=BASE;it.x=it.y=0;});
+    }
     setTimeout(function(){ // arm only after the entrance cascade fully settles
       var cs=hero.querySelectorAll('h1 .c');if(!cs.length)return;
-      items=[];cs.forEach(function(el){items.push({el:el,x:0,y:0,tx:0,ty:0});});
-      armed=true;
+      items=[];cs.forEach(function(el){items.push({el:el,x:0,y:0,tx:0,ty:0,w:BASE,lw:BASE});});
+      measure();armed=true;
     },2400);
+    var mT;window.addEventListener('resize',function(){clearTimeout(mT);mT=setTimeout(measure,200);});
     hero.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;},{passive:true});
     hero.addEventListener('mouseleave',function(){mx=-9999;my=-9999;});
     gsap.ticker.add(function(){
       if(!armed)return;
+      var h1r=h1.getBoundingClientRect();
       for(var i=0;i<items.length;i++){
-        var it=items[i],r=it.el.getBoundingClientRect();
-        var cx2=r.left+r.width/2,cy2=r.top+r.height/2;
-        var dx=cx2-mx,dy=cy2-my,d=Math.hypot(dx,dy),R=120;
+        var it=items[i],cx2=h1r.left+it.ox,cy2=h1r.top+it.oy;
+        var dx=cx2-mx,dy=cy2-my,d=Math.hypot(dx,dy),R=120,RW=190;
         if(d<R&&d>0.01){var f=Math.pow(1-d/R,2)*16;it.tx=dx/d*f;it.ty=dy/d*f;}
         else{it.tx=0;it.ty=0;}
-        it.x+=(it.tx-it.x)*0.14;it.y+=(it.ty-it.y)*0.14;
+        // the beam "burns through" the letterform: weight thins toward the cursor
+        var tw=FX.weight&&d<RW?BASE-310*Math.pow(1-d/RW,1.6):BASE;
+        it.x+=(it.tx-it.x)*0.14;it.y+=(it.ty-it.y)*0.14;it.w+=(tw-it.w)*0.16;
         it.el.style.transform='translate('+it.x.toFixed(2)+'px,'+it.y.toFixed(2)+'px)';
+        if(Math.abs(it.w-it.lw)>0.6){it.lw=it.w;it.el.style.fontVariationSettings="'wght' "+it.w.toFixed(0);}
       }
     });
     hero.addEventListener('click',function(e){
@@ -1968,44 +2102,69 @@
     });
   }
 
-  /* TAPE RAIL - instrument navigation (stage, >=1100px) */
-  var railEls=null,railBox=null;
-  function initRail(){
+  /* TUNER - radio-dial section navigator (stage, >=1100px). Stops sit where each scene
+     settles on the scroll, project sub-ticks sit inside CHANNELS; the needle glides with progress. */
+  var tuner=null;
+  function pad2(n){return (n<10?'0':'')+n;}
+  function stageGo(y){if(lenis)lenis.scrollTo(y,{duration:1.2});else window.scrollTo(0,y);}
+  function stageYAt(u){var st=stageTL.scrollTrigger;return st.start+u/stageDur*(st.end-st.start);}
+  function initTuner(){
     if(!FX.rail||window.innerWidth<1100)return;
-    railBox=document.createElement('aside');railBox.id='rail';railBox.setAttribute('aria-label','Sections');
-    var strip=document.createElement('div');strip.className='rail-strip';
-    railEls=[];
+    var box=document.createElement('nav');box.id='tuner';box.setAttribute('aria-label','Sections');
+    box.innerHTML='<span class="tn-scale"></span><span class="tn-spine"></span><span class="tn-fill"></span>';
+    var stops=[],subs=[];
     stageScenes.forEach(function(sc,i){
-      var b=document.createElement('button');b.className='rl';b.type='button';
-      b.innerHTML='<span class="rl-tick"></span><span class="rl-t">'+(nameMap[sc.id]||sc.id).toUpperCase()+'</span>';
-      b.addEventListener('click',function(){
-        var y=stageTargetY(i);if(lenis)lenis.scrollTo(y,{duration:1.1});else window.scrollTo(0,y);
-      });
-      strip.appendChild(b);railEls.push(b);
+      var nm=nameMap[sc.id]||sc.id,b=document.createElement('button');
+      b.type='button';b.className='tn-stop';b.style.top=(stageSettleU(i)/stageDur*100)+'%';
+      b.style.setProperty('--d',(i*26)+'ms');
+      b.innerHTML='<span class="tn-l"><em>'+pad2(i+1)+'</em>'+nm+'</span><i></i>';
+      b.setAttribute('aria-label','Go to '+nm.toLowerCase());
+      b.addEventListener('click',function(){stageGo(stageTargetY(i));});
+      box.appendChild(b);stops.push(b);
+      if(sc.id==='work'){
+        var n=sc.querySelectorAll('.ch').length,per=stageLenMap.work/n;
+        for(var k=1;k<n;k++)(function(k){
+          var u=stageLabelPos[i]+k*per+Math.min(0.9,per-0.4),sb=document.createElement('button');
+          sb.type='button';sb.className='tn-sub';sb.style.top=(u/stageDur*100)+'%';
+          sb.setAttribute('aria-label','Project '+(k+1));sb.innerHTML='<i></i>';
+          sb.addEventListener('click',function(){stageGo(stageYAt(u));});
+          box.appendChild(sb);subs.push({el:sb,u:u});
+        })(k);
+      }
     });
-    var head=document.createElement('span');head.className='rail-head';
-    railBox.appendChild(strip);railBox.appendChild(head);document.body.appendChild(railBox);
-    railUpdate(0);
+    var needle=document.createElement('span');needle.className='tn-needle';
+    needle.innerHTML='<span class="tn-read"><b>01</b><span>HERO</span></span>';
+    box.appendChild(needle);document.body.appendChild(box);
+    tuner={box:box,stops:stops,subs:subs,needle:needle,num:needle.querySelector('b'),read:needle.querySelector('.tn-read span'),fill:box.querySelector('.tn-fill'),idx:-1};
+    tunerUpdate(0,0);
   }
-  function railUpdate(pos){
-    if(!railEls)return;
-    var strip=railBox.querySelector('.rail-strip');
-    strip.style.transform='translateY('+(-(pos*44+22)).toFixed(1)+'px)'; // center the item at continuous index 'pos'
-    var mid=railBox.getBoundingClientRect().top+railBox.offsetHeight/2;
-    railEls.forEach(function(b){
-      var r=b.getBoundingClientRect(),d=Math.abs(r.top+r.height/2-mid);
-      var k=Math.max(0,1-d/80);
-      b.style.opacity=(0.42+k*0.58).toFixed(2);
-      b.style.transform='scale('+(1+k*0.42).toFixed(3)+') translateX('+(-k*8).toFixed(1)+'px)';
-    });
+  function tunerUpdate(u,idx){
+    if(!tuner)return;
+    var f=Math.min(1,Math.max(0,u/stageDur)),H=tuner.box.clientHeight;
+    tuner.needle.style.transform='translateY('+(f*H).toFixed(1)+'px)';
+    tuner.fill.style.transform='scaleY('+f.toFixed(4)+')';
+    tuner.subs.forEach(function(s){s.el.classList.toggle('on',u>=s.u-0.3);});
+    if(idx===tuner.idx)return;tuner.idx=idx;
+    tuner.stops.forEach(function(b,k){b.classList.toggle('on',k===idx);b.classList.toggle('past',k<idx);});
+    tuner.num.textContent=pad2(idx+1);scrambleTo(tuner.read,nameMap[stageScenes[idx].id]||'',300);
+    // the name unfurls on arrival, then folds back to just the channel number so it never crowds the content
+    var rd=tuner.read.parentNode;rd.classList.add('show');clearTimeout(tuner.hide);
+    tuner.hide=setTimeout(function(){rd.classList.remove('show');},1900);
   }
-  // rail holds on the active section (through ALL its projects) and only advances near its very end - dynamic to any scene lengths
-  function railSceneProgress(u,idx,scenes,labelPos,lenMap){
-    var last=scenes.length-1;
-    var seg=(lenMap[scenes[idx].id]||1);
-    var frac=Math.min(1,Math.max(0,(u-labelPos[idx])/seg));
-    var adv=(idx>=last)?0:(frac<0.82?0:(frac-0.82)/0.18);
-    return idx+adv;
+
+  /* CORNER READOUTS - recorder trace (drawn from the hero scope loop) and the Bengaluru clock */
+  var hudSc=document.getElementById('hudScope'),hudCtx=hudSc?hudSc.getContext('2d'):null;
+  function drawHudScope(){
+    var w=128,h=32,a=Math.min(1,0.16+velEnv/5200)*h*0.42;
+    hudCtx.clearRect(0,0,w,h);hudCtx.lineWidth=2;hudCtx.strokeStyle='rgba(255,166,61,.9)';hudCtx.beginPath();
+    for(var x=0;x<=w;x+=3){var y=h/2+Math.sin(x*0.2+tWave*8)*a*Math.sin(x/w*Math.PI);if(x)hudCtx.lineTo(x,y);else hudCtx.moveTo(x,y);}
+    hudCtx.stroke();
+  }
+  function initClock(){
+    var el=document.getElementById('clk');if(!el||engine!=='stage')return;var f;
+    try{f=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'});}catch(e){return;}
+    function tick(){el.textContent=f.format(new Date());}
+    tick();setInterval(tick,1000);
   }
 
   /* VU METERS - work scene HUD */
@@ -2037,7 +2196,11 @@
   }
 
   /* STACK CROSS-REFERENCE - skills wired to the project that proves them */
-  var xrefMap={'C++':'mini-redis','Python':'Vigil','Node.js':'TeamPulse','FastAPI':'Vigil','PostgreSQL':'Vigil','Docker':'mini-redis','React':'Vigil','TypeScript':'TeamPulse','Tailwind':'TeamPulse','REST APIs':'TeamPulse','Playwright':'HealthEdge','Katalon':'HealthEdge','Postman':'HealthEdge','Selenium':'HealthEdge','Regression suites':'HealthEdge','scikit-learn':'Fake News Radar','pandas':'Fake News Radar','XGBoost':'Vigil','SHAP':'Vigil','NLP':'Fake News Radar'};
+  var xrefMap={'C++':'mini-redis','Python':'Revenant','TypeScript':'Revenant','Rust':'MapLibre Martin','Node.js':'TeamPulse','FastAPI':'Revenant','PostgreSQL':'Revenant','Redis':'TeamPulse','MongoDB':'TeamPulse','Linux':'mini-redis',
+    'RAG':'HealthEdge','LLM agents':'Revenant','MCP servers':'HealthEdge','AWS Bedrock':'Agent Replay','Strands Agents':'Agent Replay',
+    'Katalon':'HealthEdge','Playwright':'Revenant','pytest':'Agent Replay','Jest':'TeamPulse','Groovy':'HealthEdge','Selenium':'HealthEdge',
+    'React':'Vigil','Socket.IO':'TeamPulse','WebRTC':'TeamPulse','OAuth 2.0 · JWT':'TeamPulse','GitHub Actions':'Agent Replay','AWS Lambda · DynamoDB · S3':'Agent Replay',
+    'scikit-learn':'Fake News Radar','XGBoost':'Vigil','LightGBM':'Vigil','SHAP':'Vigil','pandas':'Vigil','NLP':'Fake News Radar'};
   function initXref(){
     if(!FX.xref)return;
     document.querySelectorAll('.scol li').forEach(function(li){
@@ -2099,6 +2262,33 @@
     lg.addEventListener('click',function(e){if(e.target===lg)close();});
   }
 
+  /* SEARCHLIGHT - a soft amber beam follows the pointer: it lights the ghost word
+     behind each scene, and rims the Method cards (the dark replacement for the old white flip) */
+  function initSpot(){
+    if(!FX.spot||!fine||reduce)return;
+    var spot=document.getElementById('spot'),mx=-999,my=-999,queued=false;
+    var cards=Array.prototype.slice.call(document.querySelectorAll('.principles .pr'));
+    function paint(){
+      queued=false;
+      if(spot){spot.style.setProperty('--mx',mx+'px');spot.style.setProperty('--my',my+'px');}
+      document.querySelectorAll('.ghost').forEach(function(g){
+        if(!g.firstElementChild)return;var r=g.getBoundingClientRect();if(!r.width)return;
+        g.style.setProperty('--gx',(mx-r.left)+'px');g.style.setProperty('--gy',(my-r.top)+'px');
+      });
+      cards.forEach(function(c){var r=c.getBoundingClientRect();c.style.setProperty('--px',(mx-r.left)+'px');c.style.setProperty('--py',(my-r.top)+'px');});
+    }
+    window.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;if(!queued){queued=true;requestAnimationFrame(paint);}},{passive:true});
+  }
+
+  /* NAV DECODE - links scramble into place on hover, like the channel readout */
+  function initNavDecode(){
+    if(reduce)return;
+    document.querySelectorAll('.nav-links a').forEach(function(a){
+      var txt=a.textContent;
+      a.addEventListener('mouseenter',function(){scrambleTo(a,txt,320);});
+    });
+  }
+
   /* INIT */
   function afterLayout(){
     if(inited)return;inited=true;
@@ -2122,6 +2312,9 @@
     initInterference();
     initSfx();
     initLegend();
+    initSpot();
+    initClock();
+    initNavDecode();
     if((engine==='stage'||engine==='mobile')&&FX.marquee&&hasGSAP&&!reduce)initMarqueeVelocity();
     if(engine!=='stage')updProgress();
     if(hasGSAP&&!reduce){

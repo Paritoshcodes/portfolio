@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://paritoshsingh.me/sitemap.xml
+Sitemap: https://www.paritoshsingh.me/sitemap.xml

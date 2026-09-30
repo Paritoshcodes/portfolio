@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>mini-redis: Redis-compatible server in C++ | Paritosh Singh</title>
+<meta name="description" content="A Redis-compatible server in 594 lines of C++: a non-blocking epoll event loop, a RESP parser that survives split TCP reads, and 2.7M+ GET/sec pipelined." />
+<meta name="author" content="Paritosh Singh" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<link rel="canonical" href="https://www.paritoshsingh.me/projects/mini-redis" />
+<meta name="theme-color" content="#06070A" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/assets/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta property="og:site_name" content="Paritosh Singh" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.paritoshsingh.me/projects/mini-redis" />
+<meta property="og:title" content="mini-redis: Redis-compatible server in C++ | Paritosh Singh" />
+<meta property="og:description" content="A Redis-compatible server in 594 lines of C++: a non-blocking epoll event loop, a RESP parser that survives split TCP reads, and 2.7M+ GET/sec pipelined." />
+<meta property="og:image" content="https://www.paritoshsingh.me/assets/og-mini-redis.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="mini-redis: Redis-compatible server in C++ | Paritosh Singh" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="mini-redis: Redis-compatible server in C++ | Paritosh Singh" />
+<meta name="twitter:description" content="A Redis-compatible server in 594 lines of C++: a non-blocking epoll event loop, a RESP parser that survives split TCP reads, and 2.7M+ GET/sec pipelined." />
+<meta name="twitter:image" content="https://www.paritoshsingh.me/assets/og-mini-redis.png" />
+<!-- Vercel Web Analytics + Speed Insights (plain-HTML snippet from vercel.com/docs/analytics/quickstart) -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/case.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.paritoshsingh.me/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://www.paritoshsingh.me/projects"},{"@type":"ListItem","position":3,"name":"mini-redis","item":"https://www.paritoshsingh.me/projects/mini-redis"}]},{"@type":"SoftwareSourceCode","@id":"https://www.paritoshsingh.me/projects/mini-redis#code","name":"mini-redis","description":"A Redis-compatible server in 594 lines of C++: a non-blocking epoll event loop, a RESP parser that survives split TCP reads, and 2.7M+ GET/sec pipelined.","url":"https://www.paritoshsingh.me/projects/mini-redis","codeRepository":"https://github.com/Paritoshcodes/mini-redis","programmingLanguage":["C++"],"keywords":"Redis clone, C++, epoll, RESP protocol, TCP server, event loop, systems programming","image":"https://www.paritoshsingh.me/assets/og-mini-redis.png","author":{"@type":"Person","@id":"https://www.paritoshsingh.me/#person","name":"Paritosh Singh","url":"https://www.paritoshsingh.me/"},"dateModified":"2026-10-01"},{"@type":"WebPage","@id":"https://www.paritoshsingh.me/projects/mini-redis","url":"https://www.paritoshsingh.me/projects/mini-redis","name":"mini-redis: Redis-compatible server in C++ | Paritosh Singh","description":"A Redis-compatible server in 594 lines of C++: a non-blocking epoll event loop, a RESP parser that survives split TCP reads, and 2.7M+ GET/sec pipelined.","inLanguage":"en","isPartOf":{"@id":"https://www.paritoshsingh.me/#website"},"about":{"@id":"https://www.paritoshsingh.me/projects/mini-redis#code"},"dateModified":"2026-10-01","primaryImageOfPage":{"@type":"ImageObject","url":"https://www.paritoshsingh.me/assets/og-mini-redis.png","width":1200,"height":630}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="cs-top">
+  <a href="/" class="brand"><span class="dot"></span>Paritosh Singh</a>
+  <nav aria-label="Site"><a href="/#work">Home</a><a href="/projects">Projects</a><a href="/#contact">Contact</a></nav>
+</header>
+<main id="main" class="cs">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/projects">Projects</a> / <span aria-current="page">mini-redis</span></nav>
+  <p class="eyebrow rise">Case study · P/01 · Systems engineering · C++</p>
+  <h1 class="rise">mini-redis<span>A Redis-compatible server in C++, built on raw sockets</span></h1>
+  <p class="lede rise">A key-value server written from scratch in <b>594 lines of C++</b>, with no framework and no third-party dependencies: a single-threaded, non-blocking <b>epoll</b> event loop over raw POSIX sockets, driven by the stock <code>redis-cli</code> and <code>redis-benchmark</code> tools.</p>
+  <div class="cta rise"><a class="btn fill" href="https://github.com/Paritoshcodes/mini-redis" target="_blank" rel="noopener">Read the code ↗</a></div>
+  <figure class="media rise"><video autoplay muted loop playsinline preload="metadata" poster="/assets/posters/mini-redis.webp" aria-label="mini-redis walkthrough: clients send requests to the service, which checks and returns keys from the store"><source src="/assets/videos/mini-redis-m.mp4" type="video/mp4" /></video><figcaption>mini-redis · recording</figcaption></figure>
+  <dl class="stats"><div><dt>GET requests / sec at 128-deep pipelining</dt><dd>2.7M+</dd></div><div><dt>SET + GET / sec · 50 clients · 1 core</dt><dd>150K+</dd></div><div><dt>Redis-compatible commands</dt><dd>18</dd></div></dl>
+  <section><h2>Why build it</h2><p>I wanted to understand what happens below the API: how a server accepts connections, reads bytes off the wire, parses a protocol and answers, and what it takes to stay fast when hundreds of requests arrive in a single read.</p><p>Redis was the right target because its behaviour is fully specified by real tools. If stock <code>redis-cli</code> and <code>redis-benchmark</code> work against my server unchanged, the implementation is honest.</p></section>
+<section><h2>What I built</h2><ul class="points"><li><b>TCP server on raw POSIX sockets</b>: <code>socket</code>, <code>bind</code>, <code>listen</code>, <code>accept</code>, with every client socket set non-blocking.</li><li><b>A single-threaded epoll event loop</b>, the same concurrency model Redis itself uses, so there are no locks on the data path.</li><li><b>A RESP parser that buffers partial frames</b> per client, so pipelined commands survive split TCP reads, plus inline commands.</li><li><b>An in-memory store with expiry</b>: <code>SET</code> with <code>EX</code>/<code>PX</code>, <code>EXPIRE</code>, <code>TTL</code>, <code>PTTL</code>, <code>PERSIST</code>, <code>INCR</code>.</li><li><b>Pub/sub</b>: <code>SUBSCRIBE</code>, <code>UNSUBSCRIBE</code>, <code>PUBLISH</code>.</li></ul></section>
+<section><h2>Engineering decisions</h2><p>The hardest bug class in a network server is assuming one <code>recv()</code> equals one command. It does not: under pipelining a single read can hold dozens of commands, and a command can be split across reads. The parser keeps a per-connection buffer, consumes only complete frames and leaves the rest for the next read.</p><p>The benchmark is part of the repository. A script runs <code>redis-benchmark</code> against the server and asserts a floor on every figure, so the published numbers are reproducible rather than a screenshot.</p></section>
+<section><h2>Results</h2><ul class="points"><li><b>150K+ SET and GET requests per second</b> across 50 concurrent clients on a single core.</li><li><b>2.7M+ GET and 2.4M+ SET requests per second</b> at 128-deep pipelining.</li><li><b>1,000 of 1,000</b> pub/sub messages delivered under test.</li></ul></section>
+<section><h2>Supported commands</h2><p><code>PING</code> <code>ECHO</code> <code>QUIT</code> <code>SET</code> <code>GET</code> <code>DEL</code> <code>INCR</code> <code>EXPIRE</code> <code>TTL</code> <code>PTTL</code> <code>PERSIST</code> <code>EXISTS</code> <code>KEYS</code> <code>DBSIZE</code> <code>FLUSHALL</code> <code>SUBSCRIBE</code> <code>UNSUBSCRIBE</code> <code>PUBLISH</code></p><pre>g++ -O2 -std=c++17 -o mini-redis server.cpp
+./mini-redis
+redis-cli set name paritosh
+redis-cli get name</pre></section>
+<section><h2>Stack</h2><ul class="chips"><li>C++17</li><li>POSIX sockets</li><li>epoll</li><li>RESP</li><li>Linux</li><li>redis-benchmark</li></ul></section>
+  <section><h2>More projects</h2><div class="cards"><a class="card" href="/projects/revenant"><span class="t">Revenant</span><span class="k">AI agents · causal measurement</span><span class="d">A payment-recovery agent that proves what it caused.</span></a><a class="card" href="/projects/agent-replay"><span class="t">Agent Replay</span><span class="k">Agent CI · AWS Bedrock</span><span class="d">Regression tests for AI agents, judged by set logic.</span></a><a class="card" href="/projects/vigil"><span class="t">Vigil</span><span class="k">Machine learning · Full stack · Published</span><span class="d">Explainable multi-hazard disaster prediction.</span></a></div><p style="margin-top:16px"><a class="btn" href="/projects">All projects →</a></p></section>
+  <aside class="hire">
+  <h2>Hiring?</h2>
+  <p>I'm looking for <b>full-time software engineering roles for 2027</b>: backend, systems, and ML/AI engineering. Currently an SDET intern at HealthEdge, studying CSE (Data Science) at SRM Institute.</p>
+  <div class="cta"><a class="btn fill" href="mailto:paritosh0180@gmail.com">Email me ↗</a><a class="btn" href="/assets/Resume.pdf">Résumé (PDF) ↗</a><a class="btn" href="https://www.linkedin.com/in/paritosh18/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+</aside>
+</main>
+<footer class="cs-foot">
+  <span>Paritosh Singh · Software engineer · Bengaluru, IN</span>
+  <span><a href="https://github.com/Paritoshcodes" rel="me noopener" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/paritosh18/" rel="me noopener" target="_blank">LinkedIn</a> · <a href="/assets/Resume.pdf">Résumé</a> · <a href="mailto:paritosh0180@gmail.com">Email</a></span>
+</footer>
+</body>
+</html>

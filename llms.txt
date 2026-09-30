@@ -1,0 +1,30 @@
+# Paritosh Singh
+
+> Software engineer in Bengaluru, India, focused on backend systems, AI agents and machine learning. SDET intern at HealthEdge (June 2026 to present). B.Tech in Computer Science and Engineering (Data Science) at SRM Institute of Science and Technology, graduating May 2027, CGPA 8.78/10. Open to full-time software engineering roles starting 2027: backend, systems, and ML/AI engineering.
+
+Contact: paritosh0180@gmail.com · GitHub: https://github.com/Paritoshcodes · LinkedIn: https://www.linkedin.com/in/paritosh18/ · Résumé: https://www.paritoshsingh.me/assets/Resume.pdf
+
+## Experience
+
+- Software Development Engineer in Test Intern, HealthEdge, Bengaluru (Jun 2026 to present): test automation and AI-assisted QA tooling.
+
+## Projects
+
+- [mini-redis](https://www.paritoshsingh.me/projects/mini-redis): Redis-compatible server in 594 lines of C++ on a single-threaded, non-blocking epoll event loop over raw POSIX sockets. 150K+ SET/GET per second across 50 clients on one core; 2.7M+ GET and 2.4M+ SET per second at 128-deep pipelining; 18 commands including pub/sub.
+- [Revenant](https://www.paritoshsingh.me/projects/revenant): AI payment-recovery agent (Razorpay AI Buildathon 2026) that measures causal lift with a stratified 50/50 randomised holdout and bootstrap intervals; 93.8% coverage of a known true lift over 2,000 runs; hash-chained, append-only audit log in PostgreSQL. Python, FastAPI, TypeScript, PostgreSQL, Playwright.
+- [Agent Replay](https://www.paritoshsingh.me/projects/agent-replay): behavioural contracts and CI for AI agents (WeMakeDevs × AWS hackathon). Derives a YAML contract of required tool calls from 5 recorded runs and fails CI on the exact diverging step using set logic, not an LLM judge. AWS Bedrock, Strands Agents, Lambda, DynamoDB, S3, GitHub Actions with OIDC, 339 pytest tests.
+- [Vigil](https://www.paritoshsingh.me/projects/vigil): multi-hazard disaster prediction for 7 hazard types across 25 Indian cities with XGBoost and LightGBM ensembles and SHAP explanations; ROC AUC 0.74 to 0.88. Research paper accepted in ISJEM.
+- [TeamPulse](https://www.paritoshsingh.me/projects/teampulse): real-time, Slack-style collaboration platform with WebRTC calls, 73 REST endpoints, 15 Socket.IO handlers, RBAC, JWT and Google OAuth, and a Bull + Redis job queue.
+
+## Open source
+
+- [MapLibre Martin PR #2599](https://github.com/maplibre/martin/pull/2599): fixed a redirect that ignored --route-prefix for .pbf tile requests; merged with a regression test, shipped in v1.10.1 (Rust).
+- [render-engine-cli PR #40](https://github.com/render-engine/render-engine-cli/pull/40): fixed broken sitemap URLs when serving sites locally (Python).
+
+## Skills
+
+Languages: Python, C++, Java, SQL, TypeScript, JavaScript, Groovy, Rust (open source). Generative AI: RAG, LLM agents, multi-agent workflows, MCP servers, AWS Bedrock, Strands Agents. Machine learning: scikit-learn, XGBoost, LightGBM, SHAP, pandas, NumPy. Backend: REST APIs, Node.js, Express, FastAPI, SQLAlchemy, PostgreSQL, MongoDB, Redis, Socket.IO. Testing and DevOps: Katalon, Playwright, Selenium, JUnit, Jest, pytest, Git, GitHub Actions, Docker, Linux, AWS.
+
+## Credentials
+
+SAP Certified Back-End Developer, ABAP Cloud (2026). NPTEL Introduction to Machine Learning, IIT Madras, Elite grade (2024). 2nd place, Capture the Flag, SRMIST (2024).

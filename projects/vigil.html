@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Vigil: disaster prediction with XGBoost &amp; SHAP | Paritosh Singh</title>
+<meta name="description" content="Vigil forecasts 7 natural-hazard types across 25 Indian cities with XGBoost and LightGBM, explained with SHAP. ROC AUC up to 0.876. Paper accepted in ISJEM." />
+<meta name="author" content="Paritosh Singh" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<link rel="canonical" href="https://www.paritoshsingh.me/projects/vigil" />
+<meta name="theme-color" content="#06070A" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/assets/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta property="og:site_name" content="Paritosh Singh" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.paritoshsingh.me/projects/vigil" />
+<meta property="og:title" content="Vigil: disaster prediction with XGBoost &amp; SHAP | Paritosh Singh" />
+<meta property="og:description" content="Vigil forecasts 7 natural-hazard types across 25 Indian cities with XGBoost and LightGBM, explained with SHAP. ROC AUC up to 0.876. Paper accepted in ISJEM." />
+<meta property="og:image" content="https://www.paritoshsingh.me/assets/og-vigil.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Vigil: disaster prediction with XGBoost &amp; SHAP | Paritosh Singh" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Vigil: disaster prediction with XGBoost &amp; SHAP | Paritosh Singh" />
+<meta name="twitter:description" content="Vigil forecasts 7 natural-hazard types across 25 Indian cities with XGBoost and LightGBM, explained with SHAP. ROC AUC up to 0.876. Paper accepted in ISJEM." />
+<meta name="twitter:image" content="https://www.paritoshsingh.me/assets/og-vigil.png" />
+<!-- Vercel Web Analytics + Speed Insights (plain-HTML snippet from vercel.com/docs/analytics/quickstart) -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/case.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.paritoshsingh.me/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://www.paritoshsingh.me/projects"},{"@type":"ListItem","position":3,"name":"Vigil","item":"https://www.paritoshsingh.me/projects/vigil"}]},{"@type":"SoftwareSourceCode","@id":"https://www.paritoshsingh.me/projects/vigil#code","name":"Vigil","description":"Vigil forecasts 7 natural-hazard types across 25 Indian cities with XGBoost and LightGBM, explained with SHAP. ROC AUC up to 0.876. Paper accepted in ISJEM.","url":"https://www.paritoshsingh.me/projects/vigil","codeRepository":"https://github.com/Paritoshcodes/Vigil","programmingLanguage":["Python","TypeScript"],"keywords":"machine learning, XGBoost, LightGBM, SHAP, explainable AI, disaster prediction, FastAPI","image":"https://www.paritoshsingh.me/assets/og-vigil.png","author":{"@type":"Person","@id":"https://www.paritoshsingh.me/#person","name":"Paritosh Singh","url":"https://www.paritoshsingh.me/"},"dateModified":"2026-10-01"},{"@type":"WebPage","@id":"https://www.paritoshsingh.me/projects/vigil","url":"https://www.paritoshsingh.me/projects/vigil","name":"Vigil: disaster prediction with XGBoost & SHAP | Paritosh Singh","description":"Vigil forecasts 7 natural-hazard types across 25 Indian cities with XGBoost and LightGBM, explained with SHAP. ROC AUC up to 0.876. Paper accepted in ISJEM.","inLanguage":"en","isPartOf":{"@id":"https://www.paritoshsingh.me/#website"},"about":{"@id":"https://www.paritoshsingh.me/projects/vigil#code"},"dateModified":"2026-10-01","primaryImageOfPage":{"@type":"ImageObject","url":"https://www.paritoshsingh.me/assets/og-vigil.png","width":1200,"height":630}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="cs-top">
+  <a href="/" class="brand"><span class="dot"></span>Paritosh Singh</a>
+  <nav aria-label="Site"><a href="/#work">Home</a><a href="/projects">Projects</a><a href="/#contact">Contact</a></nav>
+</header>
+<main id="main" class="cs">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/projects">Projects</a> / <span aria-current="page">Vigil</span></nav>
+  <p class="eyebrow rise">Case study · P/04 · Machine learning · Full stack · Published</p>
+  <h1 class="rise">Vigil<span>Explainable multi-hazard disaster prediction</span></h1>
+  <p class="lede rise">An AI-based early-warning platform that forecasts <b>seven natural-hazard types across 25 Indian cities</b> with XGBoost and LightGBM ensembles, explained with <b>SHAP</b>, and served through FastAPI and PostgreSQL. The research paper, <i>Multi-Hazard Disaster Prediction and Alert System Using Real-Time Environmental Data</i>, is accepted in <b>ISJEM</b>.</p>
+  <div class="cta rise"><a class="btn fill" href="https://github.com/Paritoshcodes/Vigil" target="_blank" rel="noopener">Read the code ↗</a></div>
+  <figure class="media rise"><video autoplay muted loop playsinline preload="metadata" poster="/assets/posters/vigil.webp" aria-label="Vigil dashboard: hazard risk heatmap across Indian regions with live alerts"><source src="/assets/videos/vigil-m.mp4" type="video/mp4" /></video><figcaption>Vigil · recording</figcaption></figure>
+  <dl class="stats"><div><dt>ROC AUC · heatwave</dt><dd>0.876</dd></div><div><dt>ROC AUC · cyclone</dt><dd>0.852</dd></div><div><dt>hazard types · Indian cities</dt><dd>7 · 25</dd></div></dl>
+  <section><h2>The problem</h2><p>Disaster response needs forecasts that people can act on and trust. A risk score without an explanation is hard to defend in an operations room, so explainability was a requirement from the start, not an add-on.</p></section>
+<section><h2>What I built</h2><ul class="points"><li><b>Per-hazard models</b>: local ML models for flood, cyclone, drought, heatwave and compound risk, an API-driven wildfire estimator on NASA FIRMS data, and a rule-based hurricane estimator.</li><li><b>XGBoost and LightGBM ensembles</b> with <b>SHAP</b> explanations surfaced next to every prediction.</li><li><b>Seasonal climatological bias correction</b>: real-time weather features are corrected against monthly baselines before inference.</li><li><b>Confidence-weighted ensemble fusion</b> for compound, cascading hazards.</li><li>A <b>FastAPI + SQLAlchemy + PostgreSQL</b> backend with JWT auth, and a React 18 + TypeScript dashboard with maps and charts.</li></ul></section>
+<section><h2>Results</h2><ul class="points"><li><b>ROC AUC 0.74 to 0.88</b> across hazard types: heatwave 0.876, cyclone 0.852.</li><li>Coverage of <b>7 hazard types across 25 Indian cities</b>.</li><li>Research paper <b>accepted in ISJEM</b>.</li></ul></section>
+<section><h2>Stack</h2><ul class="chips"><li>Python</li><li>XGBoost</li><li>LightGBM</li><li>scikit-learn</li><li>SHAP</li><li>FastAPI</li><li>SQLAlchemy</li><li>PostgreSQL</li><li>React</li><li>TypeScript</li></ul></section>
+  <section><h2>More projects</h2><div class="cards"><a class="card" href="/projects/mini-redis"><span class="t">mini-redis</span><span class="k">Systems engineering · C++</span><span class="d">A Redis-compatible server in C++, built on raw sockets.</span></a><a class="card" href="/projects/revenant"><span class="t">Revenant</span><span class="k">AI agents · causal measurement</span><span class="d">A payment-recovery agent that proves what it caused.</span></a><a class="card" href="/projects/agent-replay"><span class="t">Agent Replay</span><span class="k">Agent CI · AWS Bedrock</span><span class="d">Regression tests for AI agents, judged by set logic.</span></a></div><p style="margin-top:16px"><a class="btn" href="/projects">All projects →</a></p></section>
+  <aside class="hire">
+  <h2>Hiring?</h2>
+  <p>I'm looking for <b>full-time software engineering roles for 2027</b>: backend, systems, and ML/AI engineering. Currently an SDET intern at HealthEdge, studying CSE (Data Science) at SRM Institute.</p>
+  <div class="cta"><a class="btn fill" href="mailto:paritosh0180@gmail.com">Email me ↗</a><a class="btn" href="/assets/Resume.pdf">Résumé (PDF) ↗</a><a class="btn" href="https://www.linkedin.com/in/paritosh18/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+</aside>
+</main>
+<footer class="cs-foot">
+  <span>Paritosh Singh · Software engineer · Bengaluru, IN</span>
+  <span><a href="https://github.com/Paritoshcodes" rel="me noopener" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/paritosh18/" rel="me noopener" target="_blank">LinkedIn</a> · <a href="/assets/Resume.pdf">Résumé</a> · <a href="mailto:paritosh0180@gmail.com">Email</a></span>
+</footer>
+</body>
+</html>

@@ -24,6 +24,7 @@
   var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   var NAMES = { top: 'HERO', now: 'NOW', about: 'PROFILE', work: 'CHANNELS', oss: 'OPEN SOURCE', method: 'METHOD', stack: 'STACK', log: 'LOG', contact: 'CONTACT' };
   var ORDER = ['top', 'now', 'about', 'work', 'oss', 'method', 'stack', 'log', 'contact'];
+  var CASES = ['mini-redis', 'revenant', 'agent-replay', 'vigil', 'teampulse']; // case-study pages, in deck order
   var GLYPHS = '!<>-_\\/[]{}=+*^?#0123456789ABCDEF';
   var API = null, G = null, ST = null;
   var chans = [], activeCard = -1, deckOn = false, sheetOpen = false;
@@ -203,7 +204,8 @@
       (specs.length ? '<ul class="ms-specs">' + specs.map(function (s, k) { return '<li><span>' + pad2(k + 1) + '</span>' + s.textContent + '</li>'; }).join('') + '</ul>' : '') +
       (chips ? '<div class="chips">' + chips.innerHTML + '</div>' : '') +
       '<div class="ms-actions">' +
-      (link ? '<a class="m-btn pri" href="' + link.getAttribute('href') + '" target="_blank" rel="noopener">' + (live ? 'Open the live app' : 'Read the code') + ' ↗</a>' : '') +
+      (CASES[i] ? '<a class="m-btn pri" href="/projects/' + CASES[i] + '">Read the case study →</a>' : '') +
+      (link ? '<a class="m-btn" href="' + link.getAttribute('href') + '" target="_blank" rel="noopener">' + (live ? 'Open the live app' : 'Read the code') + ' ↗</a>' : '') +
       ($('#consoleOpen', ch) ? '<button class="m-btn" type="button" data-console>Try the console ›_</button>' : '') +
       '</div>';
     var cbtn = $('[data-console]', sBody);

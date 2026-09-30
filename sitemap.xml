@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://paritoshsingh.me/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://www.paritoshsingh.me/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.paritoshsingh.me/assets/og.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.paritoshsingh.me/projects</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.paritoshsingh.me/projects/mini-redis</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.paritoshsingh.me/assets/og-mini-redis.png</image:loc></image:image>
+    <image:image><image:loc>https://www.paritoshsingh.me/assets/posters/mini-redis.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.paritoshsingh.me/projects/revenant</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.paritoshsingh.me/assets/og-revenant.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.paritoshsingh.me/projects/agent-replay</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.paritoshsingh.me/assets/og-agent-replay.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.paritoshsingh.me/projects/vigil</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.paritoshsingh.me/assets/og-vigil.png</image:loc></image:image>
+    <image:image><image:loc>https://www.paritoshsingh.me/assets/posters/vigil.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.paritoshsingh.me/projects/teampulse</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.paritoshsingh.me/assets/og-teampulse.png</image:loc></image:image>
+    <image:image><image:loc>https://www.paritoshsingh.me/assets/posters/teampulse.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.paritoshsingh.me/assets/Resume.pdf</loc>
+    <lastmod>2026-10-01</lastmod>
   </url>
 </urlset>

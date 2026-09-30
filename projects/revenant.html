@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Revenant: AI agent that measures causal lift | Paritosh Singh</title>
+<meta name="description" content="An AI payment-recovery agent that reports the lift it caused, not gross recovery: randomised holdout, bootstrap intervals and 93.8% calibrated coverage." />
+<meta name="author" content="Paritosh Singh" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<link rel="canonical" href="https://www.paritoshsingh.me/projects/revenant" />
+<meta name="theme-color" content="#06070A" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/assets/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta property="og:site_name" content="Paritosh Singh" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.paritoshsingh.me/projects/revenant" />
+<meta property="og:title" content="Revenant: AI agent that measures causal lift | Paritosh Singh" />
+<meta property="og:description" content="An AI payment-recovery agent that reports the lift it caused, not gross recovery: randomised holdout, bootstrap intervals and 93.8% calibrated coverage." />
+<meta property="og:image" content="https://www.paritoshsingh.me/assets/og-revenant.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Revenant: AI agent that measures causal lift | Paritosh Singh" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Revenant: AI agent that measures causal lift | Paritosh Singh" />
+<meta name="twitter:description" content="An AI payment-recovery agent that reports the lift it caused, not gross recovery: randomised holdout, bootstrap intervals and 93.8% calibrated coverage." />
+<meta name="twitter:image" content="https://www.paritoshsingh.me/assets/og-revenant.png" />
+<!-- Vercel Web Analytics + Speed Insights (plain-HTML snippet from vercel.com/docs/analytics/quickstart) -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/case.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.paritoshsingh.me/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://www.paritoshsingh.me/projects"},{"@type":"ListItem","position":3,"name":"Revenant","item":"https://www.paritoshsingh.me/projects/revenant"}]},{"@type":"SoftwareSourceCode","@id":"https://www.paritoshsingh.me/projects/revenant#code","name":"Revenant","description":"An AI payment-recovery agent that reports the lift it caused, not gross recovery: randomised holdout, bootstrap intervals and 93.8% calibrated coverage.","url":"https://www.paritoshsingh.me/projects/revenant","codeRepository":"https://github.com/Paritoshcodes/revenant","programmingLanguage":["Python","TypeScript"],"keywords":"AI agent, LLM safety, causal inference, A/B testing, bootstrap confidence interval, payments, Razorpay","image":"https://www.paritoshsingh.me/assets/og-revenant.png","author":{"@type":"Person","@id":"https://www.paritoshsingh.me/#person","name":"Paritosh Singh","url":"https://www.paritoshsingh.me/"},"dateModified":"2026-10-01"},{"@type":"WebPage","@id":"https://www.paritoshsingh.me/projects/revenant","url":"https://www.paritoshsingh.me/projects/revenant","name":"Revenant: AI agent that measures causal lift | Paritosh Singh","description":"An AI payment-recovery agent that reports the lift it caused, not gross recovery: randomised holdout, bootstrap intervals and 93.8% calibrated coverage.","inLanguage":"en","isPartOf":{"@id":"https://www.paritoshsingh.me/#website"},"about":{"@id":"https://www.paritoshsingh.me/projects/revenant#code"},"dateModified":"2026-10-01","primaryImageOfPage":{"@type":"ImageObject","url":"https://www.paritoshsingh.me/assets/og-revenant.png","width":1200,"height":630}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="cs-top">
+  <a href="/" class="brand"><span class="dot"></span>Paritosh Singh</a>
+  <nav aria-label="Site"><a href="/#work">Home</a><a href="/projects">Projects</a><a href="/#contact">Contact</a></nav>
+</header>
+<main id="main" class="cs">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/projects">Projects</a> / <span aria-current="page">Revenant</span></nav>
+  <p class="eyebrow rise">Case study · P/02 · AI agents · causal measurement</p>
+  <h1 class="rise">Revenant<span>A payment-recovery agent that proves what it caused</span></h1>
+  <p class="lede rise">Most recovery tools report how much they recovered. Revenant reports how much it recovered <b>that would not have recovered anyway</b>, and it is willing to say "no evidence of value" about its own work. Built for the <b>Razorpay AI Buildathon 2026</b>, AI Revenue Recovery track.</p>
+  <div class="cta rise"><a class="btn fill" href="https://github.com/Paritoshcodes/revenant" target="_blank" rel="noopener">Read the code ↗</a></div>
+  <figure class="media rise" role="img" aria-label="Calibration chamber: bootstrap estimates of the lift fall into a histogram around the true lift, above a hash-chained audit log"><canvas class="ch-gen" data-gen="revenant" aria-hidden="true"></canvas><figcaption>Revenant · live model</figcaption></figure>
+  <dl class="stats"><div><dt>coverage of the true lift over 2,000 runs</dt><dd>93.8%</dd></div><div><dt>interval error caught by its own harness</dt><dd>38%</dd></div><div><dt>stratified randomised holdout</dt><dd>50/50</dd></div></dl>
+  <section><h2>The problem</h2><p>Gross recovery is a vanity metric. It counts payments that customers would have retried on their own, so a recovery tool can look valuable while changing nothing. The only honest number is the incremental lift: recovery with the agent minus recovery without it.</p></section>
+<section><h2>What I built</h2><ul class="points"><li><b>Real recoveries.</b> The agent diagnoses each failed Razorpay test-mode payment from Razorpay's own error attribution fields, picks a bounded action from an inspectable policy grid, and retries through a real, Playwright-driven checkout.</li><li><b>A randomised holdout.</b> Treatment and control are assigned by stratified 50/50 randomisation on a synthetic population whose true recovery process is fixed in code before any experiment runs. The lift is reported with a stratified bootstrap interval.</li><li><b>A calibration harness.</b> The estimator is rerun 2,000 times against that frozen world to measure how often its 95% interval actually contains the truth.</li><li><b>A tamper-proof trail.</b> Every agent action goes into a hash-chained, append-only audit log that PostgreSQL itself refuses to modify.</li></ul></section>
+<section><h2>Keeping the model on a leash</h2><p>The AI never decides whether money moves. A deterministic policy chooses the recovery action. The LLM only maps unfamiliar decline reasons to a broad failure class, and trusted code resolves that class to a specific action, so a prompt injection cannot target a specific retry. This closed a real injection path found in adversarial testing.</p><p>A guardrail layer can veto the agent and every veto is recorded as evidence. Terminal declines are never retried, attempts are capped, and a circuit breaker halts a batch on genuine execution faults.</p></section>
+<section><h2>Results</h2><ul class="points"><li><b>93.8% coverage</b> of a known true lift over 2,000 simulated runs, reported as slightly anti-conservative rather than tuned to look clean.</li><li>The harness <b>caught its own bootstrap interval being 38% too wide</b>, which was then corrected on the record.</li><li>When the primary estimate straddles zero, the system reports <b>no evidence of value</b> instead of a flattering number.</li></ul></section>
+<section><h2>Stack</h2><ul class="chips"><li>Python</li><li>FastAPI</li><li>TypeScript</li><li>PostgreSQL</li><li>Playwright</li><li>Razorpay API</li><li>LLM tooling</li></ul></section>
+  <section><h2>More projects</h2><div class="cards"><a class="card" href="/projects/mini-redis"><span class="t">mini-redis</span><span class="k">Systems engineering · C++</span><span class="d">A Redis-compatible server in C++, built on raw sockets.</span></a><a class="card" href="/projects/agent-replay"><span class="t">Agent Replay</span><span class="k">Agent CI · AWS Bedrock</span><span class="d">Regression tests for AI agents, judged by set logic.</span></a><a class="card" href="/projects/vigil"><span class="t">Vigil</span><span class="k">Machine learning · Full stack · Published</span><span class="d">Explainable multi-hazard disaster prediction.</span></a></div><p style="margin-top:16px"><a class="btn" href="/projects">All projects →</a></p></section>
+  <aside class="hire">
+  <h2>Hiring?</h2>
+  <p>I'm looking for <b>full-time software engineering roles for 2027</b>: backend, systems, and ML/AI engineering. Currently an SDET intern at HealthEdge, studying CSE (Data Science) at SRM Institute.</p>
+  <div class="cta"><a class="btn fill" href="mailto:paritosh0180@gmail.com">Email me ↗</a><a class="btn" href="/assets/Resume.pdf">Résumé (PDF) ↗</a><a class="btn" href="https://www.linkedin.com/in/paritosh18/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+</aside>
+</main>
+<footer class="cs-foot">
+  <span>Paritosh Singh · Software engineer · Bengaluru, IN</span>
+  <span><a href="https://github.com/Paritoshcodes" rel="me noopener" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/paritosh18/" rel="me noopener" target="_blank">LinkedIn</a> · <a href="/assets/Resume.pdf">Résumé</a> · <a href="mailto:paritosh0180@gmail.com">Email</a></span>
+</footer>
+<script src="/js/signal.js" defer></script>
+<script>
+window.addEventListener('DOMContentLoaded',function(){var c=document.querySelector('canvas[data-gen]');if(!c||!window.PSFX)return;var g=PSFX.gen(c);
+new IntersectionObserver(function(es){es.forEach(function(x){x.isIntersecting?g.start():g.stop();});}).observe(c);});
+</script>
+</body>
+</html>

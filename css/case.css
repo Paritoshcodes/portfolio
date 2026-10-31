@@ -3,11 +3,12 @@
    Same instrument identity as the home page, built to be light:
    no animation libraries, text first, fast on any connection.
    ============================================================ */
+@font-face{font-family:'Geist Serif';src:url('https://cdn.jsdelivr.net/gh/vercel/geist-font@2e554ff2ea3979b63afe770af6424eb8b9490a74/fonts/GeistSerif/webfonts/GeistSerif-Regular.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap;}
 :root {
   --ink: #06070A; --ink-2: #0B0D13; --line: #20242D; --line-2: #2B313C;
   --paper: #EAE8E0; --mute: #9197A1; --faint: #5E646F;
   --signal: #FFA63D; --glow: #FFCE85; --signal-2: #34E2D6;
-  --display: 'Bricolage Grotesque', serif; --body: 'Spline Sans', system-ui, sans-serif; --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --display: 'Geist Serif', serif; --body: 'Spline Sans', system-ui, sans-serif; --mono: 'IBM Plex Mono', ui-monospace, monospace;
   --ease: cubic-bezier(.2, .7, .2, 1); --gut: clamp(20px, 5vw, 56px);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
